@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleX="1.2"
+        android:scaleY="1.2"/>
+
+    <TextView
+        android:id="@+id/tv_intro_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="26sp"
+        android:text="Text View" />
+
+    <TextView
+        android:id="@+id/tv_intro_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:lineSpacingExtra="5dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_intro_title"
+        android:textAlignment="center"
+        android:text="Text View"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/colorWhite"
+        />
+
+
+</RelativeLayout>

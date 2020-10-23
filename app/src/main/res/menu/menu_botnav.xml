@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:checkable="true"
+        android:icon="@drawable/botnav_home_selector"
+        android:title="@string/nav_home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_booking"
+        android:checkable="true"
+        android:icon="@drawable/botnav_book_selector"
+        android:title="@string/nav_booking"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/botnav_profile_selector"
+        android:checkable="true"
+        android:title="@string/nav_profile"
+        app:showAsAction="always" />
+
+</menu>
