@@ -11,13 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".OnBoardingActivity"
-            android:theme="@style/AppTheme.ActionBar.Transparent"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/AppTheme.ActionBar.Transparent"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>

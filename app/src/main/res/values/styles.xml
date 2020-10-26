@@ -7,15 +7,32 @@
         <item name="colorPrimaryDark"  tools:targetApi="23">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+
     </style>
 
     <style name="AppTheme.ActionBar.Transparent" parent="AppTheme">
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowContentOverlay">@color/colorWhite</item>
         <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowFullscreen">true</item>
         <item name="android:statusBarColor">@color/colorWhite</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
     </style>
 
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <!-- Text Size -->
+        <item name="android:textSize">14sp</item>
+        <!-- Query Text Color -->
+        <item name="android:textColorPrimary">@color/colorDarkGrey</item>
+        <!-- Hint Color -->
+        <item name="android:textColorHint">@color/colorDarkGrey</item>
+    </style>
+
+    <!-- Tab Layout -->
+    <style name="CustomTextApprearance" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
 
 </resources>

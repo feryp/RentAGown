@@ -10,6 +10,11 @@
     <string name="nav_booking">Booking</string>
     <string name="nav_profile">Profile</string>
 
+    <!-- on boarding screen -->
+    <string name="btn_next">Next</string>
+    <string name="btn_get_started">Get Started</string>
+    <string name="btn_skip">Skip</string>
+
     <!-- fragment profile -->
     <string name="title_personal">Personal</string>
     <string name="menu_invoice_history">Invoice History</string>

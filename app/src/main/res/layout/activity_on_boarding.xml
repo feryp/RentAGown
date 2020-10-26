@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:src="@drawable/logo_white"/>
+        android:src="@drawable/logo_white"
+        android:contentDescription="@string/todo"/>
 
     <Button
         android:id="@+id/btn_skip"
@@ -27,10 +27,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="28dp"
-        android:text="Skip"
+        android:text="@string/btn_skip"
         android:textSize="14sp"
         android:textColor="@color/colorWhite"
-        android:background=" #00000000"/>
+        android:background=" #00000000"
+        tools:ignore="RelativeOverlap" />
 
     <Button
         android:id="@+id/btn_next"
@@ -40,12 +41,12 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="16dp"
-        android:text="Next"
+        android:text="@string/btn_next"
         android:textSize="16sp"
         android:textColor="@color/colorWhite"
         android:drawableEnd="@drawable/ic_right_arrow_white"
-        android:background=" #00000000"/>
+        android:background=" #00000000"
+        tools:ignore="RelativeOverlap" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_indicator"
@@ -71,8 +72,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="16dp"
-        android:text="Get Started"
+        android:text="@string/btn_get_started"
         android:textSize="14sp"
         android:textColor="@color/colorWhite"
         android:fontFamily="@font/poppins_medium"
