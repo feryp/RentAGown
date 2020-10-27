@@ -124,7 +124,7 @@ public class OnBoardingActivity extends AppCompatActivity{
                 finishOnboarding();
 //                Intent main = new Intent(getApplicationContext(), MainActivity.class);
 //                startActivity(main);
-                savePrefsData();
+//                savePrefsData();
                 finish();
             }
         });

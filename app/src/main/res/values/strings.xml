@@ -15,6 +15,10 @@
     <string name="btn_get_started">Get Started</string>
     <string name="btn_skip">Skip</string>
 
+    <!-- fragment home -->
+    <string name="discover">Discover</string>
+    <string name="btn_see_all_main">See All</string>
+
     <!-- fragment profile -->
     <string name="title_personal">Personal</string>
     <string name="menu_invoice_history">Invoice History</string>
@@ -28,6 +32,7 @@
     <string name="app_version_1_0">App version 1.0</string>
     <string name="name_user">John Doe</string>
     <string name="email_user">john.doe@gmail.com</string>
+
 
 
 </resources>

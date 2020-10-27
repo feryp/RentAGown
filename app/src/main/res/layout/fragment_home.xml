@@ -33,7 +33,6 @@
                         android:layout_width="235dp"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_seach_view"
-                        android:theme="@style/AppSearchView"
                         app:iconifiedByDefault="false"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Discover"
+                    android:text="@string/discover"
                     android:textColor="@color/colorBlack"
                     android:textSize="38sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +96,7 @@
                     android:layout_marginEnd="16dp"
                     android:background=" #00000000"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="See All"
+                    android:text="@string/btn_see_all_main"
                     android:textAlignment="textEnd"
                     android:textAllCaps="false"
                     android:textColor="@color/colorDarkGrey"
@@ -108,7 +107,6 @@
                     tools:ignore="MissingConstraints" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_main_menu"
@@ -127,9 +125,65 @@
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="320dp"
+                android:background="@color/colorMistyWhite"
                 app:layout_constraintTop_toBottomOf="@+id/tab_main_menu"
                 tools:ignore="MissingConstraints" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_category_marketting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/constraint_layout_header_promo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/view_pager"-->
+<!--                tools:ignore="MissingConstraints">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_special_promo"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:text="Special Promo For You"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_see_all_promo"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:background=" #00000000"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:text="@string/btn_see_all_main"-->
+<!--                    android:textAlignment="textEnd"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/colorDarkGrey"-->
+<!--                    android:textSize="14sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <androidx.viewpager.widget.ViewPager-->
+<!--                android:id="@+id/view_pager_promo"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="264dp"-->
+<!--                android:background="@color/colorMistyWhite"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/constraint_layout_header_promo"-->
+<!--                tools:ignore="MissingConstraints" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
