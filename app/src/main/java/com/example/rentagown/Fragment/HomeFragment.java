@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
         RecyclerView rvTitleCategory = view.findViewById(R.id.rv_category_marketting);
         TabLayout tabLayout = view.findViewById(R.id.tab_main_menu);
 
-
+        //tab layout name
         tabLayout.addTab(tabLayout.newTab().setText("Prewedding"));
         tabLayout.addTab(tabLayout.newTab().setText("Wedding"));
         tabLayout.addTab(tabLayout.newTab().setText("Family"));

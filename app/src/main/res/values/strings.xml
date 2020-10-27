@@ -33,6 +33,15 @@
     <string name="name_user">John Doe</string>
     <string name="email_user">john.doe@gmail.com</string>
 
+    <!-- fragment booking -->
+    <string name="my_booking">My Booking</string>
+    <string name="btn_history">History</string>
+
+    <!-- fragment prewedding booking -->
+    <string name="add_your_booking_to_booking_list_and_start_ordering">Add your booking to booking list and start ordering</string>
+    <string name="btn_browse">Browse</string>
+    <string name="your_booking_is_currently_empty">Your Booking Is Currently Empty</string>
+
 
 
 </resources>
