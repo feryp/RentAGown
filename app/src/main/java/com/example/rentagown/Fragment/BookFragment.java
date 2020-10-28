@@ -1,20 +1,31 @@
 package com.example.rentagown.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
-import com.example.rentagown.Adapter.PageMainAdapter;
-import com.example.rentagown.Adapter.PageMybookAdapter;
+import com.example.rentagown.Adapter.MyBookingAdapter;
+import com.example.rentagown.Model.MyBooking;
 import com.example.rentagown.R;
-import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookFragment extends Fragment {
+
+    RecyclerView rvMyBooking;
+    LinearLayout layoutEmpty;
+    ArrayList<MyBooking> myBookingList;
+    MyBookingAdapter adapter;
+    Context context;
 
     public BookFragment() {
         // Required empty public constructor
@@ -24,40 +35,93 @@ public class BookFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.fragment_book, container, false);
+        View view = inflater.inflate(R.layout.fragment_book, container, false);
 
         //INIT VIEW
-        TabLayout tabLayout = view.findViewById(R.id.tab_my_booking);
+        rvMyBooking = view.findViewById(R.id.rv_my_booking);
+        layoutEmpty = view.findViewById(R.id.layout_booking_empty);
 
-        //tab layout name
-        tabLayout.addTab(tabLayout.newTab().setText("Prewedding"));
-        tabLayout.addTab(tabLayout.newTab().setText("Wedding"));
-        tabLayout.addTab(tabLayout.newTab().setText("Family"));
-        tabLayout.addTab(tabLayout.newTab().setText("Maternity"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final ViewPager viewPager = view.findViewById(R.id.view_pager_booking);
-        final PageMybookAdapter adapter = new PageMybookAdapter(getFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-//        viewPager.beginFakeDrag();
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        //List My Booking
+        myBookingList = new ArrayList<>();
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
 
-            }
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
 
-            }
-        });
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
+
+        myBookingList.add(new MyBooking(
+                R.drawable.prewedding_1,
+                "Selina Colourblock Camisole Dress",
+                "On-Progress",
+                "08 Sep 2020",
+                "09 September 2020",
+                "Rp. 5.000.000",
+                "Rp. 2.000.000",
+                "Rp. 3.000.000"));
+
+        //Setup Recycler View
+        adapter = new MyBookingAdapter(myBookingList, context);
+        rvMyBooking.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rvMyBooking.setAdapter(adapter);
+
+        if (adapter.getItemCount() > 0) {
+            layoutEmpty.setVisibility(View.GONE);
+        }
 
         return view;
     }

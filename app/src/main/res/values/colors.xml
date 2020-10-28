@@ -14,6 +14,7 @@
     <color name="colorSoftGrey">#C1C6CD</color>
     <color name="colorRed">#E81212</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorSoftBlack">#373333</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorMistyWhite">#F1F1F1</color>
 </resources>
