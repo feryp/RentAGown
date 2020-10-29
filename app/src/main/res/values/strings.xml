@@ -74,10 +74,15 @@
 
     <!-- activity change password -->
     <string name="appbar_change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="create_a_strong_password_for_the_account_by_email">Create a strong password for the account by email</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_re_password">Re-Password</string>
+    <string name="after_password_has_been_changed_please_log_in_again_with_the_new_on_all_of_your_devices">After password has been changed, please log in again with the new on all of your devices</string>
+
 
     <!-- activity change address -->
     <string name="appbar_change_address">Change Address</string>
-
 
 
 </resources>

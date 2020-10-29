@@ -19,4 +19,5 @@
     <color name="colorSoftBlack">#373333</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorMistyWhite">#F1F1F1</color>
+    <color name="colorMistyBlack">#4F4F4F</color>
 </resources>
