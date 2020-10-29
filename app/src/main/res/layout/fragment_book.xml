@@ -30,7 +30,7 @@
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/btn_see_all"
+            android:id="@+id/btn_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

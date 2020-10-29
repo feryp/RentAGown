@@ -6,16 +6,21 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OnBoardingActivity"
+        <activity android:name=".ChangeAddressActivity"></activity>
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".InvoiceHistoryActivity" />
+        <activity
+            android:name=".OnBoardingActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -25,7 +30,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
