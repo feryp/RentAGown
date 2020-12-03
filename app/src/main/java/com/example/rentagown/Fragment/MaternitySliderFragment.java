@@ -49,9 +49,9 @@ public class MaternitySliderFragment extends Fragment {
         mainCategory.add(new MainCategory(R.drawable.maternity_6,"Blue Ocean elegant maternity gown","Rp. 2.200.000"));
 
         //Setup Recycler View
-//        adapter = new MainCategoryAdapter(context, mainCategory);
-//        rvMaternity.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
-//        rvMaternity.setAdapter(adapter);
+        adapter = new MainCategoryAdapter(context, mainCategory);
+        rvMaternity.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
+        rvMaternity.setAdapter(adapter);
         return view;
     }
 }

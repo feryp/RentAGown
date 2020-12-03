@@ -49,9 +49,9 @@ public class FamilySliderFragment extends Fragment {
         mainCategory.add(new MainCategory(R.drawable.family_4,"Family of Ceminata Gown","Rp. 10.000.000"));
 
         //Setup Recycler View
-//        adapter = new MainCategoryAdapter(context, mainCategory);
-//        rvFamily.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
-//        rvFamily.setAdapter(adapter);
+        adapter = new MainCategoryAdapter(context, mainCategory);
+        rvFamily.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
+        rvFamily.setAdapter(adapter);
 
         return view;
     }

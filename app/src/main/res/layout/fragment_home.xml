@@ -30,11 +30,13 @@
 
                     <androidx.appcompat.widget.SearchView
                         android:id="@+id/searchView"
-                        android:layout_width="235dp"
+                        android:layout_width="0dp"
                         android:layout_height="50dp"
+                        android:layout_marginEnd="24dp"
                         android:background="@drawable/bg_seach_view"
                         app:iconifiedByDefault="false"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/im_wishlist"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:queryBackground="@android:color/transparent"
@@ -45,23 +47,22 @@
                         android:id="@+id/im_wishlist"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_like_black_outlined"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/searchView"
+                        app:layout_constraintEnd_toStartOf="@+id/im_notification"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/im_notification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="16dp"
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_notification"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/im_wishlist"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -126,7 +127,6 @@
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
-                android:background="@color/colorMistyWhite"
                 app:layout_constraintTop_toBottomOf="@+id/tab_main_menu"
                 tools:ignore="MissingConstraints" />
 

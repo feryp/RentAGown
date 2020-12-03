@@ -49,9 +49,9 @@ public class WeddingSliderFragment extends Fragment {
         mainCategory.add(new MainCategory(R.drawable.wedding_6,"Trixie Lace Panel Pleated Dress","Rp. 5.000.000"));
 
         //Setup Recycler View
-//        adapter = new MainCategoryAdapter(context, mainCategory);
-//        rvWedding.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
-//        rvWedding.setAdapter(adapter);
+        adapter = new MainCategoryAdapter(context, mainCategory);
+        rvWedding.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
+        rvWedding.setAdapter(adapter);
 
         return view;
     }

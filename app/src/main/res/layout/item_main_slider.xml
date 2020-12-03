@@ -10,16 +10,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="200dp"
-        android:layout_height="300dp"
-        android:background="@drawable/bg_content">
+        android:layout_height="300dp">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/im_content_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitCenter"
             app:riv_corner_radius="16dp"
-            android:scaleY="1.2"
-            android:scaleX="1.2"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
             android:contentDescription="@string/todo"
             tools:ignore="MissingConstraints" />
 

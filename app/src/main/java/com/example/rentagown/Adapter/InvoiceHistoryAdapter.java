@@ -12,14 +12,14 @@ import com.example.rentagown.Model.InvoiceHistory;
 import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.InvoiceHistoryViewHolder;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class InvoiceHistoryAdapter extends RecyclerView.Adapter<InvoiceHistoryViewHolder> {
 
-    private ArrayList<InvoiceHistory> invoiceHistoryList;
+    private List<InvoiceHistory> invoiceHistoryList;
     Context mContext;
 
-    public InvoiceHistoryAdapter(ArrayList<InvoiceHistory> invoiceHistoryList, Context mContext) {
+    public InvoiceHistoryAdapter(List<InvoiceHistory> invoiceHistoryList, Context mContext) {
         this.invoiceHistoryList = invoiceHistoryList;
         this.mContext = mContext;
     }
