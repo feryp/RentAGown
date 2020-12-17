@@ -12,8 +12,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_item_promo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
         app:cardCornerRadius="8dp"
         android:elevation="6dp"
         tools:ignore="MissingConstraints">
@@ -37,8 +37,8 @@
 
             <RelativeLayout
                 android:id="@+id/desc_item_promo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="5dp"
@@ -48,13 +48,14 @@
                     android:id="@+id/im_discount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_discount"/>
+                    android:src="@drawable/ic_discount"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:id="@+id/tv_title_item_promo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Promo"
+                    tools:text="Promo"
                     android:textSize="12sp"
                     android:textColor="@color/colorBlack"
                     android:fontFamily="@font/poppins_medium"
@@ -66,8 +67,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_title_item_promo"
-                    android:text=""
+                    tools:text="The wait is over 🎉
+Massive sale! 90% off for third purchase on any dress (except wedding dress), Booking period until 15 September 2020. Rental period until December 2021."
                     android:textSize="10sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8sp"
+                    android:autoSizeMaxTextSize="12sp"
                     android:textColor="@color/colorGray"
                     android:fontFamily="@font/poppins_regular"/>
 

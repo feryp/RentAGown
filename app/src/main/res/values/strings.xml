@@ -26,6 +26,8 @@
     <!-- fragment home -->
     <string name="discover">Discover</string>
     <string name="btn_see_all_main">See All</string>
+    <string name="tv_title_special_promo_for_you">Special Promo For You</string>
+
 
     <!-- fragment profile -->
     <string name="title_personal">Personal</string>
