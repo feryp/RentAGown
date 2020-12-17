@@ -86,4 +86,14 @@
     <string name="btn_choose_address">Choose Address</string>
 
 
+    <!-- activity add address -->
+    <string name="appbar_add_address">Add Address</string>
+    <string name="hint_address_label">Address Label</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_name_address">Name</string>
+    <string name="hint_no_handphone_address">No. Handphone</string>
+
+    <!-- activity wishlist -->
+    <string name="appbar_wishlist">Wishlist</string>
+
 </resources>

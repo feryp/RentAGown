@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".WishlistActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/im_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="#00000000"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/appbar_wishlist"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scrollbars="none"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <com.google.android.material.chip.ChipGroup-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:singleLine="true"-->
+<!--            app:singleSelection="true">-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="ALL"-->
+<!--                android:textSize="14sp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:padding="16dp"-->
+<!--                app:chipBackgroundColor="@color/colorSecondary"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="PREWEDDING"-->
+<!--                android:textSize="14sp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:padding="16dp"-->
+<!--                app:chipBackgroundColor="@color/colorSecondary"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="WEDDING"-->
+<!--                android:textSize="14sp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:padding="16dp"-->
+<!--                app:chipBackgroundColor="@color/colorSecondary"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="FAMILY"-->
+<!--                android:textSize="14sp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:padding="16dp"-->
+<!--                app:chipBackgroundColor="@color/colorSecondary"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="MATERNITY"-->
+<!--                android:textSize="14sp"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:padding="16dp"-->
+<!--                app:chipBackgroundColor="@color/colorSecondary"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Choice"/>-->
+
+<!--        </com.google.android.material.chip.ChipGroup>-->
+
+
+<!--    </HorizontalScrollView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

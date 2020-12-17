@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -17,7 +18,7 @@ import java.util.List;
 public class ChangeAddressActivity extends AppCompatActivity implements View.OnClickListener {
 
     RecyclerView rvListAddress;
-    ImageButton back;
+    ImageButton back, addAddress;
     List<ChangeAddress> changeAddressList;
     ChangeAddressAdapter adapter;
 
@@ -29,6 +30,7 @@ public class ChangeAddressActivity extends AppCompatActivity implements View.OnC
         //INIT VIEW
         rvListAddress = findViewById(R.id.rv_list_address);
         back = findViewById(R.id.im_back);
+        addAddress = findViewById(R.id.im_add_address);
 
         //List Address
         changeAddressList = new ArrayList<>();
@@ -58,6 +60,7 @@ public class ChangeAddressActivity extends AppCompatActivity implements View.OnC
 
         //SET LISTENER
         back.setOnClickListener(this);
+        addAddress.setOnClickListener(this);
 
 
     }
@@ -67,6 +70,11 @@ public class ChangeAddressActivity extends AppCompatActivity implements View.OnC
         switch (v.getId()){
             case R.id.im_back:
                 finish();
+                break;
+
+            case R.id.im_add_address:
+                Intent addAddress = new Intent(ChangeAddressActivity.this, AddAddressActivity.class);
+                startActivity(addAddress);
                 break;
 
         }

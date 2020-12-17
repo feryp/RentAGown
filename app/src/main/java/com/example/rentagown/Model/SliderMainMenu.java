@@ -1,15 +1,25 @@
 package com.example.rentagown.Model;
 
-public class MainCategory {
+public class SliderMainMenu {
 
+    int idSlider;
     int image;
     private  String title;
     private String price;
 
-    public MainCategory(int image, String title, String price) {
+    public SliderMainMenu(int idSlider, int image, String title, String price) {
+        this.idSlider = idSlider;
         this.image = image;
         this.title = title;
         this.price = price;
+    }
+
+    public int getIdSlider() {
+        return idSlider;
+    }
+
+    public void setIdSlider(int idSlider) {
+        this.idSlider = idSlider;
     }
 
     public int getImage() {

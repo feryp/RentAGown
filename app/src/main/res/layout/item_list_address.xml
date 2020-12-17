@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="@drawable/background_shadow">
+    android:background="@drawable/bg_shadow">
 
     <ImageButton
         android:id="@+id/im_delete_address"
@@ -110,7 +110,7 @@
         android:background="@drawable/bg_btn_choose_selector"
         android:text="@string/btn_choose_address"
         android:textSize="12sp"
-        android:textColor="@color/text_color_selector"
+        android:textColor="@color/text_color_selector_address"
         android:textAllCaps="false"
         android:fontFamily="@font/poppins_medium"
         tools:ignore="MissingConstraints" />

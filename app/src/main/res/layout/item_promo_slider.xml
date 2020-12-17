@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_item_promo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        android:elevation="6dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/im_item_promo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:riv_corner_radius_top_left="8dp"
+                app:riv_corner_radius_top_right="8dp"
+                android:scaleType="fitCenter"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/promo" />
+
+            <RelativeLayout
+                android:id="@+id/desc_item_promo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/im_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_discount"/>
+
+                <TextView
+                    android:id="@+id/tv_title_item_promo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promo"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_toEndOf="@+id/im_discount"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_desc_item_promo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title_item_promo"
+                    android:text=""
+                    android:textSize="10sp"
+                    android:textColor="@color/colorGray"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,26 +2,25 @@ package com.example.rentagown.ViewHolder;
 
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rentagown.Model.MainCategory;
+import com.example.rentagown.Model.SliderMainMenu;
 import com.example.rentagown.R;
 import com.makeramen.roundedimageview.RoundedImageView;
 
-public class MainCategoryViewHolder extends RecyclerView.ViewHolder {
+public class SliderMainMenuViewHolder extends RecyclerView.ViewHolder {
 
     public TextView tvTitle;
     public TextView tvPrice;
     public RoundedImageView imContent;
     public ImageButton btnWishlist;
 
-    private MainCategory mainCategory;
+    private SliderMainMenu sliderMainMenu;
 
-    public MainCategoryViewHolder(@NonNull View itemView) {
+    public SliderMainMenuViewHolder(@NonNull View itemView) {
         super(itemView);
 
         tvTitle = itemView.findViewById(R.id.tv_name_dress_main);
