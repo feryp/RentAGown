@@ -74,7 +74,8 @@ Massive sale! 90% off for third purchase on any dress (except wedding dress), Bo
                     android:autoSizeMinTextSize="8sp"
                     android:autoSizeMaxTextSize="12sp"
                     android:textColor="@color/colorGray"
-                    android:fontFamily="@font/poppins_regular"/>
+                    android:fontFamily="@font/poppins_regular"
+                    tools:ignore="SmallSp,UnusedAttribute" />
 
             </RelativeLayout>
 

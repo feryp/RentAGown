@@ -22,7 +22,7 @@
             android:id="@+id/scrim"
             android:layout_width="150dp"
             android:layout_height="180dp"
-            android:background="@drawable/scrim_layer"
+            android:background="@drawable/gradient_scrim_layer"
             tools:ignore="MissingConstraints" />
 
         <ImageButton
