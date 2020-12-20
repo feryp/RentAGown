@@ -27,7 +27,8 @@
     <string name="discover">Discover</string>
     <string name="btn_see_all_main">See All</string>
     <string name="tv_title_special_promo_for_you">Special Promo For You</string>
-
+    <string name="tv_title_favorite_gown">Favorite Gown</string>
+    <string name="tv_title_new_gown">New Gown</string>
 
     <!-- fragment profile -->
     <string name="title_personal">Personal</string>
@@ -97,5 +98,6 @@
 
     <!-- activity wishlist -->
     <string name="appbar_wishlist">Wishlist</string>
+
 
 </resources>

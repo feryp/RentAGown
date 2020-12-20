@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.example.rentagown.Adapter.OnBoardingAdapter;
-import com.example.rentagown.Model.ScreenItem;
+import com.example.rentagown.Model.OnBoadingItem;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class OnBoardingActivity extends AppCompatActivity{
     Button btnNext, btnGetStarted, btnSkip;
     Animation btnAnim;
     int position = 0;
-    List<ScreenItem> mList = new ArrayList<>();
+    List<OnBoadingItem> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,28 +43,28 @@ public class OnBoardingActivity extends AppCompatActivity{
 
 
         //Fill list screen
-        mList.add(new ScreenItem(
+        mList.add(new OnBoadingItem(
                 "Prewedding",
                 "The special day that is coming soon will not be memorable without stunning clothes, " +
                         "we are here to bring that to you.",
                 R.drawable.bg_prewedding));
 
-        mList.add(new ScreenItem(
+        mList.add(new OnBoadingItem(
                 "Wedding",
                 "A dazzling collection available for you to use on your special day, creating unforgettable memories for a lifetime.",
                 R.drawable.bg_wedding));
 
-        mList.add(new ScreenItem(
+        mList.add(new OnBoadingItem(
                 "Family",
                 "Looking different is about showing inner beauty from another perspective, and that's what someone like you needs.",
                 R.drawable.bg_family));
 
-        mList.add(new ScreenItem(
+        mList.add(new OnBoadingItem(
                 "Maternity",
                 "Looking different is about showing inner beauty from another perspective, and that's what someone like you needs.",
                 R.drawable.bg_maternity));
 
-        mList.add(new ScreenItem(
+        mList.add(new OnBoadingItem(
                 "A more flexible way to rent",
                 "We are here to make it easy for you to choose clothes that are suitable for " +
                         "all your important activities so that you appear different from the others.",

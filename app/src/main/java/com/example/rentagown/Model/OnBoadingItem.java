@@ -1,11 +1,11 @@
 package com.example.rentagown.Model;
 
-public class ScreenItem {
+public class OnBoadingItem {
 
     String Tittle, Description;
     int ScreenImg;
 
-    public ScreenItem(String tittle, String description, int screenImg) {
+    public OnBoadingItem(String tittle, String description, int screenImg) {
         Tittle = tittle;
         Description = description;
         ScreenImg = screenImg;

@@ -15,10 +15,12 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.rentagown.Adapter.CategoryMenuAdapter;
+import com.example.rentagown.Adapter.SliderFavoriteGownAdapter;
 import com.example.rentagown.Adapter.SliderMainMenuAdapter;
 import com.example.rentagown.Adapter.SliderPromoAdapter;
 import com.example.rentagown.Interface.ItemClickListener;
 import com.example.rentagown.Model.CategoryMenu;
+import com.example.rentagown.Model.FavoriteGown;
 import com.example.rentagown.Model.Promo;
 import com.example.rentagown.Model.SliderMainMenu;
 import com.example.rentagown.R;
@@ -32,13 +34,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
 
     Context context;
     ImageButton imWishlist;
-    RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo;
+    RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo, rvSliderFavoriteGown;
     CategoryMenuAdapter adapterMenu;
     SliderMainMenuAdapter adapterMainMenu;
     SliderPromoAdapter adapterPromo;
+    SliderFavoriteGownAdapter adapterFavorite;
     List<CategoryMenu> categoryMenuList;
     List<SliderMainMenu> sliderMainMenuList;
     List<Promo> promoList;
+    List<FavoriteGown> favoriteGownList;
 
     private CategoryMenu selectedCategoryMenu;
 
@@ -53,6 +57,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvTitleMenu = view.findViewById(R.id.rv_title_menu);
         rvSliderMenu = view.findViewById(R.id.rv_slider_main_menu);
         rvSliderPromo = view.findViewById(R.id.rv_slider_promo);
+        rvSliderFavoriteGown = view.findViewById(R.id.rv_slider_favorite_gown);
 
         //Title Menu
         categoryMenuList = new ArrayList<>();
@@ -115,6 +120,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterPromo = new SliderPromoAdapter(context, promoList);
         rvSliderPromo.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
         rvSliderPromo.setAdapter(adapterPromo);
+
+
+        //Slider Favorite Gown
+        favoriteGownList = new ArrayList<>();
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+        favoriteGownList.add(new FavoriteGown(R.drawable.product_favourite,"Dahlia Cascade Layered Jumpsuit","Rp. 12.000.000"));
+
+        //Setup Recycler View Favorite Gown
+        adapterFavorite = new SliderFavoriteGownAdapter(context, favoriteGownList);
+        rvSliderFavoriteGown.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+        rvSliderFavoriteGown.setAdapter(adapterFavorite);
 
         imWishlist.setOnClickListener(HomeFragment.this);
 

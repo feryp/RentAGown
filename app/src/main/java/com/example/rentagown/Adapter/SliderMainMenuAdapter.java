@@ -36,7 +36,7 @@ public class SliderMainMenuAdapter extends RecyclerView.Adapter<SliderMainMenuVi
 
     @Override
     public void onBindViewHolder(@NonNull SliderMainMenuViewHolder holder, int position) {
-        holder.tvTitle.setText(sliderMainMenuList.get(position).getTitle());
+        holder.tvItemName.setText(sliderMainMenuList.get(position).getItemName());
         holder.tvPrice.setText(sliderMainMenuList.get(position).getPrice());
         holder.imContent.setImageResource(sliderMainMenuList.get(position).getImage());
 

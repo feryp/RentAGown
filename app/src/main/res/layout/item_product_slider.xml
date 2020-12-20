@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginStart="16dp">
-    
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="150dp"
-        android:layout_height="270dp">
+        android:layout_height="wrap_content">
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/im_content_product"
-            android:layout_width="150dp"
+            android:id="@+id/im_image_product"
+            android:layout_width="wrap_content"
             android:layout_height="180dp"
-            app:riv_corner_radius="12dp"
             android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/product_favourite"
+            app:riv_corner_radius="16dp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
             tools:ignore="MissingConstraints" />
 
         <View
@@ -29,34 +36,37 @@
             android:id="@+id/btn_like_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_like_white_outlined"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_like_white_outlined"
+            android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:contentDescription="@string/todo"/>
+            tools:ignore="MissingConstraints" />
 
 
         <TextView
             android:id="@+id/tv_name_dress_product"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/im_content_product"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/im_image_product"
+            tools:ignore="MissingConstraints"
+            tools:text="Dahlia Cascade Layered Jumpsuit" />
 
         <TextView
             android:id="@+id/tv_price_dress_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/colorWhite"
-            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_product"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:text="Rp. 12.000.000" />
 
 
         <Button
@@ -72,7 +82,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_price_dress_product"
             tools:ignore="MissingConstraints" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 
 public class SliderMainMenuViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView tvTitle;
+    public TextView tvItemName;
     public TextView tvPrice;
     public RoundedImageView imContent;
     public ImageButton btnWishlist;
@@ -23,7 +23,7 @@ public class SliderMainMenuViewHolder extends RecyclerView.ViewHolder {
     public SliderMainMenuViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        tvTitle = itemView.findViewById(R.id.tv_name_dress_main);
+        tvItemName = itemView.findViewById(R.id.tv_name_dress_main);
         tvPrice = itemView.findViewById(R.id.tv_harga_dress_main);
         imContent = itemView.findViewById(R.id.im_content_main);
         btnWishlist = itemView.findViewById(R.id.btn_like_main);

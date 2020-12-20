@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.rentagown.Model.ScreenItem;
+import com.example.rentagown.Model.OnBoadingItem;
 import com.example.rentagown.R;
 
 import java.util.List;
@@ -18,9 +18,9 @@ import java.util.List;
 public class OnBoardingAdapter extends PagerAdapter {
 
     Context mContext;
-    List<ScreenItem> mListScreen;
+    List<OnBoadingItem> mListScreen;
 
-    public OnBoardingAdapter(Context mContext, List<ScreenItem> mListScreen) {
+    public OnBoardingAdapter(Context mContext, List<OnBoadingItem> mListScreen) {
         this.mContext = mContext;
         this.mListScreen = mListScreen;
     }

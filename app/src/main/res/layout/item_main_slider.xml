@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingStart="16dp"
-    android:paddingEnd="16dp"
+    android:paddingEnd="8dp"
     android:paddingTop="15dp"
     android:paddingBottom="15dp">
 
@@ -18,7 +18,7 @@
             android:id="@+id/im_content_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             app:riv_corner_radius="16dp"
             app:riv_mutate_background="true"
             app:riv_oval="false"
