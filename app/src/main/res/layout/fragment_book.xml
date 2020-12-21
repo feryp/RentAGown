@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="@string/your_booking_is_currently_empty"
+            android:text="@string/tv_title_booking_empty"
             android:textSize="16sp"
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/colorBlack"
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/add_your_booking_to_booking_list_and_start_ordering"
+            android:text="@string/tv_desc_booking_empty"
             android:textSize="12sp"
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/colorBlack" />

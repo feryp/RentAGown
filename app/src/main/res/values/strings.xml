@@ -47,11 +47,9 @@
     <!-- fragment booking -->
     <string name="my_booking">My Booking</string>
     <string name="btn_history">History</string>
-
-    <!-- fragment booking -->
-    <string name="add_your_booking_to_booking_list_and_start_ordering">Add your booking to booking list and start ordering</string>
+    <string name="tv_desc_booking_empty">Add your booking to booking list and start ordering</string>
     <string name="btn_browse">Browse</string>
-    <string name="your_booking_is_currently_empty">Your Booking Is Currently Empty</string>
+    <string name="tv_title_booking_empty">Your Booking Is Currently Empty</string>
 
     <!-- activity invoice history -->
     <string name="appbar_invoice_history">Invoice History</string>
@@ -98,6 +96,8 @@
 
     <!-- activity wishlist -->
     <string name="appbar_wishlist">Wishlist</string>
+    <string name="tv_title_wishlist_empty">YOUR WISHLIST IS CURRENTLY EMPTY</string>
+    <string name="tv_desc_wishlist_empty">Add your favorites to wishlist and start building your personal collections</string>
 
 
 </resources>

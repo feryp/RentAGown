@@ -13,15 +13,16 @@ import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.MyBookingViewHolder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> {
 
-    private ArrayList<MyBooking> myBookingList;
-    Context mContext;
+    private Context mContext;
+    private List<MyBooking> myBookingList;
 
-    public MyBookingAdapter(ArrayList<MyBooking> myBookingList, Context mContext) {
-        this.myBookingList = myBookingList;
+    public MyBookingAdapter(Context mContext, List<MyBooking> myBookingList) {
         this.mContext = mContext;
+        this.myBookingList = myBookingList;
     }
 
     @NonNull

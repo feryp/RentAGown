@@ -23,7 +23,7 @@ public class BookFragment extends Fragment {
 
     RecyclerView rvMyBooking;
     LinearLayout layoutEmpty;
-    ArrayList<MyBooking> myBookingList;
+    List<MyBooking> myBookingList;
     MyBookingAdapter adapter;
     Context context;
 
@@ -115,7 +115,7 @@ public class BookFragment extends Fragment {
                 "Rp. 3.000.000"));
 
         //Setup Recycler View
-        adapter = new MyBookingAdapter(myBookingList, context);
+        adapter = new MyBookingAdapter(context, myBookingList);
         rvMyBooking.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvMyBooking.setAdapter(adapter);
 
