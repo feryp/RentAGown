@@ -1,10 +1,8 @@
 package com.example.rentagown.Adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,16 +14,12 @@ import com.example.rentagown.ViewHolder.CategoryMenuViewHolder;
 
 import java.util.List;
 
-public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHolder> {
+public class CategoryProductAdapter extends RecyclerView.Adapter<CategoryMenuViewHolder> {
 
     private List<CategoryMenu> categoryMenuList;
     private ItemClickListener listener;
 
-    public CategoryMenuAdapter(List<CategoryMenu> categoryMenuList) {
-        this.categoryMenuList = categoryMenuList;
-    }
-
-    public CategoryMenuAdapter(List<CategoryMenu> categoryMenuList, ItemClickListener listener) {
+    public CategoryProductAdapter(List<CategoryMenu> categoryMenuList, ItemClickListener listener) {
         this.categoryMenuList = categoryMenuList;
         this.listener = listener;
     }
@@ -33,22 +27,20 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
     @NonNull
     @Override
     public CategoryMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title_menu,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chips_category,parent,false);
         return new CategoryMenuViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final CategoryMenuViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull CategoryMenuViewHolder holder, final int position) {
         holder.tvTitle.setText(categoryMenuList.get(position).getTitleCategory());
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(listener != null) listener.onClick(v, position, false);
-
+                if (listener != null) listener.onClick(v, position,false);
             }
         });
-
     }
 
     @Override
@@ -56,8 +48,7 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
         return categoryMenuList.size();
     }
 
-    public CategoryMenu getItem(int position) {
+    public CategoryMenu getItem(int position){
         return categoryMenuList.get(position);
     }
-
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import com.example.rentagown.Model.FavoriteGown;
 import com.example.rentagown.Model.NewGown;
 import com.example.rentagown.Model.Promo;
 import com.example.rentagown.Model.SliderMainMenu;
+import com.example.rentagown.ProductGownActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.WishlistActivity;
 
@@ -36,6 +39,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
 
     Context context;
     ImageButton imWishlist;
+    Button btnSeeAllCategory, btnSeeAllPromo, btnSeeAllFavoriteGown, btnSeeAllNewGown;
     RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo, rvSliderFavoriteGown, rvSliderNewGown;
     CategoryMenuAdapter adapterMenu;
     SliderMainMenuAdapter adapterMainMenu;
@@ -58,6 +62,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
 
         //INIT VIEW
         imWishlist = view.findViewById(R.id.im_wishlist);
+        btnSeeAllCategory = view.findViewById(R.id.btn_see_all_category);
+        btnSeeAllPromo = view.findViewById(R.id.btn_see_all_promo);
+        btnSeeAllFavoriteGown = view.findViewById(R.id.btn_see_all_favorite);
+        btnSeeAllNewGown = view.findViewById(R.id.btn_see_all_new);
         rvTitleMenu = view.findViewById(R.id.rv_title_menu);
         rvSliderMenu = view.findViewById(R.id.rv_slider_main_menu);
         rvSliderPromo = view.findViewById(R.id.rv_slider_promo);
@@ -156,6 +164,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvSliderNewGown.setAdapter(adapterNewGown);
 
         imWishlist.setOnClickListener(HomeFragment.this);
+        btnSeeAllCategory.setOnClickListener(HomeFragment.this);
 
         return view;
 
@@ -211,6 +220,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
             case R.id.im_wishlist:
                 Intent wishlist = new Intent(getActivity(), WishlistActivity.class);
                 startActivity(wishlist);
+                break;
+            case R.id.btn_see_all_category:
+                Intent categoryProduct = new Intent(getActivity(), ProductGownActivity.class);
+                startActivity(categoryProduct);
                 break;
         }
     }

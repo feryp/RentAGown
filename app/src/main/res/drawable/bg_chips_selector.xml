@@ -2,28 +2,25 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Active tab -->
-    <item
+    <item android:drawable="@drawable/bg_button_rounded_black_outlined"
         android:state_focused="false"
         android:state_pressed="false"
-        android:state_selected="true"
-        android:color="@color/colorPrimary"/>
+        android:state_selected="true"/>
 
     <!-- Inactive tab -->
-    <item
+    <item android:drawable="@drawable/bg_button_rounded_black_outlined"
         android:state_focused="false"
         android:state_pressed="false"
-        android:state_selected="false"
-        android:color="@color/colorDarkGrey" />
+        android:state_selected="false"/>
 
     <!-- Pressed tab -->
-    <item
-        android:state_pressed="true"
-        android:color="@color/colorPrimary" />
+    <item android:drawable="@drawable/bg_button_rounded_gold"
+        android:state_pressed="true"/>
 
     <!-- Selected tab (using d-pad) -->
-    <item
+    <item android:drawable="@drawable/bg_button_rounded_gold"
         android:state_focused="true"
         android:state_pressed="false"
-        android:state_selected="true"
-        android:color="@color/colorPrimary" />
+        android:state_selected="true"/>
+
 </selector>

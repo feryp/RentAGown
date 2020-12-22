@@ -1,25 +1,24 @@
 package com.example.rentagown.Model;
 
-public class SliderMainMenu {
-
-    int idSlider;
+public class Product {
+    int idProduct;
     int image;
-    private  String ItemName;
+    private String ItemName;
     private String price;
 
-    public SliderMainMenu(int idSlider, int image, String ItemName, String price) {
-        this.idSlider = idSlider;
+    public Product(int idProduct, int image, String itemName, String price) {
+        this.idProduct = idProduct;
         this.image = image;
-        this.ItemName = ItemName;
+        ItemName = itemName;
         this.price = price;
     }
 
-    public int getIdSlider() {
-        return idSlider;
+    public int getIdProduct() {
+        return idProduct;
     }
 
-    public void setIdSlider(int idSlider) {
-        this.idSlider = idSlider;
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
     public int getImage() {
@@ -45,6 +44,4 @@ public class SliderMainMenu {
     public void setPrice(String price) {
         this.price = price;
     }
-
-
 }
