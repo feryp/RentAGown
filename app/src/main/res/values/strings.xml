@@ -99,5 +99,7 @@
     <string name="tv_title_wishlist_empty">YOUR WISHLIST IS CURRENTLY EMPTY</string>
     <string name="tv_desc_wishlist_empty">Add your favorites to wishlist and start building your personal collections</string>
 
+    <!-- activity gown -->
+    <string name="appbar_gown">Gown</string>
 
 </resources>
