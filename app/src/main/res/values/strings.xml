@@ -14,6 +14,7 @@
     <string name="price_booking">Price :</string>
     <string name="dp_paid_booking">DP Paid :</string>
     <string name="remaining_bills_booking">Remaining Bills :</string>
+    <string name="btn_fitting_size">Fitting Size</string>
 
     <!-- item product slider-->
     <string name="btn_book_now">BOOK NOW</string>
@@ -101,5 +102,10 @@
 
     <!-- activity gown -->
     <string name="appbar_gown">Gown</string>
+
+    <!-- activity filter -->
+    <string name="appbar_filter">Filter</string>
+    <string name="btn_reset_filter">Reset</string>
+
 
 </resources>

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -157,6 +158,10 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.im_back:
                 finish();
+                break;
+            case R.id.im_filter:
+                Intent filter = new Intent(ProductGownActivity.this, FilterActivity.class);
+                startActivity(filter);
                 break;
         }
     }

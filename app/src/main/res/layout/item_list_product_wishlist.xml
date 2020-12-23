@@ -87,9 +87,9 @@
         <Button
             android:id="@+id/btn_booking_now"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/bg_btn_choose_selector"
+            style="@style/ButtonRoundedOutlinedGold"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btn_book_now"
             android:textColor="@color/text_color_selector_address"

@@ -15,6 +15,7 @@
         android:fontFamily="@font/poppins_semi_bold"
         android:textColor="@color/colorBlack"
         android:textSize="16sp"
+        tools:text="08 Sep 2020"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,7 @@
             android:maxWidth="169dp"
             android:textColor="@color/colorBlack"
             android:textSize="16sp"
+            tools:text="Selina Colourblock Camisole Dress"
             app:layout_constraintStart_toEndOf="@+id/im_circle_product"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,6 +64,7 @@
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
             android:textSize="9sp"
+            tools:text="On-Progress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,6 +115,7 @@
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
+            tools:text="Rp. 5.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_booking" />
 
@@ -124,6 +128,7 @@
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
+            tools:text="Rp. 2.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_price_booking" />
 
@@ -136,6 +141,7 @@
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
+            tools:text="Rp. 3.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dp_paid" />
 
@@ -147,19 +153,20 @@
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/colorSoftBlack"
             android:textSize="16sp"
+            tools:text="9 September 2020"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_remaining_bils" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="100dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/border_button_gold"
-            android:text="Fitting Size"
-            android:textColor="@color/colorPrimary"
+            style="@style/ButtonRoundedOutlinedGold2"
+            android:text="@string/btn_fitting_size"
+            android:textColor="@color/colorSecondary"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

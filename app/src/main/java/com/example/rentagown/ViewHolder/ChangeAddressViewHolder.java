@@ -43,13 +43,13 @@ public class ChangeAddressViewHolder extends RecyclerView.ViewHolder implements 
         switch (v.getId()){
             case R.id.btn_choose_address:
                 Toast.makeText(v.getContext(),"Choose",Toast.LENGTH_SHORT).show();
-                //clear state
-                btnChooseAddress.setSelected(false);
-                btnChooseAddress.setPressed(true);
-
-                //change state
-                btnChooseAddress.setSelected(true);
-                btnChooseAddress.setPressed(false);
+//                //clear state
+//                btnChooseAddress.setSelected(false);
+//                btnChooseAddress.setPressed(true);
+//
+//                //change state
+//                btnChooseAddress.setSelected(true);
+//                btnChooseAddress.setPressed(false);
                 break;
 
             case R.id.im_edit_address:

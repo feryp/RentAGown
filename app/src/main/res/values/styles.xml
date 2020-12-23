@@ -1,13 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark"  tools:targetApi="23">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
 
+    </style>
+
+    <style name="ButtonRoundedFilledGold" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">28dp</item>
+        <item name="background">@drawable/bg_button_rounded_gold</item>
+    </style>
+
+    <style name="ButtonRoundedOutlinedGold" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="cornerRadius">25dp</item>
+    </style>
+
+    <style name="ButtonRoundedOutlinedWhite" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorWhite</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="ButtonRoundedOutlinedGold2" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="cornerRadius">4dp</item>
     </style>
 
     <style name="AppTheme.ActionBar.Transparent" parent="AppTheme">
@@ -45,6 +65,13 @@
 
         <!-- inactive track color (30% transparency) -->
         <item name="android:colorForeground">@color/colorDarkGrey</item>
+    </style>
+
+    <!-- Chip Choice Custom -->
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/background_color_chip_state_list</item>
+        <item name="android:textColor">@color/text_color_chip_state_list</item>
+        <item name="chipStrokeColor">@color/stroke_color_chip_state_list</item>
     </style>
 
 </resources>
