@@ -12,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainBeforeActivity"></activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".MainBeforeActivity" />
+        <activity android:name=".SignInActivity" />
         <activity android:name=".ViewProductActivity" />
         <activity android:name=".FilterActivity" />
         <activity android:name=".ProductGownActivity" />

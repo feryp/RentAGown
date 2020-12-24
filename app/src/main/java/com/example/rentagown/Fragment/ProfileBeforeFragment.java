@@ -14,9 +14,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.rentagown.InvoiceHistoryActivity;
-import com.example.rentagown.LoginActivity;
+import com.example.rentagown.SignInActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
+import com.example.rentagown.SignUpActivity;
 
 
 public class ProfileBeforeFragment extends Fragment implements View.OnClickListener {
@@ -43,6 +44,7 @@ public class ProfileBeforeFragment extends Fragment implements View.OnClickListe
 
         //SET LISTENER
         btnSignIn.setOnClickListener(ProfileBeforeFragment.this);
+        btnCreateAccount.setOnClickListener(ProfileBeforeFragment.this);
         invoiceHistory.setOnClickListener(ProfileBeforeFragment.this);
         settings.setOnClickListener(ProfileBeforeFragment.this);
         signOut.setOnClickListener(ProfileBeforeFragment.this);
@@ -55,8 +57,13 @@ public class ProfileBeforeFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_to_layout_login:
-                Intent login = new Intent(getActivity(), LoginActivity.class);
+                Intent login = new Intent(getActivity(), SignInActivity.class);
                 startActivity(login);
+                break;
+
+            case R.id.btn_create_account:
+                Intent createAccount = new Intent(getActivity(), SignUpActivity.class);
+                startActivity(createAccount);
                 break;
 
             case R.id.menu_invoice_history:

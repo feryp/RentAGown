@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.rentagown.InvoiceHistoryActivity;
-import com.example.rentagown.LoginActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
 

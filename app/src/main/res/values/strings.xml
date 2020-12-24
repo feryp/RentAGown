@@ -107,7 +107,7 @@
     <string name="appbar_filter">Filter</string>
     <string name="btn_reset_filter">Reset</string>
 
-    <!-- activity login -->
+    <!-- activity sign in -->
     <string name="tv_title_login">Login</string>
     <string name="et_email_login">Email</string>
     <string name="et_password_login">Password</string>
@@ -115,6 +115,15 @@
     <string name="btn_sign_in">SIGN IN</string>
     <string name="don_t_have_an_account">Don\'t have an account ?</string>
     <string name="btn_to_sign_up">Sign Up</string>
+
+    <!-- activity sign up -->
+    <string name="tv_title_register">Register</string>
+    <string name="et_name_register">Name</string>
+    <string name="et_email_register">Email</string>
+    <string name="et_no_handphone">No. Handphone</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="btn_to_sign_in">Sign In</string>
 
 
 </resources>
