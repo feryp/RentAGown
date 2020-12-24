@@ -160,7 +160,7 @@ public class OnBoardingActivity extends AppCompatActivity{
                 .putBoolean("onboarding_complete",true).apply();
 
         // Launch the main Activity, called MainActivity
-        Intent main = new Intent(this, MainActivity.class);
+        Intent main = new Intent(this, MainBeforeActivity.class);
         startActivity(main);
 
         // Close the OnboardingActivity

@@ -2,22 +2,18 @@ package com.example.rentagown;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 import com.example.rentagown.Fragment.BookFragment;
 import com.example.rentagown.Fragment.HomeFragment;
-import com.example.rentagown.Fragment.ProfileFragment;
+import com.example.rentagown.Fragment.ProfileAfterFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainAfterActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
@@ -26,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_after);
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
+                            selectedFragment = new ProfileAfterFragment();
                             bottomNavigationView.setItemIconTintList(null);
                             break;
                     }

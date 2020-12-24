@@ -2,16 +2,19 @@ package com.example.rentagown;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText etEmail, etPassword;
+    Button btnSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,10 @@ public class LoginActivity extends AppCompatActivity {
         //INIT VIEW
         etEmail = findViewById(R.id.et_email_login);
         etPassword = findViewById(R.id.et_password_login);
+        btnSignIn = findViewById(R.id.btn_login);
+
+        //Set Listener
+        btnSignIn.setOnClickListener(this);
     }
 
     public void ShowHidePass(View view) {
@@ -35,6 +42,16 @@ public class LoginActivity extends AppCompatActivity {
                 //Hide Password
                 etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
             }
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_login:
+                Intent login = new Intent(LoginActivity.this, MainAfterActivity.class);
+                startActivity(login);
+                break;
         }
     }
 }

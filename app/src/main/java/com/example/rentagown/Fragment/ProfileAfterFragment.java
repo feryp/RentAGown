@@ -1,5 +1,6 @@
 package com.example.rentagown.Fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,7 +18,7 @@ import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
 
 
-public class ProfileFragment extends Fragment implements View.OnClickListener{
+public class ProfileAfterFragment extends Fragment implements View.OnClickListener{
 
     ConstraintLayout invoiceHistory, transactionStatus, settings, helpCenter, privacyPolicy, termsConditions, signOut;
 
@@ -25,7 +26,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment\
-        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_profile_after, container, false);
 
         //INIT VIEW
         invoiceHistory = v.findViewById(R.id.menu_invoice_history);
@@ -37,15 +38,16 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         signOut = v.findViewById(R.id.btn_logout);
 
         //SET LISTENER
-        invoiceHistory.setOnClickListener(ProfileFragment.this);
-        settings.setOnClickListener(ProfileFragment.this);
-        signOut.setOnClickListener(ProfileFragment.this);
+        invoiceHistory.setOnClickListener(ProfileAfterFragment.this);
+        settings.setOnClickListener(ProfileAfterFragment.this);
+        signOut.setOnClickListener(ProfileAfterFragment.this);
 
         return v;
 
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -59,10 +61,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 Intent settings = new Intent(getActivity(), SettingActivity.class);
                 startActivity(settings);
                 break;
-            case R.id.btn_logout:
-                Intent logout = new Intent(getActivity(), LoginActivity.class);
-                startActivity(logout);
-                break;
+
         }
     }
 }
