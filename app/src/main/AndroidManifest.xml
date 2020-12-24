@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FilterActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ViewProductActivity" />
+        <activity android:name=".FilterActivity" />
         <activity android:name=".ProductGownActivity" />
         <activity android:name=".WishlistActivity" />
         <activity android:name=".AddAddressActivity" />

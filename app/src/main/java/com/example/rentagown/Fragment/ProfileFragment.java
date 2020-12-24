@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.rentagown.InvoiceHistoryActivity;
+import com.example.rentagown.LoginActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
 
@@ -38,6 +39,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         //SET LISTENER
         invoiceHistory.setOnClickListener(ProfileFragment.this);
         settings.setOnClickListener(ProfileFragment.this);
+        signOut.setOnClickListener(ProfileFragment.this);
 
         return v;
 
@@ -56,6 +58,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(getActivity().getApplicationContext(),"Settings", Toast.LENGTH_SHORT).show();
                 Intent settings = new Intent(getActivity(), SettingActivity.class);
                 startActivity(settings);
+                break;
+            case R.id.btn_logout:
+                Intent logout = new Intent(getActivity(), LoginActivity.class);
+                startActivity(logout);
                 break;
         }
     }

@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_back"
+                    android:src="@drawable/ic_back_black"
                     android:background="#00000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
