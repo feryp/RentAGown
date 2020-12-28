@@ -11,13 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.rentagown.Interface.ItemClickListener;
 import com.example.rentagown.Model.MyBooking;
 import com.example.rentagown.R;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
     public TextView tvDateTransaction, tvDateBooking, tvNameProduct, tvPrice, tvDpPaid, tvRemainingBills,tvStatusBooking;
-    public CircleImageView imProduct;
+    public RoundedImageView imProduct;
     public Button btnFitingSize;
 
     private MyBooking myBooking;
