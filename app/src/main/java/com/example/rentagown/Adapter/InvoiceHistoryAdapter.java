@@ -33,11 +33,11 @@ public class InvoiceHistoryAdapter extends RecyclerView.Adapter<InvoiceHistoryVi
 
     @Override
     public void onBindViewHolder(@NonNull InvoiceHistoryViewHolder holder, int position) {
-        holder.tv_id_invoice.setText(invoiceHistoryList.get(position).getIdInvoice());
-        holder.tv_price_invoice.setText(invoiceHistoryList.get(position).getPriceInvoice());
-        holder.tv_status_incvoice.setText(invoiceHistoryList.get(position).getStatusInvoice());
-        holder.tv_time_invoice.setText(invoiceHistoryList.get(position).getTimeInvoice());
-        holder.tv_date_invoice.setText(invoiceHistoryList.get(position).getDateInvoice());
+        holder.tvIdInvoice.setText(invoiceHistoryList.get(position).getIdInvoice());
+        holder.tvPriceInvoice.setText(invoiceHistoryList.get(position).getPriceInvoice());
+        holder.tvStatusIncvoice.setText(invoiceHistoryList.get(position).getStatusInvoice());
+        holder.tvTimeInvoice.setText(invoiceHistoryList.get(position).getTimeInvoice());
+        holder.tvDateInvoice.setText(invoiceHistoryList.get(position).getDateInvoice());
     }
 
     @Override

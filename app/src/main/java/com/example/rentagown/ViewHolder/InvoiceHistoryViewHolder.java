@@ -12,7 +12,7 @@ import com.example.rentagown.R;
 
 public class InvoiceHistoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView tv_id_invoice, tv_price_invoice, tv_status_incvoice, tv_time_invoice, tv_date_invoice;
+    public TextView tvIdInvoice, tvPriceInvoice, tvStatusIncvoice, tvTimeInvoice, tvDateInvoice;
 
     private InvoiceHistory invoiceHistory;
 
@@ -22,11 +22,11 @@ public class InvoiceHistoryViewHolder extends RecyclerView.ViewHolder implements
     public InvoiceHistoryViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        tv_id_invoice = itemView.findViewById(R.id.tv_id_invoice_history);
-        tv_price_invoice = itemView.findViewById(R.id.tv_price_invoice_history);
-        tv_status_incvoice = itemView.findViewById(R.id.tv_status_invoice_history);
-        tv_time_invoice = itemView.findViewById(R.id.tv_time_invoice_history);
-        tv_date_invoice = itemView.findViewById(R.id.tv_date_invoice_history);
+        tvIdInvoice = itemView.findViewById(R.id.tv_id_invoice_history);
+        tvPriceInvoice = itemView.findViewById(R.id.tv_price_invoice_history);
+        tvStatusIncvoice = itemView.findViewById(R.id.tv_status_invoice_history);
+        tvTimeInvoice = itemView.findViewById(R.id.tv_time_invoice_history);
+        tvDateInvoice = itemView.findViewById(R.id.tv_date_invoice_history);
 
         itemView.setOnClickListener(this);
     }

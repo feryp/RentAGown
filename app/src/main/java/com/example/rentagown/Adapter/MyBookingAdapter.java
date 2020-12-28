@@ -34,14 +34,16 @@ public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyBookingViewHolder holder, int position) {
-        holder.tv_date_transaction.setText(myBookingList.get(position).getDateTransaction());
-        holder.tv_date_booking.setText(myBookingList.get(position).getDateBooking());
-        holder.tv_name_product.setText(myBookingList.get(position).getNameProduct());
-        holder.tv_status_booking.setText(myBookingList.get(position).getStatusBooking());
-        holder.tv_price.setText(myBookingList.get(position).getPrice());
-        holder.tv_dp_paid.setText(myBookingList.get(position).getDpPaid());
-        holder.tv_remaining_bills.setText(myBookingList.get(position).getRemainingBills());
-        holder.im_product.setImageResource(myBookingList.get(position).getImageProduct());
+        holder.tvDateTransaction.setText(myBookingList.get(position).getDateTransaction());
+        holder.tvDateBooking.setText(myBookingList.get(position).getDateBooking());
+        holder.tvNameProduct.setText(myBookingList.get(position).getNameProduct());
+        holder.tvStatusBooking.setText(myBookingList.get(position).getStatusBooking());
+        holder.tvPrice.setText(myBookingList.get(position).getPrice());
+        holder.tvDpPaid.setText(myBookingList.get(position).getDpPaid());
+        holder.tvRemainingBills.setText(myBookingList.get(position).getRemainingBills());
+        holder.imProduct.setImageResource(myBookingList.get(position).getImageProduct());
+
+
     }
 
     @Override

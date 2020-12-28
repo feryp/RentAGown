@@ -1,6 +1,7 @@
 package com.example.rentagown.ViewHolder;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,8 +16,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-    public TextView tv_date_transaction, tv_date_booking, tv_name_product, tv_price, tv_dp_paid, tv_remaining_bills,tv_status_booking;
-    public CircleImageView im_product;
+    public TextView tvDateTransaction, tvDateBooking, tvNameProduct, tvPrice, tvDpPaid, tvRemainingBills,tvStatusBooking;
+    public CircleImageView imProduct;
+    public Button btnFitingSize;
 
     private MyBooking myBooking;
 
@@ -26,14 +28,14 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
     public MyBookingViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        tv_date_transaction = itemView.findViewById(R.id.tv_tgl_transaction);
-        tv_date_booking = itemView.findViewById(R.id.tv_tgl_booking_product);
-        tv_name_product = itemView.findViewById(R.id.tv_name_dress_booking);
-        tv_price = itemView.findViewById(R.id.tv_price_booking);
-        tv_dp_paid = itemView.findViewById(R.id.tv_dp_paid);
-        tv_remaining_bills = itemView.findViewById(R.id.tv_remaining_bils);
-        tv_status_booking = itemView.findViewById(R.id.tv_status_booking);
-        im_product = itemView.findViewById(R.id.im_circle_product);
+        tvDateTransaction = itemView.findViewById(R.id.tv_tgl_transaction);
+        tvDateBooking = itemView.findViewById(R.id.tv_tgl_booking_product);
+        tvNameProduct = itemView.findViewById(R.id.tv_name_dress_booking);
+        tvPrice = itemView.findViewById(R.id.tv_price_booking);
+        tvDpPaid = itemView.findViewById(R.id.tv_dp_paid);
+        tvRemainingBills = itemView.findViewById(R.id.tv_remaining_bils);
+        tvStatusBooking = itemView.findViewById(R.id.tv_status_booking);
+        imProduct = itemView.findViewById(R.id.im_circle_product);
 
         itemView.setOnClickListener(this);
     }
