@@ -131,4 +131,10 @@
     <string name="we_will_email_you_a_link_reset_your_password">We will email you a link reset your password</string>
     <string name="btn_send_email">Send</string>
 
+    <!-- activity email success -->
+    <string name="btn_back_sign_in">Sign In</string>
+    <string name="didn_t_receive_the_link">Didn\'t receive the link?</string>
+    <string name="btn_resend_link">Resend</string>
+    <string name="please_check_your_inbox_and_click_in_the_receive_link_to_reset_a_password">Please check your inbox and click in the receive link to reset a password</string>
+    <string name="tv_title_email_has_been_sent">Email has been sent!</string>
 </resources>
