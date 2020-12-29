@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.example.rentagown.Adapter.PageAdapterDetailProduct;
@@ -41,6 +42,11 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         back = findViewById(R.id.im_back);
         like = findViewById(R.id.im_like);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
+
+        ViewGroup.LayoutParams params = viewPager.getLayoutParams();
+        params.height = 5000;
+        viewPager.setLayoutParams(params);
+
 
         sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
@@ -85,6 +91,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         //Set Listener
         back.setOnClickListener(this);
         like.setOnClickListener(this);
+
 
 
     }

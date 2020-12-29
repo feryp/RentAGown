@@ -74,4 +74,10 @@
         <item name="chipStrokeColor">@color/stroke_color_chip_state_list</item>
     </style>
 
+    <!-- Rating Bar Custom -->
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlActivated">#E9B90A</item>
+        <item name="colorControlNormal">@color/colorSoftGrey</item>
+    </style>
+
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="65dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginTop="12dp"
@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorSoftGray"
             android:textSize="12sp"
+            tools:text="INV-08092020-070001"
             android:fontFamily="@font/poppins_medium" />
 
         <TextView
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorBlack"
             android:textSize="16sp"
+            tools:text="Rp. 2.000.000"
             android:fontFamily="@font/poppins_semi_bold" />
 
     </LinearLayout>
@@ -66,6 +68,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorBlack"
             android:textSize="12sp"
+            tools:text="Transfer Manual"
             android:fontFamily="@font/poppins_medium" />
 
         <TextView
@@ -73,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
+            tools:text="10:15"
             android:textColor="@color/colorDarkGrey"
             android:fontFamily="@font/poppins_regular" />
 
@@ -82,6 +86,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorDarkGrey"
             android:textSize="12sp"
+            tools:text="08 Sep 2020"
             android:fontFamily="@font/poppins_regular" />
 
     </LinearLayout>

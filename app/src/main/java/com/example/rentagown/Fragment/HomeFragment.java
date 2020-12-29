@@ -1,5 +1,6 @@
 package com.example.rentagown.Fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import com.example.rentagown.Model.FavoriteGown;
 import com.example.rentagown.Model.NewGown;
 import com.example.rentagown.Model.Promo;
 import com.example.rentagown.Model.SliderMainMenu;
+import com.example.rentagown.NotificationActivity;
 import com.example.rentagown.ProductGownActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.WishlistActivity;
@@ -38,7 +40,7 @@ import java.util.List;
 public class HomeFragment extends Fragment implements View.OnClickListener, ItemClickListener {
 
     Context context;
-    ImageButton imWishlist;
+    ImageButton imWishlist, imNotification;
     Button btnSeeAllCategory, btnSeeAllPromo, btnSeeAllFavoriteGown, btnSeeAllNewGown;
     RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo, rvSliderFavoriteGown, rvSliderNewGown;
     CategoryMenuAdapter adapterMenu;
@@ -62,6 +64,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
 
         //INIT VIEW
         imWishlist = view.findViewById(R.id.im_wishlist);
+        imNotification = view.findViewById(R.id.im_notification);
         btnSeeAllCategory = view.findViewById(R.id.btn_see_all_category);
         btnSeeAllPromo = view.findViewById(R.id.btn_see_all_promo);
         btnSeeAllFavoriteGown = view.findViewById(R.id.btn_see_all_favorite);
@@ -164,6 +167,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvSliderNewGown.setAdapter(adapterNewGown);
 
         imWishlist.setOnClickListener(HomeFragment.this);
+        imNotification.setOnClickListener(HomeFragment.this);
         btnSeeAllCategory.setOnClickListener(HomeFragment.this);
 
         return view;
@@ -214,6 +218,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         return dummySliderMainMenus;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -221,6 +226,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
                 Intent wishlist = new Intent(getActivity(), WishlistActivity.class);
                 startActivity(wishlist);
                 break;
+
+            case R.id.im_notification:
+                Intent notification = new Intent(getActivity(), NotificationActivity.class);
+                startActivity(notification);
+                break;
+
             case R.id.btn_see_all_category:
                 Intent categoryProduct = new Intent(getActivity(), ProductGownActivity.class);
                 startActivity(categoryProduct);
@@ -228,6 +239,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view, int position, boolean isLongClick) {
         switch (view.getId()) {

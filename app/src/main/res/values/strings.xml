@@ -52,6 +52,12 @@
     <string name="btn_browse">Browse</string>
     <string name="tv_title_booking_empty">Your Booking Is Currently Empty</string>
 
+    <!-- activity history booking -->
+    <string name="appbar_history">History</string>
+
+    <!-- activity notification-->
+    <string name="appbar_notification">Notification</string>
+
     <!-- activity invoice history -->
     <string name="appbar_invoice_history">Invoice History</string>
 
@@ -137,4 +143,15 @@
     <string name="btn_resend_link">Resend</string>
     <string name="please_check_your_inbox_and_click_in_the_receive_link_to_reset_a_password">Please check your inbox and click in the receive link to reset a password</string>
     <string name="tv_title_email_has_been_sent">Email has been sent!</string>
+
+    <!-- activity view product -->
+    <string name="title_price_product">PRICE</string>
+    <string name="title_date_booking">DATE BOOKING</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="special_treatment">Special Treatment</string>
+    <string name="one_day_service">One-day service</string>
+    <string name="harga_sudah_termasuk_veil_dan_balero_dan_gratis_peminjaman_aksesoris">Harga sudah termasuk veil dan balero, dan gratis peminjaman aksesoris</string>
+    <string name="name_view_product">Selina Colourblock Camisole Dress</string>
+
+
 </resources>
