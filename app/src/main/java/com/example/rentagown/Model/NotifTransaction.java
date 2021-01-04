@@ -7,16 +7,16 @@ public class NotifTransaction {
     String timeBook;
     String statusPayment;
     String price;
-    String statusHistory;
+    String statusNotif;
 
-    public NotifTransaction(String dateTransaction, String itemName, String dateBook, String timeBook, String statusPayment, String price, String statusHistory) {
+    public NotifTransaction(String dateTransaction, String itemName, String dateBook, String timeBook, String statusPayment, String price, String statusNotif) {
         this.dateTransaction = dateTransaction;
         ItemName = itemName;
         this.dateBook = dateBook;
         this.timeBook = timeBook;
         this.statusPayment = statusPayment;
         this.price = price;
-        this.statusHistory = statusHistory;
+        this.statusNotif = statusNotif;
     }
 
     public String getDateTransaction() {
@@ -67,11 +67,11 @@ public class NotifTransaction {
         this.price = price;
     }
 
-    public String getStatusHistory() {
-        return statusHistory;
+    public String getStatusNotif() {
+        return statusNotif;
     }
 
     public void setStatusHistory(String statusHistory) {
-        this.statusHistory = statusHistory;
+        this.statusNotif= statusNotif;
     }
 }

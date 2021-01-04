@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/tv_date_promo_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        tools:text="08 SEP 2020"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:background="@drawable/border_bottom"
+        android:paddingBottom="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_shadow"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_promo_notif"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/tv_name_promo_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            tools:text="Promo Spesial HUT RI Ke 71" />
+
+        <TextView
+            android:id="@+id/tv_discount_promo_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorSoftGray"
+            android:textSize="12sp"
+            tools:text="Diskon hingga 80%"
+            android:layout_below="@+id/tv_name_promo_notif"/>
+
+
+        <TextView
+            android:id="@+id/tv_desc_promo_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            tools:text="Dari style Prewedding produk terbaik dengan diskon hingga 80% lho! Cek sekarang, cuma di HUT RI ke 71 ini."
+            android:layout_below="@+id/tv_discount_promo_notif"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_discount"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/todo"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ public class NotifTransactionAdapter extends RecyclerView.Adapter<NotifTransacti
         holder.tvTimeBooking.setText(notifTransactionList.get(position).getTimeBook());
         holder.tvStatusPayment.setText(notifTransactionList.get(position).getStatusPayment());
         holder.tvPriceProduct.setText(notifTransactionList.get(position).getPrice());
-        holder.tvStatusHistory.setText(notifTransactionList.get(position).getStatusHistory());
+        holder.tvStatusNotif.setText(notifTransactionList.get(position).getStatusNotif());
     }
 
     @Override

@@ -245,7 +245,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         switch (view.getId()) {
             case  R.id.category_menu_item_container:
                 CategoryMenu cm = adapterMenu.getItem(position);
-
                 adapterMainMenu.replaceItems(getSliderMainMenuByCategory(cm.getIdCategory()));
                 break;
 

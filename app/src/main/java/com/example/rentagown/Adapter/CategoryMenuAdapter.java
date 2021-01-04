@@ -1,6 +1,7 @@
 package com.example.rentagown.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,15 @@ import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.CategoryMenuViewHolder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHolder> {
 
     private List<CategoryMenu> categoryMenuList;
     private ItemClickListener listener;
+
+    private List<TextView> textViewList = new ArrayList<>();
 
     public CategoryMenuAdapter(List<CategoryMenu> categoryMenuList) {
         this.categoryMenuList = categoryMenuList;
@@ -39,12 +43,25 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
 
     @Override
     public void onBindViewHolder(@NonNull final CategoryMenuViewHolder holder, final int position) {
+
+        textViewList.add(holder.tvTitle);
+//
+        if (!textViewList.contains(holder.tvTitle)) {
+            textViewList.add(holder.tvTitle);
+        }
         holder.tvTitle.setText(categoryMenuList.get(position).getTitleCategory());
+
+
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(listener != null) listener.onClick(v, position, false);
+
+                for(TextView tv:textViewList){
+                    tv.setTextColor(Color.parseColor("#747474"));
+                }
+                holder.tvTitle.setTextColor(Color.parseColor("#E6B31E"));
 
             }
         });
@@ -60,4 +77,7 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
         return categoryMenuList.get(position);
     }
 
+    public class Utils{
+        public static final int selected_position = -1;
+    }
 }

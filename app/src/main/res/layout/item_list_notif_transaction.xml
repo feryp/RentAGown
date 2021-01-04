@@ -8,7 +8,7 @@
     android:paddingTop="24dp">
 
     <TextView
-        android:id="@+id/tv_date_transaction_history"
+        android:id="@+id/tv_date_transaction_notif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -33,7 +33,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_date_transaction_history"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_transaction_notif"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -43,7 +43,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_name_product_history"
+                android:id="@+id/tv_name_product_notif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semi_bold"
@@ -57,7 +57,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_date_booking_history"
+                    android:id="@+id/tv_date_booking_notif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
@@ -73,7 +73,7 @@
                     android:background="@color/colorSoftGray" />
 
                 <TextView
-                    android:id="@+id/tv_time_booking_history"
+                    android:id="@+id/tv_time_booking_notif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
@@ -85,7 +85,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_status_payment_history"
+                android:id="@+id/tv_status_payment_notif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -105,7 +105,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_price_product_history"
+                android:id="@+id/tv_price_product_notif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
@@ -114,7 +114,7 @@
                 tools:text="Rp.2.000.000" />
 
             <TextView
-                android:id="@+id/tv_status_history"
+                android:id="@+id/tv_status_notif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"

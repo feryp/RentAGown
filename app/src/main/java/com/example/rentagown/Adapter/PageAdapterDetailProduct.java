@@ -18,6 +18,7 @@ public class PageAdapterDetailProduct extends FragmentStatePagerAdapter {
         this.counttab = counttab;
     }
 
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
