@@ -10,7 +10,7 @@
 
     </style>
 
-    <style name="ButtonRoundedFilledGold" parent="Widget.MaterialComponents.Button">
+    <style name="ButtonRoundedFilledGold" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="cornerRadius">28dp</item>
         <item name="background">@drawable/bg_button_rounded_gold</item>
     </style>

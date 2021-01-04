@@ -125,19 +125,20 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btn_whatsapp"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:background="@drawable/bg_chatting"
             android:contentDescription="@string/todo"/>
 
         <Button
-            android:id="@+id/btn_booking"
+            android:id="@+id/btn_book_now"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="16dp"
             style="@style/ButtonRoundedFilledGold"
             android:textAllCaps="false"
-            android:text="Book Now"
+            android:text="@string/btn_booking_now"
             android:textSize="16sp"
             android:textColor="@color/colorWhite"
             android:fontFamily="@font/poppins_semi_bold"

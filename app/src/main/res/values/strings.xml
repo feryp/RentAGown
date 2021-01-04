@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">RentAGown</string>
     <string name="todo">todo</string>
 
@@ -152,6 +152,20 @@
     <string name="one_day_service">One-day service</string>
     <string name="harga_sudah_termasuk_veil_dan_balero_dan_gratis_peminjaman_aksesoris">Harga sudah termasuk veil dan balero, dan gratis peminjaman aksesoris</string>
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
+    <string name="btn_booking_now">Book Now</string>
+
+    <!-- activity your booking -->
+    <string name="appbar_your_booking">Your Booking</string>
+    <string name="name_dress_your_booking">Selina Colourblock Camisole Dress</string>
+    <string name="status_your_booking">Tersedia</string>
+    <string name="category_dress_your_booking">Prewedding Gown</string>
+    <string name="special_treatment_your_booking">One Day Service</string>
+    <string name="price_your_booking">Rp. 5.000.000</string>
+    <string name="date_your_booking" tools:ignore="TypographyDashes">9 September 2020 - 12 September 2020</string>
+    <string name="info_your_booking">Maximum return of goods is 7 days after the date of booking, which is 16 September 2020 (Office Hours).</string>
+    <string name="tv_title_total_price">Total Price</string>
+    <string name="tv_total_price">Rp. 5.000.000</string>
+    <string name="btn_checkout">Checkout</string>
 
 
 </resources>

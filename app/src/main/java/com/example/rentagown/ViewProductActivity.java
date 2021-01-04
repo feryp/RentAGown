@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.rentagown.Adapter.PageAdapterDetailProduct;
@@ -32,7 +35,8 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
     SliderView sliderView;
     List<SliderItemProduct> sliderItemProductList;
     TabLayout tabDetailProduct;
-    ImageButton back, like;
+    ImageButton back, like, btnWhatsapp;
+    Button btnBookNow;
 
 
 
@@ -46,6 +50,8 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         tabDetailProduct = findViewById(R.id.tab_detail_product);
         back = findViewById(R.id.im_back);
         like = findViewById(R.id.im_like);
+        btnWhatsapp = findViewById(R.id.btn_whatsapp);
+        btnBookNow = findViewById(R.id.btn_book_now);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
 
         ViewGroup.LayoutParams params = viewPager.getLayoutParams();
@@ -96,6 +102,8 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         //Set Listener
         back.setOnClickListener(this);
         like.setOnClickListener(this);
+        btnWhatsapp.setOnClickListener(this);
+        btnBookNow.setOnClickListener(this);
 
 
 
@@ -103,11 +111,16 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
 
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.im_back:
                 finish();
+                break;
+            case R.id.btn_book_now:
+                Intent bookNow = new Intent(ViewProductActivity.this, YourBookingActivity.class);
+                startActivity(bookNow);
                 break;
         }
     }

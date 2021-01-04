@@ -36,7 +36,7 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
         tvDpPaid = itemView.findViewById(R.id.tv_dp_paid);
         tvRemainingBills = itemView.findViewById(R.id.tv_remaining_bils);
         tvStatusBooking = itemView.findViewById(R.id.tv_status_booking);
-        imProduct = itemView.findViewById(R.id.im_circle_product);
+        imProduct = itemView.findViewById(R.id.im_product_booking);
 
         itemView.setOnClickListener(this);
     }

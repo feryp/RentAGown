@@ -93,7 +93,7 @@
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:contentDescription="@string/todo"
-                android:src="@drawable/ic_date" />
+                android:src="@drawable/ic_date_gold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
