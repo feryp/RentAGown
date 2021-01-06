@@ -71,7 +71,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="5dp"
-            tools:text="25%"
+            android:text="25%"
             android:gravity="center"
             android:textSize="8sp"
             android:textColor="@color/colorWhite"
@@ -79,7 +79,6 @@
             android:fontFamily="@font/poppins_regular"
             app:layout_constraintStart_toEndOf="@+id/tv_price_dress_product"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_product"
-            android:visibility="gone"
             tools:ignore="MissingConstraints"/>
 
         <TextView
@@ -89,10 +88,9 @@
             android:textSize="12sp"
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/colorDarkGrey"
-            tools:text="Rp. 8.000.000"
+            android:text="Rp. 8.000.000"
             android:foreground="@drawable/strikethrough_foreground"
             app:layout_constraintTop_toBottomOf="@+id/tv_price_dress_product"
-            android:visibility="gone"
             tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <Button

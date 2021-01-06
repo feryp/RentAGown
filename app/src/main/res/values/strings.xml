@@ -7,6 +7,7 @@
 
     <!-- menu botnav -->
     <string name="nav_home">Home</string>
+    <string name="nav_cart">Cart</string>
     <string name="nav_booking">Booking</string>
     <string name="nav_profile">Profile</string>
 
@@ -30,6 +31,13 @@
     <string name="tv_title_special_promo_for_you">Special Promo For You</string>
     <string name="tv_title_favorite_gown">Favorite Gown</string>
     <string name="tv_title_new_gown">New Gown</string>
+
+    <!-- fragment cart -->
+    <string name="appbar_cart">Cart</string>
+    <string name="info_cart">Maximum return of goods is 7 days after the date of booking, which is 16 September 2020 (Office Hours).</string>
+    <string name="tv_title_total_price">Total Price</string>
+    <string name="tv_total_price">Rp. 0</string>
+    <string name="btn_checkout_cart">Checkout</string>
 
     <!-- fragment profile -->
     <string name="title_personal">Personal</string>
@@ -154,17 +162,12 @@
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
     <string name="btn_booking_now">Book Now</string>
 
+
     <!-- activity your booking -->
     <string name="appbar_your_booking">Your Booking</string>
-    <string name="name_dress_your_booking">Selina Colourblock Camisole Dress</string>
-    <string name="status_your_booking">Tersedia</string>
-    <string name="category_dress_your_booking">Prewedding Gown</string>
-    <string name="special_treatment_your_booking">One Day Service</string>
-    <string name="price_your_booking">Rp. 5.000.000</string>
-    <string name="date_your_booking" tools:ignore="TypographyDashes">9 September 2020 - 12 September 2020</string>
     <string name="info_your_booking">Maximum return of goods is 7 days after the date of booking, which is 16 September 2020 (Office Hours).</string>
-    <string name="tv_title_total_price">Total Price</string>
-    <string name="tv_total_price">Rp. 5.000.000</string>
+    <string name="tv_title_total_price_your_booking">Total Price</string>
+    <string name="tv_total_price_your_booking">Rp. 0</string>
     <string name="btn_checkout">Checkout</string>
 
 

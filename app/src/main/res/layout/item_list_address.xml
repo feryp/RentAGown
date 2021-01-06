@@ -34,7 +34,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tv_address_label"
+        android:id="@+id/tv_label_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -58,7 +58,7 @@
         android:textColor="@color/colorMistyBlack"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_address_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_address"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -76,7 +76,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/et_detail_address"
+        android:id="@+id/tv_detail_address"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"

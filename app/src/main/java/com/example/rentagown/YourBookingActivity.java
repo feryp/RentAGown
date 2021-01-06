@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class YourBookingActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageButton back, btnCalendar, btnWhatsapp;
+    ImageButton back, btnWhatsapp;
     Button btnCheckout;
 
     @Override
@@ -20,14 +20,11 @@ public class YourBookingActivity extends AppCompatActivity implements View.OnCli
 
         //INIT VIEW
         back = findViewById(R.id.im_back);
-        btnCalendar = findViewById(R.id.btn_calendar);
         btnWhatsapp = findViewById(R.id.btn_whatsapp);
         btnCheckout = findViewById(R.id.btn_checkout);
 
-
         //SET LISTENER
         back.setOnClickListener(this);
-        btnCalendar.setOnClickListener(this);
         btnWhatsapp.setOnClickListener(this);
         btnCheckout.setOnClickListener(this);
     }

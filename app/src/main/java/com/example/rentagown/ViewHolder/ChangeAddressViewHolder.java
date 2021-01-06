@@ -28,7 +28,7 @@ public class ChangeAddressViewHolder extends RecyclerView.ViewHolder implements 
         tvLabelAddress = itemView.findViewById(R.id.tv_address_label);
         tvName = itemView.findViewById(R.id.tv_name_address);
         tvNoHp = itemView.findViewById(R.id.tv_nohp_address);
-        tvDetailAddress = itemView.findViewById(R.id.et_detail_address);
+        tvDetailAddress = itemView.findViewById(R.id.tv_detail_address);
         btnChooseAddress = itemView.findViewById(R.id.btn_choose_address);
         editAddress = itemView.findViewById(R.id.im_edit_address);
         deleteAddress = itemView.findViewById(R.id.im_delete_address);

@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.rentagown.Fragment.BookFragment;
+import com.example.rentagown.Fragment.CartFragment;
 import com.example.rentagown.Fragment.HomeFragment;
 import com.example.rentagown.Fragment.ProfileAfterFragment;
 import com.example.rentagown.Fragment.ProfileBeforeFragment;
@@ -36,6 +38,7 @@ public class MainBeforeActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new
             BottomNavigationView.OnNavigationItemSelectedListener() {
+                @SuppressLint("NonConstantResourceId")
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     switch (menuItem.getItemId()){
