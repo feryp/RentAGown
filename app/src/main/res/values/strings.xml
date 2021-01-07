@@ -162,13 +162,33 @@
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
     <string name="btn_booking_now">Book Now</string>
 
-
     <!-- activity your booking -->
     <string name="appbar_your_booking">Your Booking</string>
     <string name="info_your_booking">Maximum return of goods is 7 days after the date of booking, which is 16 September 2020 (Office Hours).</string>
     <string name="tv_title_total_price_your_booking">Total Price</string>
     <string name="tv_total_price_your_booking">Rp. 0</string>
     <string name="btn_checkout">Checkout</string>
+
+    <!-- activity payment -->
+    <string name="title_shipping_address">Shipping Address</string>
+    <string name="btn_change_address">Change Address</string>
+    <string name="label_rumah">Rumah</string>
+    <string name="label_name">John Doe</string>
+    <string name="label_no_hp">(6287871180436)</string>
+    <string name="label_address">Perum. Visenda, Jl. K.H. Hasyim, Kec. Kembangan, Kota Jakarta Barat, DKI Jakarta.</string>
+    <string name="title_payment_methods">Payment Methods</string>
+    <string name="current_method">CURRENT METHOD</string>
+    <string name="default_method">Default Method</string>
+    <string name="available_bank_account_number_you_transfer_to">Available bank account number you transfer to</string>
+    <string name="transfer_bank_bca">Transfer Bank BCA</string>
+    <string name="account_name">John Doe</string>
+    <string name="account_number">5496523645</string>
+
+    <!-- activity bottom sheet bar payment -->
+    <string name="title_select_payment_method">Select Payment Method</string>
+    <string name="deposit_booking_transfer">Deposit Booking (Transfer)</string>
+    <string name="full_payment_transfer">Full Payment (Transfer)</string>
+    <string name="btn_continue">Continue</string>
 
 
 </resources>
