@@ -121,6 +121,16 @@
     <string name="appbar_filter">Filter</string>
     <string name="btn_reset_filter">Reset</string>
     <string name="btn_apply">Apply</string>
+    <string name="chip_paling_sesuai">Paling Sesuai</string>
+    <string name="chip_terbaru">Terbaru</string>
+    <string name="chip_harga_tertinggi">Harga Tertinggi</string>
+    <string name="chip_harga_terendah">Harga Terendah</string>
+    <string name="title_price">Price</string>
+    <string name="et_harga_terendah">Terendah</string>
+    <string name="et_harga_tertinggi">Tertinggi</string>
+    <string name="chip_50_rb_100_rb">50 rb - 100 rb</string>
+    <string name="chip_100_rb_150_rb">100 rb - 150 rb</string>
+    <string name="chip_150_rb_200_rb">150 rb - 200 rb</string>
 
     <!-- activity sign in -->
     <string name="tv_title_login">Login</string>
@@ -204,16 +214,19 @@
     <string name="payment_method_confirm">Payment Method</string>
     <string name="btn_confirmation">Confirmation</string>
     <string name="btn_cancel">Cancel</string>
-    <string name="chip_paling_sesuai">Paling Sesuai</string>
-    <string name="chip_terbaru">Terbaru</string>
-    <string name="chip_harga_tertinggi">Harga Tertinggi</string>
-    <string name="chip_harga_terendah">Harga Terendah</string>
-    <string name="title_price">Price</string>
-    <string name="et_harga_terendah">Terendah</string>
-    <string name="et_harga_tertinggi">Tertinggi</string>
-    <string name="chip_50_rb_100_rb">50 rb - 100 rb</string>
-    <string name="chip_100_rb_150_rb">100 rb - 150 rb</string>
-    <string name="chip_150_rb_200_rb">150 rb - 200 rb</string>
+
+    <!-- activity form confirmation -->
+    <string name="appbar_confirmation">Confirmation</string>
+    <string name="please_fill_out_this_page_after_performing_bank_transfer">Please fill out this page after performing bank transfer</string>
+    <string name="please_make_a_payment_transfer_to_the_following_account_and_fill_in_the_payment_confirmation_document_so_that_we_can_process_your_purchase">Please make a payment transfer to the following account and fill in the payment confirmation document so that we can process your purchase</string>
+    <string name="total_price">Total Price</string>
+    <string name="last_2_digit_is_unique_code_for_bank_transfer_confirm">Last 2 digit is unique code for bank transfer</string>
+    <string name="hint_your_bank_name">Your Bank Name</string>
+    <string name="hint_your_account_number">Your Account Number</string>
+    <string name="hint_your_account_name">Your Account Name</string>
+    <string name="hint_payment_amount">Payment Amount</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_continue_booking">Continue Booking</string>
 
 
 </resources>
