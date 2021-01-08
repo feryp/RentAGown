@@ -55,10 +55,10 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/card_ite_your_booking"
+        android:id="@+id/card_item_your_booking"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_shadow"
         app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
         tools:ignore="MissingConstraints">
@@ -104,7 +104,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
-
 
         <View
             android:id="@+id/line"
@@ -309,13 +308,13 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="16dp"
+            app:backgroundTint="@null"
             android:background="@drawable/bg_button_rounded_gold"
             android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/btn_checkout"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
-            app:cornerRadius="28dp"
             tools:ignore="MissingConstraints" />
 
     </LinearLayout>

@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,6 +122,15 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_book_now:
                 Intent bookNow = new Intent(ViewProductActivity.this, YourBookingActivity.class);
                 startActivity(bookNow);
+                break;
+
+            case R.id.btn_whatsapp:
+                String number = "+6281806155676";
+                String url = "https://api.whatsapp.com/send/?phone="+number;
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+
                 break;
         }
     }

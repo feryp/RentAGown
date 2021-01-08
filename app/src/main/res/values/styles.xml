@@ -10,14 +10,18 @@
 
     </style>
 
-    <style name="ButtonRoundedFilledGold" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+    <style name="ButtonRoundedFilledGold" parent="Widget.MaterialComponents.Button">
         <item name="cornerRadius">28dp</item>
-        <item name="background">@drawable/bg_button_rounded_gold</item>
     </style>
 
     <style name="ButtonRoundedOutlinedGold" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/colorPrimary</item>
-        <item name="cornerRadius">25dp</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+
+    <style name="ButtonInvoice" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorSecondary</item>
+        <item name="cornerRadius">4dp</item>
     </style>
 
     <style name="ButtonRoundedOutlinedWhite" parent="Widget.MaterialComponents.Button.OutlinedButton">

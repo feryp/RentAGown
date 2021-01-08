@@ -25,7 +25,7 @@ public class ChangeAddressViewHolder extends RecyclerView.ViewHolder implements 
     public ChangeAddressViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        tvLabelAddress = itemView.findViewById(R.id.tv_address_label);
+        tvLabelAddress = itemView.findViewById(R.id.tv_label_address);
         tvName = itemView.findViewById(R.id.tv_name_address);
         tvNoHp = itemView.findViewById(R.id.tv_nohp_address);
         tvDetailAddress = itemView.findViewById(R.id.tv_detail_address);

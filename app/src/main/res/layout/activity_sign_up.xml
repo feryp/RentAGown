@@ -134,7 +134,9 @@
 
         <Button
             android:id="@+id/btn_sign_up"
-            style="@style/ButtonRoundedFilledGold"
+            style="@style/Widget.MaterialComponents.Button"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_button_rounded_gold"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="16dp"

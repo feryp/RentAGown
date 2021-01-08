@@ -3,6 +3,7 @@ package com.example.rentagown;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,15 @@ public class YourBookingActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_checkout:
                 Intent checkout = new Intent(YourBookingActivity.this, PaymentActivity.class);
                 startActivity(checkout);
+                break;
+
+            case R.id.btn_whatsapp:
+                String number = "+6281806155676";
+                String url = "https://api.whatsapp.com/send/?phone="+number;
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+
                 break;
         }
     }

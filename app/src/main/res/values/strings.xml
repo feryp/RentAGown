@@ -120,6 +120,7 @@
     <!-- activity filter -->
     <string name="appbar_filter">Filter</string>
     <string name="btn_reset_filter">Reset</string>
+    <string name="btn_apply">Apply</string>
 
     <!-- activity sign in -->
     <string name="tv_title_login">Login</string>
@@ -170,6 +171,7 @@
     <string name="btn_checkout">Checkout</string>
 
     <!-- activity payment -->
+    <string name="appbar_payment">Payment</string>
     <string name="title_shipping_address">Shipping Address</string>
     <string name="btn_change_address">Change Address</string>
     <string name="label_rumah">Rumah</string>
@@ -189,6 +191,29 @@
     <string name="deposit_booking_transfer">Deposit Booking (Transfer)</string>
     <string name="full_payment_transfer">Full Payment (Transfer)</string>
     <string name="btn_continue">Continue</string>
+    <string name="btn_payment">Payment</string>
+
+    <!-- activity confirm payment -->
+    <string name="appbar_confirm_payment">Confirm Payment</string>
+    <string name="payment_deadline">Payment Deadline</string>
+    <string name="account_number_confirm">Account Number</string>
+    <string name="atas_nama">a.n John Doe</string>
+    <string name="btn_invoice">INVOICE</string>
+    <string name="total_price_confirm">Total</string>
+    <string name="last_2_digit_is_unique_code_for_bank_transfer">Last 2 digit is unique code for bank transfer</string>
+    <string name="payment_method_confirm">Payment Method</string>
+    <string name="btn_confirmation">Confirmation</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="chip_paling_sesuai">Paling Sesuai</string>
+    <string name="chip_terbaru">Terbaru</string>
+    <string name="chip_harga_tertinggi">Harga Tertinggi</string>
+    <string name="chip_harga_terendah">Harga Terendah</string>
+    <string name="title_price">Price</string>
+    <string name="et_harga_terendah">Terendah</string>
+    <string name="et_harga_tertinggi">Tertinggi</string>
+    <string name="chip_50_rb_100_rb">50 rb - 100 rb</string>
+    <string name="chip_100_rb_150_rb">100 rb - 150 rb</string>
+    <string name="chip_150_rb_200_rb">150 rb - 200 rb</string>
 
 
 </resources>
