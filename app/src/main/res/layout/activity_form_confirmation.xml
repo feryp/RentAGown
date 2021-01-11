@@ -220,6 +220,7 @@
                     android:paddingTop="16dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
                     tools:ignore="MissingConstraints">
 
@@ -229,6 +230,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:background="@drawable/bg_button_rounded_gold_outlined"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:fontFamily="@font/poppins_semi_bold"
                         android:text="@string/btn_confirm"
                         android:textAllCaps="false"
@@ -244,6 +247,8 @@
                         android:layout_height="56dp"
                         android:layout_marginTop="19dp"
                         android:background="@drawable/bg_button_rounded_gold"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:fontFamily="@font/poppins_semi_bold"
                         android:text="@string/btn_continue_booking"
                         android:textAllCaps="false"
@@ -259,7 +264,5 @@
         </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

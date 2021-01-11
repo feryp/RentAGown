@@ -41,11 +41,15 @@ public class FormConfirmationActivity extends AppCompatActivity implements View.
                 finish();
                 break;
 
+            case R.id.btn_confirm:
+                Intent confirm = new Intent(FormConfirmationActivity.this, BookingSuccessActivity.class);
+                startActivity(confirm);
+                break;
+
 //            case R.id.btn_continue_booking:
 //                Intent backBooking = new Intent(FormConfirmationActivity.this, HomeFragment.class);
 //                startActivity(backBooking);
 //                break;
-
 
         }
 

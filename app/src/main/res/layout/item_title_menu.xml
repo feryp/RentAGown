@@ -17,6 +17,7 @@
         android:fontFamily="@font/poppins_semi_bold"
         android:textSize="14sp"
         tools:text="Category 1"
+        android:textColor="@color/text_color_selector_menu"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

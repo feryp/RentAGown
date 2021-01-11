@@ -170,9 +170,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         imNotification.setOnClickListener(HomeFragment.this);
         btnSeeAllCategory.setOnClickListener(HomeFragment.this);
 
+
         return view;
 
     }
+
 
     private List<SliderMainMenu> getSliderMainMenuByCategory(int categoryId) {
         ArrayList<SliderMainMenu> dummySliderMainMenus = new ArrayList<>();

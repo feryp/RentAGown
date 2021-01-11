@@ -58,6 +58,9 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
             public void onClick(View v) {
                 if(listener != null) listener.onClick(v, position, false);
 
+//                CategoryMenu items = null;
+
+
                 for(TextView tv:textViewList){
                     tv.setTextColor(Color.parseColor("#747474"));
                 }
@@ -77,7 +80,15 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
         return categoryMenuList.get(position);
     }
 
-    public class Utils{
-        public static final int selected_position = -1;
-    }
+
+
+
+//    void selectCategory(int categoryId){
+//
+//        for (CategoryMenu items = null){
+//            if (items.getIdCategory() == categoryId){
+//
+//            }
+//        }
+//    }
 }

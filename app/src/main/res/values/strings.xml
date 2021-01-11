@@ -195,6 +195,9 @@
     <string name="transfer_bank_bca">Transfer Bank BCA</string>
     <string name="account_name">John Doe</string>
     <string name="account_number">5496523645</string>
+    <string name="title_payment_summary">Payment Summary</string>
+    <string name="payment_deposit_booking">Deposit Booking</string>
+    <string name="payment_total">Total</string>
 
     <!-- activity bottom sheet bar payment -->
     <string name="title_select_payment_method">Select Payment Method</string>
@@ -228,5 +231,23 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue_booking">Continue Booking</string>
 
+    <!-- activity booking success -->
+    <string name="booking_success">Booking Success</string>
+    <string name="your_dress_will_be_prepared_for_you_thanks_for_order">Your dress will be prepared for you, thanks for order!</string>
+    <string name="btn_invoice_success">Invoice</string>
+    <string name="btn_back_to_home">Back to Home</string>
+
+    <!-- activity invoice -->
+    <string name="appbar_invoice">Invoice</string>
+    <string name="title_no_invoice">Invoice#</string>
+    <string name="title_payment_date">Payment Date</string>
+    <string name="title_due_date">Due Date</string>
+    <string name="title_total_price_invoice">Total Price</string>
+    <string name="title_total_discount_invoice">Total Discount</string>
+    <string name="title_late_charges">Late Charges</string>
+    <string name="title_total_deposit_booking">Total Deposit Booking</string>
+    <string name="title_remaining_bill">Remaining Bill</string>
+    <string name="transfer_manual">Transfer Manual</string>
+    <string name="title_account_number_invoice">Account Number</string>
 
 </resources>

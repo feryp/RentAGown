@@ -42,8 +42,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation "biz.laenger.android:vpbs:0.0.6"
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.3'
+    implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
 
-
-    //Optional: see how to use the utility.
-    implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
 }

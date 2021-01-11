@@ -350,7 +350,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/poppins_semi_bold"
-                        android:text="Payment Summary"
+                        android:text="@string/title_payment_summary"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp" />
 
@@ -365,7 +365,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Deposit Booking"
+                            android:text="@string/payment_deposit_booking"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
 
@@ -450,7 +450,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:fontFamily="@font/poppins_medium"
-                            android:text="Total"
+                            android:text="@string/payment_total"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
 
@@ -485,6 +485,8 @@
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_chatting"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:contentDescription="@string/todo" />
 
                         <Button
@@ -500,6 +502,8 @@
                             android:textAllCaps="false"
                             android:textColor="@color/colorWhite"
                             android:textSize="16sp"
+                            android:clickable="true"
+                            android:focusable="true"
                             tools:ignore="MissingConstraints" />
 
                     </LinearLayout>
