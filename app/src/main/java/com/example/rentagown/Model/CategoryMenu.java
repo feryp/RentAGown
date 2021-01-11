@@ -1,8 +1,9 @@
 package com.example.rentagown.Model;
 
 public class CategoryMenu {
-    int idCategory;
-    String TitleCategory;
+    private int idCategory;
+    private String TitleCategory;
+
 
     public CategoryMenu(int idCategory, String titleCategory) {
         this.idCategory = idCategory;
@@ -24,4 +25,6 @@ public class CategoryMenu {
     public void setTitleCategory(String titleCategory) {
         TitleCategory = titleCategory;
     }
+
+
 }

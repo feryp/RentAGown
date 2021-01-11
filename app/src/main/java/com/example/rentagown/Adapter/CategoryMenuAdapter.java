@@ -23,6 +23,7 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
     private List<CategoryMenu> categoryMenuList;
     private ItemClickListener listener;
 
+
     private List<TextView> textViewList = new ArrayList<>();
 
     public CategoryMenuAdapter(List<CategoryMenu> categoryMenuList) {
@@ -45,21 +46,17 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
     public void onBindViewHolder(@NonNull final CategoryMenuViewHolder holder, final int position) {
 
         textViewList.add(holder.tvTitle);
-//
+
         if (!textViewList.contains(holder.tvTitle)) {
             textViewList.add(holder.tvTitle);
         }
+
         holder.tvTitle.setText(categoryMenuList.get(position).getTitleCategory());
-
-
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(listener != null) listener.onClick(v, position, false);
-
-//                CategoryMenu items = null;
-
 
                 for(TextView tv:textViewList){
                     tv.setTextColor(Color.parseColor("#747474"));
