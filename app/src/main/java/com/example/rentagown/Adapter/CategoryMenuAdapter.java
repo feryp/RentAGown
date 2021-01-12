@@ -80,12 +80,12 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
 
 
 
-//    void selectCategory(int categoryId){
-//
-//        for (CategoryMenu items = null){
-//            if (items.getIdCategory() == categoryId){
-//
-//            }
-//        }
-//    }
+    void selectCategory(int categoryId){
+
+        for (CategoryMenu item : categoryMenuList){
+            if (item.getIdCategory() == categoryId){
+
+            }
+        }
+    }
 }
