@@ -30,7 +30,7 @@
     </style>
 
     <style name="ButtonRoundedOutlinedGold2" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeColor">@color/colorSecondary</item>
         <item name="cornerRadius">4dp</item>
     </style>
 

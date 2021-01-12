@@ -1,5 +1,6 @@
 package com.example.rentagown.Fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -136,6 +137,7 @@ public class BookFragment extends Fragment implements View.OnClickListener{
         return view;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){

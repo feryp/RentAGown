@@ -1,5 +1,7 @@
 package com.example.rentagown.ViewHolder;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -8,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rentagown.FittingSizeActivity;
 import com.example.rentagown.Interface.ItemClickListener;
 import com.example.rentagown.Model.MyBooking;
 import com.example.rentagown.R;
@@ -38,12 +41,24 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
         tvStatusBooking = itemView.findViewById(R.id.tv_status_booking);
         imProduct = itemView.findViewById(R.id.im_product_booking);
 
+        btnFitingSize = itemView.findViewById(R.id.btn_fitting_size);
+
         itemView.setOnClickListener(this);
+        btnFitingSize.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.btn_fitting_size:
+                Intent fittingSize = new Intent(itemView.getContext(), FittingSizeActivity.class);
+                itemView.getContext().startActivity(fittingSize);
+                break;
+            default:
+                itemClickListener.onClick(v,getAdapterPosition(),false);
+                break;
+        }
     }
 
     public void setItemClickListener(ItemClickListener itemClickListener) {
