@@ -5,19 +5,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.rentagown.Adapter.CategoryMenuAdapter;
 import com.example.rentagown.Adapter.CategoryProductAdapter;
 import com.example.rentagown.Adapter.ProductAdapter;
 import com.example.rentagown.Interface.ItemClickListener;
 import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.Model.Product;
-import com.example.rentagown.Model.SliderMainMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +53,7 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
         categoryProductAdapter = new CategoryProductAdapter(categoryMenuList, this);
         rvMenuCategory.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         rvMenuCategory.setAdapter(categoryProductAdapter);
+        rvMenuCategory.addItemDecoration(new ItemDecoration(16));
         categoryProductAdapter.selectCategory(0);
 
         //Preselect first category

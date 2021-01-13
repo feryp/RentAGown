@@ -20,6 +20,7 @@ import com.example.rentagown.Adapter.SliderFavoriteGownAdapter;
 import com.example.rentagown.Adapter.SliderMainMenuAdapter;
 import com.example.rentagown.Adapter.SliderNewGownAdapter;
 import com.example.rentagown.Adapter.SliderPromoAdapter;
+import com.example.rentagown.ItemDecoration;
 import com.example.rentagown.Interface.ItemClickListener;
 import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.Model.FavoriteGown;
@@ -84,6 +85,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterMenu = new CategoryMenuAdapter(categoryMenuList, this);
         rvTitleMenu.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         rvTitleMenu.setAdapter(adapterMenu);
+        rvTitleMenu.addItemDecoration(new ItemDecoration(16));
         adapterMenu.selectCategory(0);
 
         // preselect first category
@@ -97,6 +99,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterMainMenu = new SliderMainMenuAdapter(context, sliderMainMenuList);
         rvSliderMenu.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
         rvSliderMenu.setAdapter(adapterMainMenu);
+        rvSliderMenu.addItemDecoration(new ItemDecoration(16));
 
         //Slider Promo
         promoList = new ArrayList<>();
@@ -135,6 +138,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterPromo = new SliderPromoAdapter(context, promoList);
         rvSliderPromo.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
         rvSliderPromo.setAdapter(adapterPromo);
+        rvSliderPromo.addItemDecoration(new ItemDecoration(16));
 
 
         //Slider Favorite Gown
@@ -150,6 +154,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterFavoriteGown = new SliderFavoriteGownAdapter(context, favoriteGownList);
         rvSliderFavoriteGown.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         rvSliderFavoriteGown.setAdapter(adapterFavoriteGown);
+        rvSliderFavoriteGown.addItemDecoration(new ItemDecoration(16));
 
         //Slider New Gown
         newGownList = new ArrayList<>();
@@ -164,6 +169,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterNewGown = new SliderNewGownAdapter(context, newGownList);
         rvSliderNewGown.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
         rvSliderNewGown.setAdapter(adapterNewGown);
+        rvSliderNewGown.addItemDecoration(new ItemDecoration(16));
 
         imWishlist.setOnClickListener(HomeFragment.this);
         imNotification.setOnClickListener(HomeFragment.this);

@@ -77,4 +77,11 @@ public class CategoryProductAdapter extends RecyclerView.Adapter<CategoryMenuVie
 
     }
 
+    public void addItem(CategoryMenu dataObj, int index){
+        categoryMenuList.add(index, dataObj);
+        notifyItemInserted(index);
+    }
+
+
+
 }
