@@ -56,6 +56,7 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
         categoryProductAdapter = new CategoryProductAdapter(categoryMenuList, this);
         rvMenuCategory.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         rvMenuCategory.setAdapter(categoryProductAdapter);
+        categoryProductAdapter.selectCategory(0);
 
         //Preselect first category
         selectedCategoryMenu = categoryProductAdapter.getItem(0);
