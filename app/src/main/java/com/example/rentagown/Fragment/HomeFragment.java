@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.rentagown.Adapter.CategoryMenuAdapter;
 import com.example.rentagown.Adapter.SliderFavoriteGownAdapter;
@@ -86,6 +84,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         adapterMenu = new CategoryMenuAdapter(categoryMenuList, this);
         rvTitleMenu.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         rvTitleMenu.setAdapter(adapterMenu);
+        adapterMenu.selectCategory(0);
 
         // preselect first category
         selectedCategoryMenu = adapterMenu.getItem(0);

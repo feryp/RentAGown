@@ -23,8 +23,8 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
     private List<CategoryMenu> categoryMenuList;
     private ItemClickListener listener;
 
+    CategoryMenu selectedCategory = null;
 
-    private List<TextView> textViewList = new ArrayList<>();
 
     public CategoryMenuAdapter(List<CategoryMenu> categoryMenuList) {
         this.categoryMenuList = categoryMenuList;
@@ -45,23 +45,22 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
     @Override
     public void onBindViewHolder(@NonNull final CategoryMenuViewHolder holder, final int position) {
 
-        textViewList.add(holder.tvTitle);
-
-        if (!textViewList.contains(holder.tvTitle)) {
-            textViewList.add(holder.tvTitle);
-        }
-
         holder.tvTitle.setText(categoryMenuList.get(position).getTitleCategory());
+
+        if (selectedCategory != null){
+            if (selectedCategory.getIdCategory() == categoryMenuList.get(position).getIdCategory()){
+                holder.tvTitle.setTextColor(Color.parseColor("#E6B31E")); //warna kuning
+            } else {
+                holder.tvTitle.setTextColor(Color.parseColor("#747474")); //warna hitam
+            }
+        }
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(listener != null) listener.onClick(v, position, false);
 
-                for(TextView tv:textViewList){
-                    tv.setTextColor(Color.parseColor("#747474"));
-                }
-                holder.tvTitle.setTextColor(Color.parseColor("#E6B31E"));
+                selectCategory(categoryMenuList.get(position));
 
             }
         });
@@ -77,15 +76,14 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
         return categoryMenuList.get(position);
     }
 
-
-
-
-    void selectCategory(int categoryId){
-
-        for (CategoryMenu item : categoryMenuList){
-            if (item.getIdCategory() == categoryId){
-
-            }
-        }
+    public void selectCategory(CategoryMenu selected){
+        selectedCategory = selected;
+        notifyDataSetChanged();
     }
+
+    public void selectCategory(int position){
+        selectCategory(getItem(position));
+
+    }
+
 }
