@@ -53,7 +53,7 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
         categoryProductAdapter = new CategoryProductAdapter(categoryMenuList, this);
         rvMenuCategory.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         rvMenuCategory.setAdapter(categoryProductAdapter);
-        rvMenuCategory.addItemDecoration(new ItemDecoration(16));
+        rvMenuCategory.addItemDecoration(new ItemDecorationSlider(16));
         categoryProductAdapter.selectCategory(0);
 
         //Preselect first category
@@ -64,9 +64,7 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
 
         //Setup Recycler View Product
         productAdapter = new ProductAdapter(this, productList);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        rvProduct.setLayoutManager(gridLayoutManager);
+        rvProduct.setLayoutManager(new GridLayoutManager(this, 2));
         rvProduct.setAdapter(productAdapter);
 
         //SET LISTENER

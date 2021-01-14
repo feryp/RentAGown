@@ -20,7 +20,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-    public TextView tvDateTransaction, tvDateBooking, tvNameProduct, tvPrice, tvDpPaid, tvRemainingBills,tvStatusBooking;
+    public TextView tvDateTransaction, tvStartDateBooking, tvEndDateBooking, tvNameProduct, tvPrice, tvDpPaid, tvRemainingBills,tvStatusBooking;
     public RoundedImageView imProduct;
     public Button btnFitingSize;
 
@@ -33,7 +33,8 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
         super(itemView);
 
         tvDateTransaction = itemView.findViewById(R.id.tv_tgl_transaction);
-        tvDateBooking = itemView.findViewById(R.id.tv_tgl_booking_product);
+        tvStartDateBooking = itemView.findViewById(R.id.tv_start_date_booking_product);
+        tvEndDateBooking = itemView.findViewById(R.id.tv_end_date_booking_product);
         tvNameProduct = itemView.findViewById(R.id.tv_name_dress_booking);
         tvPrice = itemView.findViewById(R.id.tv_price_booking);
         tvDpPaid = itemView.findViewById(R.id.tv_dp_paid);
@@ -42,6 +43,7 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
         imProduct = itemView.findViewById(R.id.im_product_booking);
 
         btnFitingSize = itemView.findViewById(R.id.btn_fitting_size);
+
 
         itemView.setOnClickListener(this);
         btnFitingSize.setOnClickListener(this);

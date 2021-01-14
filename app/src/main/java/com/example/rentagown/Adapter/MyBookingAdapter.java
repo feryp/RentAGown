@@ -35,7 +35,8 @@ public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyBookingViewHolder holder, int position) {
         holder.tvDateTransaction.setText(myBookingList.get(position).getDateTransaction());
-        holder.tvDateBooking.setText(myBookingList.get(position).getDateBooking());
+        holder.tvStartDateBooking.setText(myBookingList.get(position).getStartDateBooking());
+        holder.tvEndDateBooking.setText(myBookingList.get(position).getEndDateBooking());
         holder.tvNameProduct.setText(myBookingList.get(position).getNameProduct());
         holder.tvStatusBooking.setText(myBookingList.get(position).getStatusBooking());
         holder.tvPrice.setText(myBookingList.get(position).getPrice());

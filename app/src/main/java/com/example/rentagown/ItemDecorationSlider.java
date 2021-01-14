@@ -7,11 +7,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ItemDecoration extends RecyclerView.ItemDecoration {
+public class ItemDecorationSlider extends RecyclerView.ItemDecoration {
 
     private final int edgePadding;
 
-    public ItemDecoration(int edgePadding) {
+    public ItemDecorationSlider(int edgePadding) {
         this.edgePadding = edgePadding;
     }
 

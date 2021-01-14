@@ -56,7 +56,8 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
@@ -66,7 +67,8 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
@@ -76,7 +78,8 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
@@ -86,7 +89,8 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
@@ -96,7 +100,8 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
@@ -106,20 +111,13 @@ public class BookFragment extends Fragment implements View.OnClickListener{
                 "Selina Colourblock Camisole Dress",
                 "On-Progress",
                 "08 Sep 2020",
-                "09 September 2020",
+                "09 Sep 2020 -",
+                "16 Sep 2020",
                 "Rp. 5.000.000",
                 "Rp. 2.000.000",
                 "Rp. 3.000.000"));
 
-        myBookingList.add(new MyBooking(
-                R.drawable.prewedding_1,
-                "Selina Colourblock Camisole Dress",
-                "On-Progress",
-                "08 Sep 2020",
-                "09 September 2020",
-                "Rp. 5.000.000",
-                "Rp. 2.000.000",
-                "Rp. 3.000.000"));
+
 
         //Setup Recycler View
         adapter = new MyBookingAdapter(context, myBookingList);

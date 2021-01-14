@@ -6,17 +6,19 @@ public class MyBooking {
     private String nameProduct;
     private String statusBooking;
     private String dateTransaction;
-    private String dateBooking;
+    private String startDateBooking;
+    private String endDateBooking;
     private String price;
     private String dpPaid;
     private String remainingBills;
 
-    public MyBooking(int imageProduct, String nameProduct, String statusBooking, String dateTransaction, String dateBooking, String price, String dpPaid, String remainingBills) {
+    public MyBooking(int imageProduct, String nameProduct, String statusBooking, String dateTransaction, String startDateBooking, String endDateBooking, String price, String dpPaid, String remainingBills) {
         this.imageProduct = imageProduct;
         this.nameProduct = nameProduct;
         this.statusBooking = statusBooking;
         this.dateTransaction = dateTransaction;
-        this.dateBooking = dateBooking;
+        this.startDateBooking = startDateBooking;
+        this.endDateBooking = endDateBooking;
         this.price = price;
         this.dpPaid = dpPaid;
         this.remainingBills = remainingBills;
@@ -54,12 +56,20 @@ public class MyBooking {
         this.dateTransaction = dateTransaction;
     }
 
-    public String getDateBooking() {
-        return dateBooking;
+    public String getStartDateBooking() {
+        return startDateBooking;
     }
 
-    public void setDateBooking(String dateBooking) {
-        this.dateBooking = dateBooking;
+    public void setStartDateBooking(String startDateBooking) {
+        this.startDateBooking = startDateBooking;
+    }
+
+    public String getEndDateBooking() {
+        return endDateBooking;
+    }
+
+    public void setEndDateBooking(String endDateBooking) {
+        this.endDateBooking = endDateBooking;
     }
 
     public String getPrice() {

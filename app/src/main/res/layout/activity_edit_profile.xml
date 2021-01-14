@@ -85,25 +85,39 @@
         app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_add_photo"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/bg_button_camera"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_marginTop="16dp"
+        android:text="Upload"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
-        app:layout_constraintVertical_bias="0.249"
+        app:layout_constraintTop_toBottomOf="@+id/edit_foto_profile"
         tools:ignore="MissingConstraints" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/btn_add_photo"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@drawable/bg_button_camera"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.681"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"-->
+<!--        app:layout_constraintVertical_bias="0.249"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
     <EditText
         android:id="@+id/et_edit_name"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/hint_name"
         android:textSize="16sp"
@@ -112,7 +126,7 @@
         android:paddingStart="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_foto_profile"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_photo"
         android:background="@drawable/bg_edit_text_filled"
         tools:ignore="MissingConstraints,RtlSymmetry"
         android:autofillHints="" />

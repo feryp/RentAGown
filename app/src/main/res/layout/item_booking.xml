@@ -22,11 +22,9 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="240dp"
         android:background="@drawable/bg_shadow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_tgl_transaction"
         tools:ignore="MissingConstraints">
 
@@ -71,7 +69,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="@string/price_booking"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/im_product_booking"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_booking" />
 
@@ -83,7 +81,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="@string/dp_paid_booking"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/im_product_booking"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_price_booking" />
 
@@ -95,7 +93,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="@string/remaining_bills_booking"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/im_product_booking"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_dp_paid" />
 
@@ -108,7 +106,7 @@
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             tools:text="Rp. 5.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_booking" />
@@ -121,7 +119,7 @@
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             tools:text="Rp. 2.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_price_booking" />
@@ -134,23 +132,36 @@
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="textEnd"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp"
+            android:textSize="12sp"
             tools:text="Rp. 3.000.000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dp_paid" />
 
         <TextView
-            android:id="@+id/tv_tgl_booking_product"
+            android:id="@+id/tv_start_date_booking_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/colorSoftBlack"
-            android:textSize="14sp"
-            tools:text="9 September 2020"
+            android:textSize="12sp"
+            tools:text="9 Sep 2020"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_remaining_bils" />
+            app:layout_constraintTop_toBottomOf="@+id/im_product_booking" />
+
+        <TextView
+            android:id="@+id/tv_end_date_booking_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorSoftBlack"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_start_date_booking_product"
+            app:layout_constraintTop_toBottomOf="@+id/im_product_booking"
+            tools:text="16 Sep 2020" />
 
         <TextView
             android:id="@+id/tv_status_booking"
