@@ -10,9 +10,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.rentagown.Fragment.BookFragment;
-import com.example.rentagown.Fragment.CartFragment;
 import com.example.rentagown.Fragment.HomeFragment;
-import com.example.rentagown.Fragment.ProfileAfterFragment;
 import com.example.rentagown.Fragment.ProfileBeforeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -63,4 +61,5 @@ public class MainBeforeActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
 }

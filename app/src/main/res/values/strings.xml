@@ -60,9 +60,6 @@
     <string name="btn_browse">Browse</string>
     <string name="tv_title_booking_empty">Your Booking Is Currently Empty</string>
 
-    <!-- activity history booking -->
-    <string name="appbar_history">History</string>
-
     <!-- activity notification-->
     <string name="appbar_notification">Notification</string>
 
@@ -249,5 +246,24 @@
     <string name="title_remaining_bill">Remaining Bill</string>
     <string name="transfer_manual">Transfer Manual</string>
     <string name="title_account_number_invoice">Account Number</string>
+
+    <!-- activity fitting size -->
+    <string name="appbar_size_gown">Size Gown</string>
+    <string name="btn_template">Template</string>
+    <string name="et_bust">Bust</string>
+    <string name="et_arm_hole">Arm Hole</string>
+    <string name="et_waist">Waist</string>
+    <string name="et_hip">Hip</string>
+    <string name="title_note">Note :</string>
+    <string name="semua_ukuran_dalam_sentimeter_cm">- Semua ukuran dalam sentimeter (cm)</string>
+    <string name="ukur_secara_melingkar">- Ukur secara melingkar</string>
+    <string name="btn_custom_size">Custom Size</string>
+
+    <!-- activity history booking -->
+    <string name="appbar_history">History</string>
+    <string name="btn_review_history">Review</string>
+    <string name="titile_booking_history">Booking</string>
+    <string name="title_total_price_history">Total Price</string>
+
 
 </resources>

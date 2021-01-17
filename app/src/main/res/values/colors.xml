@@ -22,4 +22,6 @@
     <color name="colorMistyWhite">#F1F1F1</color>
     <color name="colorMistyBlack">#4F4F4F</color>
     <color name="colorGreen">#10D953</color>
+    <color name="colorSoftGreen">#64FF98</color>
+    <color name="colorDarkGreen">#086326</color>
 </resources>
