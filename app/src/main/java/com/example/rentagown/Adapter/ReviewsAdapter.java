@@ -10,20 +10,20 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rentagown.Model.Product;
 import com.example.rentagown.Model.Review;
 import com.example.rentagown.R;
 import com.example.rentagown.ReviewActivity;
 import com.example.rentagown.ViewHolder.ReviewViewHolder;
+import com.example.rentagown.ViewProductActivity;
 
 import java.util.List;
 
-public class ReviewAdapter extends RecyclerView.Adapter<ReviewViewHolder> {
+public class ReviewsAdapter extends RecyclerView.Adapter<ReviewViewHolder> {
 
     private Context mContext;
     private List<Review> reviewList;
 
-    public ReviewAdapter(Context mContext, List<Review> reviewList) {
+    public ReviewsAdapter(Context mContext, List<Review> reviewList) {
         this.mContext = mContext;
         this.reviewList = reviewList;
     }
@@ -42,20 +42,11 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewViewHolder> {
         holder.tvTimeReview.setText(reviewList.get(position).getTimeReview());
         holder.tvCommentReview.setText(reviewList.get(position).getCommentReview());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Review",Toast.LENGTH_SHORT).show();
-                Intent review = new Intent(v.getContext(), ReviewActivity.class);
-                v.getContext().startActivity(review);
-            }
-        });
+
     }
 
     @Override
     public int getItemCount() {
         return reviewList.size();
     }
-
-
 }

@@ -57,17 +57,17 @@ public class MyBookingViewHolder extends RecyclerView.ViewHolder implements View
                 Intent fittingSize = new Intent(itemView.getContext(), FittingSizeActivity.class);
                 itemView.getContext().startActivity(fittingSize);
                 break;
-            default:
-                itemClickListener.onClick(v,getAdapterPosition(),false);
-                break;
+//            default:
+//                itemClickListener.onClick(v,getAdapterPosition(),false);
+//                break;
         }
     }
 
-    public void setItemClickListener(ItemClickListener itemClickListener) {
-        this.itemClickListener = itemClickListener;
-    }
-
-    public void setOnClickListener(View.OnClickListener onClickListener) {
-        this.onClickListener = onClickListener;
-    }
+//    public void setItemClickListener(ItemClickListener itemClickListener) {
+//        this.itemClickListener = itemClickListener;
+//    }
+//
+//    public void setOnClickListener(View.OnClickListener onClickListener) {
+//        this.onClickListener = onClickListener;
+//    }
 }

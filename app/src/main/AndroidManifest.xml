@@ -12,15 +12,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FittingSizeActivity" />
-        <activity android:name=".DateBookingActivity" />
-        <activity android:name=".InvoiceActivity" />
-        <activity android:name=".BookingSuccessActivity" />
-        <activity android:name=".FormConfirmationActivity" />
-        <activity android:name=".ConfirmPaymentActivity" />
-        <activity android:name=".YourBookingActivity" />
-        <activity android:name=".PaymentActivity" />
-        <activity android:name=".NotificationActivity" />
+        <activity android:name=".WriteReviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".ReviewActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".FittingSizeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".DateBookingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".InvoiceActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".BookingSuccessActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".FormConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".ConfirmPaymentActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".YourBookingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".PaymentActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".NotificationActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".HistoryBookingActivity"
             android:screenOrientation="portrait"
@@ -36,6 +62,7 @@
         <activity
             android:name=".SignUpActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainBeforeActivity"
@@ -44,6 +71,7 @@
         <activity
             android:name=".SignInActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ViewProductActivity"

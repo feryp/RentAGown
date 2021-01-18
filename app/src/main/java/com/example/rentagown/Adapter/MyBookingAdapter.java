@@ -44,7 +44,6 @@ public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> 
         holder.tvRemainingBills.setText(myBookingList.get(position).getRemainingBills());
         holder.imProduct.setImageResource(myBookingList.get(position).getImageProduct());
 
-
     }
 
     @Override

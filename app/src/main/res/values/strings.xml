@@ -265,5 +265,14 @@
     <string name="titile_booking_history">Booking</string>
     <string name="title_total_price_history">Total Price</string>
 
+    <!-- activity review -->
+    <string name="appbar_reviews">Reviews</string>
+    <string name="tv_number_rate_review">4.0</string>
+    <string name="based_on">Based on</string>
+    <string name="_23_reviews">23 Reviews</string>
+
+    <!-- activity write review -->
+    <string name="appbar_write_review">Write Review</string>
+
 
 </resources>
