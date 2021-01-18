@@ -40,6 +40,8 @@ public class OnBoardingAdapter extends PagerAdapter {
         desc.setText(mListScreen.get(position).getDescription());
         imageSlide.setImageResource(mListScreen.get(position).getScreenImg());
 
+        imageSlide.setScaleType(ImageView.ScaleType.FIT_XY);
+
         container.addView(layoutScreen);
 
         return layoutScreen;
