@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,101 +9,113 @@
     android:orientation="vertical"
     tools:context=".Fragment.BookFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout_header"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_mybooking"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/my_booking"
-            android:textColor="@color/colorBlack"
-            android:textSize="38sp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_history"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/btn_history"
-            android:textAlignment="textEnd"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/my_booking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="38sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_my_booking"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:layout_below="@+id/constraint_layout_header"
-        />
+                <Button
+                    android:id="@+id/btn_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/btn_history"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:id="@+id/layout_booking_empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        tools:ignore="MissingConstraints">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_booking_empty"
-            android:contentDescription="@string/todo"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_my_booking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/constraint_layout_header"
+                />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/tv_title_booking_empty"
-            android:textSize="16sp"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/colorBlack"
-            android:textAllCaps="true"/>
+            <LinearLayout
+                android:id="@+id/layout_booking_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                tools:ignore="MissingConstraints">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/tv_desc_booking_empty"
-            android:textSize="12sp"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/colorBlack" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_booking_empty"
+                    android:contentDescription="@string/todo"/>
 
-        <Button
-            android:id="@+id/btn_browse"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/btn_browse"
-            android:textSize="12sp"
-            android:textColor="@color/colorWhite"
-            android:fontFamily="@font/poppins_medium"
-            android:textAllCaps="false"
-            style="@style/ButtonRoundedFilledGold"
-            />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/tv_title_booking_empty"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="true"/>
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tv_desc_booking_empty"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/colorBlack" />
+
+                <Button
+                    android:id="@+id/btn_browse"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/btn_browse"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAllCaps="false"
+                    style="@style/ButtonRoundedFilledGold"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-</RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
