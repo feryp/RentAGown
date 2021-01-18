@@ -68,7 +68,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Review helps other user"
+            android:text="@string/review_helps_other_user"
             android:textColor="@color/colorDarkGrey"
             android:textSize="14sp" />
 
@@ -152,7 +152,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Reviews"
+        android:text="@string/title_reviews_comment"
         android:textColor="@color/colorBlack"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +169,7 @@
         android:background="@drawable/bg_edit_text_outlined"
         android:fontFamily="@font/poppins_regular"
         android:gravity="top"
-        android:hint="Comments"
+        android:hint="@string/et_hint_comments"
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="text|textMultiLine"
@@ -195,7 +195,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="1000 characters left"
+        android:text="@string/notice_1000_characters_left"
         android:textColor="@color/colorSoftGray"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +218,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:fontFamily="@font/poppins_regular"
-            android:text="Recommed item ?"
+            android:text="@string/recommed_item"
             android:textColor="@color/colorBlack"
             android:textSize="16sp" />
 
@@ -239,7 +239,7 @@
                 android:button="@null"
                 android:checked="false"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Yes"
+                android:text="@string/rd_yes"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp" />
 
@@ -251,7 +251,7 @@
                 android:button="@null"
                 android:checked="false"
                 android:fontFamily="@font/poppins_regular"
-                android:text="No"
+                android:text="@string/rd_no"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp" />
 
@@ -267,7 +267,7 @@
         android:layout_width="match_parent"
         android:layout_height="74dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Submit Review"
+        android:text="@string/btn_submit_review"
         android:textAllCaps="false"
         android:textColor="@color/colorSecondary"
         android:textSize="16sp"

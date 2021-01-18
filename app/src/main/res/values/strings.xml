@@ -273,6 +273,14 @@
 
     <!-- activity write review -->
     <string name="appbar_write_review">Write Review</string>
+    <string name="review_helps_other_user">Review helps other user</string>
+    <string name="title_reviews_comment">Reviews</string>
+    <string name="et_hint_comments">Comments</string>
+    <string name="notice_1000_characters_left">1000 characters left</string>
+    <string name="recommed_item">Recommed item ?</string>
+    <string name="rd_yes">Yes</string>
+    <string name="rd_no">No</string>
+    <string name="btn_submit_review">Submit Review</string>
 
 
 </resources>
