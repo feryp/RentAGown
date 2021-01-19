@@ -145,7 +145,8 @@
                 android:text="@string/title_schedule_time_amp_date"
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/poppins_semi_bold" />
+                android:fontFamily="@font/poppins_semi_bold"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/btn_edit_date"
@@ -163,7 +164,7 @@
                 android:textColor="@color/colorSecondary"
                 android:fontFamily="@font/poppins_regular"
                 android:textAllCaps="false"
-                tools:ignore="UnusedAttribute" />
+                tools:ignore="UnusedAttribute,RelativeOverlap" />
 
         </RelativeLayout>
 
@@ -234,7 +235,8 @@
                 android:text="@string/title_item_detail_booking"
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"
-                android:fontFamily="@font/poppins_semi_bold" />
+                android:fontFamily="@font/poppins_semi_bold"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -246,7 +248,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/colorBlack"
                 android:fontFamily="@font/poppins_semi_bold"
-                />
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -268,7 +270,8 @@
                 android:textColor="@color/colorBlack"
                 android:fontFamily="@font/poppins_regular"
                 android:maxWidth="190dp"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/tv_item_price_detail_booking"
@@ -279,7 +282,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="Rp. 5.000.000"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -297,7 +301,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/title_sub_total_detal_booking"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/tv_sub_total_detail_booking"
@@ -309,7 +314,8 @@
                 android:gravity="center"
                 android:text="Rp. 5.000.000"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -327,7 +333,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/title_total_discount_detail_booking"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/tv_total_discount_detail_booking"
@@ -339,7 +346,8 @@
                 android:gravity="center"
                 android:text="- Rp. 0"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -357,7 +365,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/title_dp_paid_detail_booking"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/tv_dp_paid_detail_booking"
@@ -369,7 +378,8 @@
                 android:gravity="center"
                 android:text="Rp. 500.000"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -387,7 +397,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/title_remaining_bills_detail_booking"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
             <TextView
                 android:id="@+id/tv_remaining_bils_detail_booking"
@@ -399,7 +410,8 @@
                 android:gravity="center"
                 android:text="Rp. 4.500.000"
                 android:textColor="@color/colorBlack"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap"/>
 
         </RelativeLayout>
 
@@ -425,7 +437,8 @@
             android:textSize="14sp"
             android:textColor="@color/colorBlack"
             android:fontFamily="@font/poppins_medium"
-            android:layout_toEndOf="@+id/checkbox_payment_detail_booking"/>
+            android:layout_toEndOf="@+id/checkbox_payment_detail_booking"
+            tools:ignore="RelativeOverlap"/>
 
         <Button
             android:id="@+id/btn_pay_detail_booking"

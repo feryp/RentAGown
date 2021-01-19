@@ -147,7 +147,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvSliderPromo.addItemDecoration(new ItemDecorationSlider(16));
 
         if (adapterPromo.getItemCount() > 0){
-            layoutPromoEmpty.setVisibility(View.INVISIBLE);
+            layoutPromoEmpty.setVisibility(View.GONE);
             layoutPromo.setVisibility(View.VISIBLE);
         }
 

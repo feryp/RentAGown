@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    tools:context=".InvoiceHistoryActivity">
+    tools:context=".TransactionStatusActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +14,8 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="?attr/actionBarSize"
+            tools:ignore="MissingConstraints">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -44,7 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="@string/appbar_invoice_history"
+                        android:text="@string/appbar_transaction_status"
                         android:textColor="@color/colorBlack"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,13 +67,84 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_invoice_history"
+                <LinearLayout
+                    android:id="@+id/layout_transaction"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="@string/total_bill_amount"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_bill_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Rp. 5.000.000"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/title_transactions"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_transaction_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/layout_invoice_empty"
+                    android:id="@+id/layout_btn_repayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorWhite"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <Button
+                        android:id="@+id/btn_repayment"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/bg_button_rounded_gold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/btn_repayment"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        tools:ignore="MissingConstraints,UnusedAttribute" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_transaction_empty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -84,7 +155,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_invoice_empty"
+                        android:src="@drawable/ic_transaction_empty"
                         android:contentDescription="@string/todo"/>
 
                     <TextView
@@ -94,7 +165,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:gravity="center"
-                        android:text="@string/text_invoice_empty"
+                        android:text="@string/text_transaction_empty"
                         android:textSize="12sp"
                         android:fontFamily="@font/poppins_regular"
                         android:textColor="@color/colorBlack" />
@@ -107,6 +178,7 @@
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </RelativeLayout>
+
 
 
 

@@ -9,6 +9,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.example.rentagown.Adapter.InvoiceHistoryAdapter;
 import com.example.rentagown.Model.InvoiceHistory;
@@ -18,9 +19,10 @@ import java.util.ArrayList;
 public class InvoiceHistoryActivity extends AppCompatActivity implements View.OnClickListener {
 
     RecyclerView rvInvoiceHistory;
+    LinearLayout layoutEmpty;
     ImageButton back;
     ArrayList<InvoiceHistory> invoiceHistoryList;
-    InvoiceHistoryAdapter adapter;
+    InvoiceHistoryAdapter historyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class InvoiceHistoryActivity extends AppCompatActivity implements View.On
         //INIT VIEW
         rvInvoiceHistory = findViewById(R.id.rv_invoice_history);
         back = findViewById(R.id.im_back);
+        layoutEmpty = findViewById(R.id.layout_invoice_empty);
 
         //List Invoice History
         invoiceHistoryList = new ArrayList<>();
@@ -119,9 +122,13 @@ public class InvoiceHistoryActivity extends AppCompatActivity implements View.On
                 "Rp. 2.000.000"));
 
         //Set up Adapter
-        adapter = new InvoiceHistoryAdapter(invoiceHistoryList, this);
+        historyAdapter = new InvoiceHistoryAdapter(invoiceHistoryList, this);
         rvInvoiceHistory.setLayoutManager(new LinearLayoutManager(this));
-        rvInvoiceHistory.setAdapter(adapter);
+        rvInvoiceHistory.setAdapter(historyAdapter);
+
+        if (historyAdapter.getItemCount() > 0){
+            layoutEmpty.setVisibility(View.GONE);
+        }
 
         //SET LISTENER
         back.setOnClickListener(this);

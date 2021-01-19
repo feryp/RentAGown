@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/tv_date_transaction_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        tools:text="08 Sep 2020"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorSoftGrey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_transaction_payment" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/im_product_transaction"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:src="@drawable/prewedding_1"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_name_dress_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                tools:text="Selina Colourblock Camisole Dress" />
+
+            <TextView
+                android:id="@+id/tv_time_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:maxWidth="169dp"
+                android:textColor="@color/colorSoftGray"
+                android:textSize="12sp"
+                tools:text="10:15 am" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:gravity="center_vertical|end">
+
+            <TextView
+                android:id="@+id/tv_payment_method_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/colorSoftGray"
+                android:textSize="10sp"
+                tools:text="Deposit Booking"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tv_total_price_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:maxWidth="169dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                tools:text="Rp. 500.000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:text="INVOICE"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

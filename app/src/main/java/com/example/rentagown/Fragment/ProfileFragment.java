@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.example.rentagown.InvoiceHistoryActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
+import com.example.rentagown.TransactionStatusActivity;
+
+import java.util.Objects;
 
 
 public class ProfileFragment extends Fragment implements View.OnClickListener{
@@ -38,7 +41,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         //SET LISTENER
         invoiceHistory.setOnClickListener(ProfileFragment.this);
+        transactionStatus.setOnClickListener(ProfileFragment.this);
         settings.setOnClickListener(ProfileFragment.this);
+        helpCenter.setOnClickListener(ProfileFragment.this);
+        termsConditions.setOnClickListener(ProfileFragment.this);
         signOut.setOnClickListener(ProfileFragment.this);
 
         return v;
@@ -51,12 +57,19 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.menu_invoice_history:
-                Toast.makeText(getActivity().getApplicationContext(), "Invoice History", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Invoice History", Toast.LENGTH_SHORT).show();
                 Intent invoiceHistory = new Intent(getActivity(), InvoiceHistoryActivity.class);
                 startActivity(invoiceHistory);
                 break;
+
+            case R.id.menu_transaction_status:
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Transaction Status", Toast.LENGTH_SHORT).show();
+                Intent transactionStatus = new Intent(getActivity(), TransactionStatusActivity.class);
+                startActivity(transactionStatus);
+                break;
+
             case R.id.menu_setting:
-                Toast.makeText(getActivity().getApplicationContext(),"Settings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Settings", Toast.LENGTH_SHORT).show();
                 Intent settings = new Intent(getActivity(), SettingActivity.class);
                 startActivity(settings);
                 break;

@@ -65,6 +65,7 @@
 
     <!-- activity invoice history -->
     <string name="appbar_invoice_history">Invoice History</string>
+    <string name="text_invoice_empty">Sorry, currently we can\'t display your requested invoice. Please try again by reloading this page.</string>
 
     <!-- activity setting -->
     <string name="appbar_settings">Settings</string>
@@ -295,5 +296,13 @@
     <string name="pay_after_service">Pay after service</string>
     <string name="btn_pay">Pay</string>
     <string name="btn_fitting_size_detail">Fitting Size</string>
+
+    <!-- activity transaction status -->
+    <string name="appbar_transaction_status">Transaction Status</string>
+    <string name="total_bill_amount">Total Bill Amount</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="btn_repayment">Repayment</string>
+    <string name="text_transaction_empty">Sorry, you currently have no transactions. Please try again by reloading this page.</string>
+
 
 </resources>
