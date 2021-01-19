@@ -24,7 +24,7 @@ public class DateBookingActivity extends AppCompatActivity implements View.OnCli
 
     CalendarView calendarView;
     String startDate, endDate;
-    ImageButton selectDate;
+    ImageButton imClose, imSetDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,8 @@ public class DateBookingActivity extends AppCompatActivity implements View.OnCli
 
         //INIT VIEW
         calendarView = findViewById(R.id.calendar_view);
-        selectDate = findViewById(R.id.im_set_date);
+        imClose = findViewById(R.id.im_close);
+        imSetDate = findViewById(R.id.im_set_date);
 
         //Set First day of the week
         calendarView.setFirstDayOfWeek(Calendar.SUNDAY);
@@ -63,13 +64,17 @@ public class DateBookingActivity extends AppCompatActivity implements View.OnCli
         calendarView.addConnectedDays(connectedDays);
         calendarView.setConnectedDayIconPosition(ConnectedDayIconPosition.BOTTOM);
 
-        selectDate.setOnClickListener(this);
+        imSetDate.setOnClickListener(this);
+        imClose.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.im_close:
+                finish();
+                break;
             case R.id.im_set_date:
 //                if (calendarView.getSelectionManager() instanceof RangeSelectionManager){
 //                    RangeSelectionManager rangeSelectionManager = (RangeSelectionManager) calendarView.getSelectionManager();

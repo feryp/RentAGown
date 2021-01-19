@@ -134,6 +134,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,6 +148,6 @@
         android:textSize="16sp"
         android:textColor="@color/colorWhite"
         android:fontFamily="@font/poppins_semi_bold"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UnusedAttribute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

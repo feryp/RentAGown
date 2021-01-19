@@ -12,9 +12,10 @@ import android.widget.FrameLayout;
 import com.example.rentagown.Fragment.BookFragment;
 import com.example.rentagown.Fragment.HomeFragment;
 import com.example.rentagown.Fragment.ProfileBeforeFragment;
+import com.example.rentagown.Fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainBeforeActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
@@ -23,7 +24,7 @@ public class MainBeforeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_before);
+        setContentView(R.layout.activity_main);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
@@ -51,7 +52,7 @@ public class MainBeforeActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileBeforeFragment();
+                            selectedFragment = new ProfileFragment();
                             bottomNavigationView.setItemIconTintList(null);
                             break;
                     }

@@ -131,7 +131,9 @@
             android:background="@drawable/bg_chatting"
             android:clickable="true"
             android:focusable="true"
-            android:contentDescription="@string/todo"/>
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/todo"
+            tools:ignore="UnusedAttribute" />
 
         <Button
             android:id="@+id/btn_book_now"
@@ -146,9 +148,10 @@
             android:textSize="16sp"
             android:clickable="true"
             android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:textColor="@color/colorWhite"
             android:fontFamily="@font/poppins_semi_bold"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
     </LinearLayout>
 

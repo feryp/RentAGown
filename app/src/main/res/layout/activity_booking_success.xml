@@ -70,6 +70,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+
             android:background="@drawable/bg_button_rounded_gold_outlined"
             android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/btn_invoice_success"
@@ -79,7 +80,8 @@
             app:backgroundTint="@null"
             android:clickable="true"
             android:focusable="true"
-            tools:ignore="MissingConstraints" />
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <Button
             android:id="@+id/btn_back_to_home"
@@ -94,9 +96,10 @@
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
             android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:backgroundTint="@null"
-            tools:ignore="MissingConstraints"
-            android:focusable="true" />
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
     </LinearLayout>
 

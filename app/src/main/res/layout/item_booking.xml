@@ -137,31 +137,48 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_dp_paid" />
 
-        <TextView
-            android:id="@+id/tv_start_date_booking_product"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/colorSoftBlack"
-            android:textSize="12sp"
-            tools:text="9 Sep 2020"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/im_product_booking" />
+            app:layout_constraintTop_toBottomOf="@+id/im_product_booking">
 
-        <TextView
-            android:id="@+id/tv_end_date_booking_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/colorSoftBlack"
-            android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_start_date_booking_product"
-            app:layout_constraintTop_toBottomOf="@+id/im_product_booking"
-            tools:text="16 Sep 2020" />
+            <TextView
+                android:id="@+id/tv_start_date_booking_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorSoftBlack"
+                android:textSize="12sp"
+                tools:text="9 Sep 2020"
+                />
+
+            <View
+                android:id="@+id/line_date"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/colorSoftBlack" />
+
+            <TextView
+                android:id="@+id/tv_end_date_booking_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorSoftBlack"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/line_date"
+                app:layout_constraintTop_toBottomOf="@+id/im_product_booking"
+                tools:text="16 Sep 2020" />
+
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/tv_status_booking"

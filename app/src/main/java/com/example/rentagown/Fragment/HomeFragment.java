@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.rentagown.Adapter.CategoryMenuAdapter;
 import com.example.rentagown.Adapter.SliderFavoriteGownAdapter;
@@ -40,6 +42,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
 
     Context context;
     ImageButton imWishlist, imNotification;
+    ImageView layoutPromoEmpty;
+    ConstraintLayout layoutPromo;
     Button btnSeeAllCategory, btnSeeAllPromo, btnSeeAllFavoriteGown, btnSeeAllNewGown;
     RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo, rvSliderFavoriteGown, rvSliderNewGown;
     CategoryMenuAdapter adapterMenu;
@@ -64,6 +68,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         //INIT VIEW
         imWishlist = view.findViewById(R.id.im_wishlist);
         imNotification = view.findViewById(R.id.im_notification);
+        layoutPromoEmpty = view.findViewById(R.id.layout_promo_empty);
+        layoutPromo = view.findViewById(R.id.layout_promo);
         btnSeeAllCategory = view.findViewById(R.id.btn_see_all_category);
         btnSeeAllPromo = view.findViewById(R.id.btn_see_all_promo);
         btnSeeAllFavoriteGown = view.findViewById(R.id.btn_see_all_favorite);
@@ -139,6 +145,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvSliderPromo.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false));
         rvSliderPromo.setAdapter(adapterPromo);
         rvSliderPromo.addItemDecoration(new ItemDecorationSlider(16));
+
+        if (adapterPromo.getItemCount() > 0){
+            layoutPromoEmpty.setVisibility(View.INVISIBLE);
+            layoutPromo.setVisibility(View.VISIBLE);
+        }
 
 
         //Slider Favorite Gown

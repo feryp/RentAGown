@@ -149,7 +149,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_password_register"
-            tools:ignore="MissingConstraints" />
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <LinearLayout
             android:layout_width="match_parent"

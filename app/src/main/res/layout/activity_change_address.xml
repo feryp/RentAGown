@@ -96,7 +96,10 @@
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
             app:backgroundTint="@null"
-            tools:ignore="MissingConstraints" />
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
 
     </LinearLayout>

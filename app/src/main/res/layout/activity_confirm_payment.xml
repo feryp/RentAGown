@@ -328,7 +328,10 @@
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp"
-            tools:ignore="MissingConstraints" />
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <Button
             android:id="@+id/btn_cancel"
@@ -343,7 +346,10 @@
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
-            tools:ignore="MissingConstraints" />
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
     </LinearLayout>
 

@@ -187,6 +187,9 @@
         android:textSize="16sp"
         android:textColor="@color/colorWhite"
         android:fontFamily="@font/poppins_semi_bold"
-        tools:ignore="MissingConstraints" />
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        tools:ignore="MissingConstraints,UnusedAttribute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

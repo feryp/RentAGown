@@ -17,7 +17,7 @@ import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
 
 
-public class ProfileAfterFragment extends Fragment implements View.OnClickListener{
+public class ProfileFragment extends Fragment implements View.OnClickListener{
 
     ConstraintLayout invoiceHistory, transactionStatus, settings, helpCenter, privacyPolicy, termsConditions, signOut;
 
@@ -25,7 +25,7 @@ public class ProfileAfterFragment extends Fragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment\
-        View v = inflater.inflate(R.layout.fragment_profile_after, container, false);
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //INIT VIEW
         invoiceHistory = v.findViewById(R.id.menu_invoice_history);
@@ -37,9 +37,9 @@ public class ProfileAfterFragment extends Fragment implements View.OnClickListen
         signOut = v.findViewById(R.id.btn_logout);
 
         //SET LISTENER
-        invoiceHistory.setOnClickListener(ProfileAfterFragment.this);
-        settings.setOnClickListener(ProfileAfterFragment.this);
-        signOut.setOnClickListener(ProfileAfterFragment.this);
+        invoiceHistory.setOnClickListener(ProfileFragment.this);
+        settings.setOnClickListener(ProfileFragment.this);
+        signOut.setOnClickListener(ProfileFragment.this);
 
         return v;
 

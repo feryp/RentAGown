@@ -10,9 +10,8 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.rentagown.Fragment.BookFragment;
-import com.example.rentagown.Fragment.CartFragment;
 import com.example.rentagown.Fragment.HomeFragment;
-import com.example.rentagown.Fragment.ProfileAfterFragment;
+import com.example.rentagown.Fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainAfterActivity extends AppCompatActivity {
@@ -54,7 +53,7 @@ public class MainAfterActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileAfterFragment();
+                            selectedFragment = new ProfileFragment();
                             bottomNavigationView.setItemIconTintList(null);
                             break;
                     }

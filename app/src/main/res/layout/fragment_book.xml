@@ -100,15 +100,20 @@
                 <Button
                     android:id="@+id/btn_browse"
                     android:layout_width="125dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="38dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/btn_browse"
                     android:textSize="12sp"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/poppins_medium"
                     android:textAllCaps="false"
-                    style="@style/ButtonRoundedFilledGold"
-                    />
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_gradient"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    tools:ignore="UnusedAttribute" />
 
             </LinearLayout>
 

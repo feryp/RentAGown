@@ -1,15 +1,19 @@
 package com.example.rentagown.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rentagown.DetailBookingActivity;
 import com.example.rentagown.Model.MyBooking;
 import com.example.rentagown.R;
+import com.example.rentagown.ReviewActivity;
 import com.example.rentagown.ViewHolder.MyBookingViewHolder;
 
 import java.util.ArrayList;
@@ -43,6 +47,15 @@ public class MyBookingAdapter extends RecyclerView.Adapter<MyBookingViewHolder> 
         holder.tvDpPaid.setText(myBookingList.get(position).getDpPaid());
         holder.tvRemainingBills.setText(myBookingList.get(position).getRemainingBills());
         holder.imProduct.setImageResource(myBookingList.get(position).getImageProduct());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Review",Toast.LENGTH_SHORT).show();
+                Intent detail = new Intent(v.getContext(), DetailBookingActivity.class);
+                v.getContext().startActivity(detail);
+            }
+        });
 
     }
 

@@ -472,7 +472,6 @@
 
                 </LinearLayout>
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>
@@ -497,7 +496,9 @@
                 android:background="@drawable/bg_chatting"
                 android:clickable="true"
                 android:focusable="true"
-                android:contentDescription="@string/todo" />
+                android:foreground="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/todo"
+                tools:ignore="UnusedAttribute" />
 
             <Button
                 android:id="@+id/btn_payment"
@@ -514,16 +515,12 @@
                 android:textSize="16sp"
                 android:clickable="true"
                 android:focusable="true"
-                tools:ignore="MissingConstraints" />
+                android:foreground="?android:attr/selectableItemBackground"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
 
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -282,5 +282,18 @@
     <string name="rd_no">No</string>
     <string name="btn_submit_review">Submit Review</string>
 
+    <!-- activity detail booking -->
+    <string name="appbar_detail">Detail</string>
+    <string name="title_schedule_time_amp_date"><![CDATA[Schedule Time & Date]]></string>
+    <string name="btn_edit_schedule_time">Edit</string>
+    <string name="title_item_detail_booking">Item</string>
+    <string name="title_price_detail_booking">Price</string>
+    <string name="title_sub_total_detal_booking">Sub Total</string>
+    <string name="title_total_discount_detail_booking">Total Discount</string>
+    <string name="title_dp_paid_detail_booking">Deposit Booking Paid</string>
+    <string name="title_remaining_bills_detail_booking">Remaining Bills</string>
+    <string name="pay_after_service">Pay after service</string>
+    <string name="btn_pay">Pay</string>
+    <string name="btn_fitting_size_detail">Fitting Size</string>
 
 </resources>
