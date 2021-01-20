@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 
 import com.example.rentagown.Fragment.BookFragment;
 import com.example.rentagown.Fragment.HomeFragment;
+import com.example.rentagown.Fragment.LoginFragment;
 import com.example.rentagown.Fragment.ProfileBeforeFragment;
 import com.example.rentagown.Fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
+                            selectedFragment = new LoginFragment();
                             bottomNavigationView.setItemIconTintList(null);
                             break;
                     }
