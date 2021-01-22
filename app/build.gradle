@@ -49,5 +49,7 @@ dependencies {
     implementation "biz.laenger.android:vpbs:0.0.6"
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.3'
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
+    implementation "androidx.cardview:cardview:1.0.0"
+
 
 }

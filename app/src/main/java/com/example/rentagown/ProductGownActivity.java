@@ -5,9 +5,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 
 import com.example.rentagown.Adapter.CategoryProductAdapter;
@@ -22,7 +25,8 @@ import java.util.List;
 public class ProductGownActivity extends AppCompatActivity implements View.OnClickListener, ItemClickListener {
 
     ImageButton back, filter;
-    RecyclerView rvMenuCategory, rvProduct;
+    RecyclerView rvMenuCategory;
+    RecyclerView rvProduct;
     CategoryProductAdapter categoryProductAdapter;
     List<CategoryMenu> categoryMenuList;
     List<Product> productList;
@@ -64,8 +68,11 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
 
         //Setup Recycler View Product
         productAdapter = new ProductAdapter(this, productList);
-        rvProduct.setLayoutManager(new GridLayoutManager(this, 2));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        rvProduct.addItemDecoration(new ItemDecorationGrid(16));
+        rvProduct.setLayoutManager(gridLayoutManager);
         rvProduct.setAdapter(productAdapter);
+
 
         //SET LISTENER
         back.setOnClickListener(this);
@@ -149,6 +156,9 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
 
         return dummyProduct;
     }
+
+
+
 
     @Override
     public void onClick(View v) {

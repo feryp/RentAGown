@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class DetailBookingActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageButton back;
-    TextView editDate;
     Button  btnPay, btnFittingSize;
 
     @Override
@@ -23,13 +22,11 @@ public class DetailBookingActivity extends AppCompatActivity implements View.OnC
 
         //INIT VIEW
         back = findViewById(R.id.im_back);
-        editDate = findViewById(R.id.btn_edit_date);
         btnPay = findViewById(R.id.btn_pay_detail_booking);
         btnFittingSize = findViewById(R.id.btn_fitting_size_detail_booking);
 
         //SET LISTENER
         back.setOnClickListener(this);
-        editDate.setOnClickListener(this);
         btnPay.setOnClickListener(this);
         btnFittingSize.setOnClickListener(this);
 
@@ -41,11 +38,6 @@ public class DetailBookingActivity extends AppCompatActivity implements View.OnC
         switch (v.getId()){
             case R.id.im_back:
                 finish();
-                break;
-
-            case R.id.btn_edit_date:
-                Intent edit = new Intent(DetailBookingActivity.this, DateBookingActivity.class);
-                startActivity(edit);
                 break;
 
             case R.id.btn_pay_detail_booking:

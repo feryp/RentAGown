@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TransactionStatusActivity"></activity>
+        <activity android:name=".ListPromoActivity"></activity>
+        <activity android:name=".TransactionStatusActivity" />
         <activity android:name=".DetailBookingActivity" />
         <activity
             android:name=".WriteReviewActivity"

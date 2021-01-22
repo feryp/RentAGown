@@ -19,7 +19,7 @@ public class SliderPromoViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
 
         imPromo = itemView.findViewById(R.id.im_item_promo);
-        tvTitlePromo = itemView.findViewById(R.id.tv_title_item_promo);
+        tvTitlePromo = itemView.findViewById(R.id.tv_title_item_promo  );
         tvDescPromo = itemView.findViewById(R.id.tv_desc_item_promo);
 
     }

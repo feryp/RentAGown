@@ -24,6 +24,7 @@ import com.example.rentagown.Adapter.SliderNewGownAdapter;
 import com.example.rentagown.Adapter.SliderPromoAdapter;
 import com.example.rentagown.ItemDecorationSlider;
 import com.example.rentagown.Interface.ItemClickListener;
+import com.example.rentagown.ListPromoActivity;
 import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.Model.FavoriteGown;
 import com.example.rentagown.Model.NewGown;
@@ -185,6 +186,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         imWishlist.setOnClickListener(HomeFragment.this);
         imNotification.setOnClickListener(HomeFragment.this);
         btnSeeAllCategory.setOnClickListener(HomeFragment.this);
+        btnSeeAllPromo.setOnClickListener(HomeFragment.this);
 
 
         return view;
@@ -253,6 +255,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
             case R.id.btn_see_all_category:
                 Intent categoryProduct = new Intent(getActivity(), ProductGownActivity.class);
                 startActivity(categoryProduct);
+                break;
+
+            case R.id.btn_see_all_promo:
+                Intent promoList = new Intent(getActivity(), ListPromoActivity.class);
+                startActivity(promoList);
                 break;
         }
     }

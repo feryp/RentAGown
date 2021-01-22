@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    tools:context=".ProductGownActivity">
+    tools:context=".ListPromoActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -21,61 +20,45 @@
             android:background="@color/colorWhite"
             tools:ignore="MissingConstraints">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="64dp"
+                tools:ignore="MissingConstraints">
 
                 <ImageButton
                     android:id="@+id/im_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:background="#00000000"
+                    android:layout_marginStart="24dp"
                     android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_back_black" />
+                    android:src="@drawable/ic_back_black"
+                    android:background="#00000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/appbar_gown"
+                    android:text="Promo"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/im_back"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/im_filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00000000"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_filter" />
-
-            </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu_category_product"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_product"
+        android:id="@+id/rv_list_promo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_menu_category_product" />
-
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

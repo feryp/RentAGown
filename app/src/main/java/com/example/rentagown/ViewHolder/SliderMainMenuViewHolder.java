@@ -16,7 +16,6 @@ public class SliderMainMenuViewHolder extends RecyclerView.ViewHolder {
     public TextView tvItemName;
     public TextView tvPrice;
     public RoundedImageView imContent;
-    public ImageButton btnWishlist;
 
     private SliderMainMenu sliderMainMenu;
 
@@ -26,7 +25,6 @@ public class SliderMainMenuViewHolder extends RecyclerView.ViewHolder {
         tvItemName = itemView.findViewById(R.id.tv_name_dress_main);
         tvPrice = itemView.findViewById(R.id.tv_harga_dress_main);
         imContent = itemView.findViewById(R.id.im_content_main);
-        btnWishlist = itemView.findViewById(R.id.btn_like_main);
 
     }
 }
