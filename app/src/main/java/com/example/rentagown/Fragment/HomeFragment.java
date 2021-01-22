@@ -24,7 +24,7 @@ import com.example.rentagown.Adapter.SliderNewGownAdapter;
 import com.example.rentagown.Adapter.SliderPromoAdapter;
 import com.example.rentagown.ItemDecorationSlider;
 import com.example.rentagown.Interface.ItemClickListener;
-import com.example.rentagown.ListPromoActivity;
+import com.example.rentagown.PromoActivity;
 import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.Model.FavoriteGown;
 import com.example.rentagown.Model.NewGown;
@@ -258,7 +258,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
                 break;
 
             case R.id.btn_see_all_promo:
-                Intent promoList = new Intent(getActivity(), ListPromoActivity.class);
+                Intent promoList = new Intent(getActivity(), PromoActivity.class);
                 startActivity(promoList);
                 break;
         }

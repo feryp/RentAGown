@@ -5,24 +5,21 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.rentagown.Adapter.ListPromoAdapter;
-import com.example.rentagown.Adapter.ProductAdapter;
-import com.example.rentagown.Interface.ItemClickListener;
+import com.example.rentagown.Adapter.PromoAdapter;
 import com.example.rentagown.Model.Promo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListPromoActivity extends AppCompatActivity implements View.OnClickListener {
+public class PromoActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton back;
     RecyclerView rvListPromo;
     List<Promo> promoList;
-    ListPromoAdapter promoAdapter;
+    PromoAdapter promoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +69,7 @@ public class ListPromoActivity extends AppCompatActivity implements View.OnClick
                         "Booking period until 15 September 2020. Rental period until December 2021."));
 
         //Setup Recycler View Product
-        promoAdapter = new ListPromoAdapter(this, promoList);
+        promoAdapter = new PromoAdapter(this, promoList);
         rvListPromo.setLayoutManager(new GridLayoutManager(this, 2));
         rvListPromo.setAdapter(promoAdapter);
 

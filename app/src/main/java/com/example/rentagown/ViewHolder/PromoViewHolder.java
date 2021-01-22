@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.rentagown.R;
 import com.makeramen.roundedimageview.RoundedImageView;
 
-public class ListPromoViewHolder extends RecyclerView.ViewHolder {
+public class PromoViewHolder extends RecyclerView.ViewHolder {
 
     public TextView tvTitlePromoList;
     public TextView tvDescPromoList;
     public RoundedImageView imPromoList;
 
-    public ListPromoViewHolder(@NonNull View itemView) {
+    public PromoViewHolder(@NonNull View itemView) {
         super(itemView);
 
         imPromoList = itemView.findViewById(R.id.im_item_list_promo);

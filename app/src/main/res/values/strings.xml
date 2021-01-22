@@ -304,5 +304,23 @@
     <string name="btn_repayment">Repayment</string>
     <string name="text_transaction_empty">Sorry, you currently have no transactions. Please try again by reloading this page.</string>
 
+    <!-- activity detail promo -->
+    <string name="appbar_detail_promo">Detail Promo</string>
+    <string name="title_list_promo">Promo</string>
+    <string name="decs_promo">The wait is over 🎉 Massive sale! 90% off for third purchase on any dress (except wedding dress), Booking period until 15 September 2020. Rental period until December 2021.</string>
+    <string name="title_terms_and_conditions_promo">Terms and Conditions</string>
+    <string name="field_terms_conditions_promo">
+        1. Promo period for booking periods until 15 Sep  2020, and for rental periods up to 31 Dec 2020
+        \n 2. Promo is applicable for new users that register to RAG using referral code
+        \n 3. Promo is only valid for 1 device and 1 user account only
+        \n 4. Promo is valid for all RAG users
+        \n 5. The voucher will be automatically available in Pocket</string>
+    <string name="title_for_referrers_promo">For Referrers</string>
+    <string name="field_for_referrers_promo">
+        1. To get the promo, referrals have to refer their friends to register to RAG using referral code
+        \n 2. Referrers can refer as many friend as they want to win the main prizes
+</string>
+    <string name="btn_use_promo">Use Promo</string>
+
 
 </resources>
