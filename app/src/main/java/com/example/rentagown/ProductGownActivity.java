@@ -69,7 +69,6 @@ public class ProductGownActivity extends AppCompatActivity implements View.OnCli
         //Setup Recycler View Product
         productAdapter = new ProductAdapter(this, productList);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        rvProduct.addItemDecoration(new ItemDecorationGrid(16));
         rvProduct.setLayoutManager(gridLayoutManager);
         rvProduct.setAdapter(productAdapter);
 

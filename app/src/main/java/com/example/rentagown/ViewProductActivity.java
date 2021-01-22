@@ -119,6 +119,12 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
             case R.id.im_back:
                 finish();
                 break;
+
+            case R.id.im_like:
+                if (v == like){
+                    like.setBackgroundResource(R.drawable.btn_like_selected);
+                }
+                break;
             case R.id.btn_book_now:
                 Intent bookNow = new Intent(ViewProductActivity.this, YourBookingActivity.class);
                 startActivity(bookNow);
