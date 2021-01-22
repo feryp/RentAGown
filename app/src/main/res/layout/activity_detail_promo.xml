@@ -75,60 +75,69 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:id="@+id/im_item_promo"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_margin="16dp"
-                        app:riv_corner_radius="8dp"
-                        android:scaleType="centerCrop"
-                        app:riv_mutate_background="true"
-                        app:riv_oval="false"
-                        android:contentDescription="@string/todo"
-                        android:src="@drawable/promo" />
-
-                    <RelativeLayout
-                        android:id="@+id/desc_item_list_promo"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp">
+                        android:orientation="horizontal"
+                        android:layout_margin="16dp">
 
-                        <ImageView
-                            android:id="@+id/im_detail_discount"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_discount"
-                            android:contentDescription="@string/todo"/>
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/im_item_promo"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            app:riv_corner_radius="8dp"
+                            android:scaleType="centerCrop"
+                            app:riv_mutate_background="true"
+                            app:riv_oval="false"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/promo" />
 
-                        <TextView
-                            android:id="@+id/tv_title_item_detail_promo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_list_promo"
-                            android:textSize="14sp"
-                            android:textColor="@color/colorBlack"
-                            android:fontFamily="@font/poppins_medium"
-                            android:layout_toEndOf="@+id/im_detail_discount"
-                            android:layout_marginStart="8dp" />
-
-                        <TextView
-                            android:id="@+id/tv_desc_item_list_promo"
+                        <RelativeLayout
+                            android:id="@+id/desc_item_list_promo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/tv_title_item_detail_promo"
-                            android:autoSizeMaxTextSize="12sp"
-                            android:autoSizeMinTextSize="8sp"
-                            android:autoSizeTextType="uniform"
-                            android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/colorGray"
-                            android:textSize="12sp"
-                            tools:ignore="SmallSp,UnusedAttribute"
-                            android:text="@string/decs_promo" />
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
 
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/im_detail_discount"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_discount"
+                                android:contentDescription="@string/todo"/>
+
+                            <TextView
+                                android:id="@+id/tv_title_item_detail_promo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_list_promo"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_medium"
+                                android:layout_toEndOf="@+id/im_detail_discount"
+                                android:layout_marginStart="8dp" />
+
+                            <TextView
+                                android:id="@+id/tv_desc_item_list_promo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_title_item_detail_promo"
+                                android:autoSizeMaxTextSize="12sp"
+                                android:autoSizeMinTextSize="8sp"
+                                android:autoSizeTextType="uniform"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp"
+                                tools:ignore="SmallSp,UnusedAttribute"
+                                android:text="@string/decs_promo" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
 
                     <LinearLayout
                         android:id="@+id/layout_text_terms_conditions_promo"
