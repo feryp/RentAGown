@@ -1,10 +1,12 @@
 package com.example.rentagown.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -35,6 +37,7 @@ import com.example.rentagown.Model.SliderMainMenu;
 import com.example.rentagown.NotificationActivity;
 import com.example.rentagown.ProductGownActivity;
 import com.example.rentagown.R;
+import com.example.rentagown.SearchViewActivity;
 import com.example.rentagown.WishlistActivity;
 
 import java.util.ArrayList;
@@ -46,6 +49,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
     Context context;
     ImageButton imWishlist, imNotification;
     ImageView layoutPromoEmpty;
+    SearchView searchView;
     ConstraintLayout layoutPromo;
     Button btnSeeAllCategory, btnSeeAllPromo, btnSeeAllFavoriteGown, btnSeeAllNewGown;
     RecyclerView rvTitleMenu, rvSliderMenu, rvSliderPromo, rvSliderFavoriteGown, rvSliderNewGown;
@@ -71,6 +75,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         //INIT VIEW
         imWishlist = view.findViewById(R.id.im_wishlist);
         imNotification = view.findViewById(R.id.im_notification);
+        searchView = view.findViewById(R.id.search_view);
         layoutPromoEmpty = view.findViewById(R.id.layout_promo_empty);
         layoutPromo = view.findViewById(R.id.layout_promo);
         btnSeeAllCategory = view.findViewById(R.id.btn_see_all_category);
@@ -82,6 +87,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         rvSliderPromo = view.findViewById(R.id.rv_slider_promo);
         rvSliderFavoriteGown = view.findViewById(R.id.rv_slider_favorite_gown);
         rvSliderNewGown = view.findViewById(R.id.rv_slider_new_gown);
+
 
         //Title Menu
         categoryMenuList = new ArrayList<>();
@@ -191,6 +197,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         btnSeeAllPromo.setOnClickListener(HomeFragment.this);
         btnSeeAllFavoriteGown.setOnClickListener(HomeFragment.this);
         btnSeeAllNewGown.setOnClickListener(HomeFragment.this);
+        searchView.setOnClickListener(HomeFragment.this);
 
 
         return view;
@@ -246,6 +253,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.search_view:
+                Intent search = new Intent(getActivity(), SearchViewActivity.class);
+                if (Intent.ACTION_SEARCH.equals(search.getAction())){
+                    String query = search.getStringExtra(SearchManager.QUERY);
+                }
+                startActivity(search);
+                break;
+
             case R.id.im_wishlist:
                 Intent wishlist = new Intent(getActivity(), WishlistActivity.class);
                 startActivity(wishlist);

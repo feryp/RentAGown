@@ -42,7 +42,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
     LinearLayout bottomSheet;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
