@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailPromoActivity"></activity>
+        <activity android:name=".NewGownActivity"></activity>
+        <activity android:name=".FavoriteGownActivity" />
+        <activity android:name=".DetailPromoActivity" />
         <activity android:name=".PromoActivity" />
         <activity android:name=".TransactionStatusActivity" />
         <activity android:name=".DetailBookingActivity" />

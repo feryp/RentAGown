@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.example.rentagown.Adapter.PageAdapterDetailProduct;
 import com.example.rentagown.Adapter.SliderViewProductAdapter;
@@ -38,6 +39,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
     TabLayout tabDetailProduct;
     ImageButton back, like, btnWhatsapp;
     Button btnBookNow;
+    LinearLayout bottomSheet;
 
 
 
@@ -53,6 +55,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         like = findViewById(R.id.im_like);
         btnWhatsapp = findViewById(R.id.btn_whatsapp);
         btnBookNow = findViewById(R.id.btn_book_now);
+        bottomSheet = findViewById(R.id.bottom_sheet);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
 
         ViewGroup.LayoutParams params = viewPager.getLayoutParams();
@@ -105,7 +108,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         like.setOnClickListener(this);
         btnWhatsapp.setOnClickListener(this);
         btnBookNow.setOnClickListener(this);
-
 
 
     }

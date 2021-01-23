@@ -22,8 +22,10 @@ import com.example.rentagown.Adapter.SliderFavoriteGownAdapter;
 import com.example.rentagown.Adapter.SliderMainMenuAdapter;
 import com.example.rentagown.Adapter.SliderNewGownAdapter;
 import com.example.rentagown.Adapter.SliderPromoAdapter;
+import com.example.rentagown.FavoriteGownActivity;
 import com.example.rentagown.ItemDecorationSlider;
 import com.example.rentagown.Interface.ItemClickListener;
+import com.example.rentagown.NewGownActivity;
 import com.example.rentagown.PromoActivity;
 import com.example.rentagown.Model.CategoryMenu;
 import com.example.rentagown.Model.FavoriteGown;
@@ -187,6 +189,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
         imNotification.setOnClickListener(HomeFragment.this);
         btnSeeAllCategory.setOnClickListener(HomeFragment.this);
         btnSeeAllPromo.setOnClickListener(HomeFragment.this);
+        btnSeeAllFavoriteGown.setOnClickListener(HomeFragment.this);
+        btnSeeAllNewGown.setOnClickListener(HomeFragment.this);
 
 
         return view;
@@ -260,6 +264,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Item
             case R.id.btn_see_all_promo:
                 Intent promoList = new Intent(getActivity(), PromoActivity.class);
                 startActivity(promoList);
+                break;
+
+            case R.id.btn_see_all_favorite:
+                Intent favoriteGown = new Intent(getActivity(), FavoriteGownActivity.class);
+                startActivity(favoriteGown);
+                break;
+
+            case R.id.btn_see_all_new:
+                Intent newGown = new Intent(getActivity(), NewGownActivity.class);
+                startActivity(newGown);
                 break;
         }
     }

@@ -24,7 +24,7 @@ public class PromoActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_promo);
+        setContentView(R.layout.activity_promo);
 
         //INIT VIEW
         back = findViewById(R.id.im_back);

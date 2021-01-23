@@ -99,6 +99,7 @@
                     app:tabSelectedTextColor="@color/colorPrimary"
                     app:tabTextAppearance="@style/CustomTextApprearance"/>
 
+
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/vp_detail_product"
                     android:layout_width="match_parent"

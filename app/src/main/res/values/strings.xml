@@ -322,5 +322,14 @@
 </string>
     <string name="btn_use_promo">Use Promo</string>
 
+    <!-- activity promo -->
+    <string name="appbar_promo">Promo</string>
+
+    <!-- activity favorite gown -->
+    <string name="appbar_favorite_gown">Favorite Gown</string>
+
+    <!-- activity new gown -->
+    <string name="appbar_new_gown">New Gown</string>
+
 
 </resources>
