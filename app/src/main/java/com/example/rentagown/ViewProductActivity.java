@@ -1,6 +1,7 @@
 package com.example.rentagown;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -12,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -19,6 +21,7 @@ import android.widget.LinearLayout;
 import com.example.rentagown.Adapter.PageAdapterDetailProduct;
 import com.example.rentagown.Adapter.SliderViewProductAdapter;
 import com.example.rentagown.Model.SliderItemProduct;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -41,6 +44,10 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
     Button btnBookNow;
     LinearLayout bottomSheet;
 
+    //tambahan variable
+    CoordinatorLayout containerViewProduct;
+    BottomSheetBehavior behavior;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +55,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_view_product);
 
         //INIT VIEW
+        containerViewProduct = findViewById(R.id.containerActivityViewProduct);
         sliderView = findViewById(R.id.slider_view_product);
         tabDetailProduct = findViewById(R.id.tab_detail_product);
         back = findViewById(R.id.im_back);
@@ -57,9 +65,10 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         bottomSheet = findViewById(R.id.bottom_sheet);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
 
-        ViewGroup.LayoutParams params = viewPager.getLayoutParams();
-        params.height = 5000;
-        viewPager.setLayoutParams(params);
+        //ini di hapus saja
+//        ViewGroup.LayoutParams params = viewPager.getLayoutParams();
+//        params.height = 5000;
+//        viewPager.setLayoutParams(params);
 
 
         sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
@@ -99,8 +108,10 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-//        BottomSheetUtils.setupViewPager(viewPager);
 
+
+        //untuk membuat bottom sheet dinamis
+        setupBottomSheet();
 
         //Set Listener
         back.setOnClickListener(this);
@@ -108,9 +119,36 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         btnWhatsapp.setOnClickListener(this);
         btnBookNow.setOnClickListener(this);
 
+        //ditambahkan ini
+        bottomSheet.requestLayout();
+
 
     }
 
+    private void setupBottomSheet() {
+        behavior = BottomSheetBehavior.from(bottomSheet);
+
+        //kita cari dulu panjang dari sliderviewnya
+        sliderView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                sliderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                int sliderViewHeight = sliderView.getHeight();
+
+                //habis itu kita cari dulu panjang dari containernya
+                containerViewProduct.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        containerViewProduct.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                        int containerHeight = containerViewProduct.getHeight();
+
+                        behavior.setPeekHeight((containerHeight - sliderViewHeight)+150);
+                    }
+                });
+
+            }
+        });
+    }
 
 
     @SuppressLint("NonConstantResourceId")

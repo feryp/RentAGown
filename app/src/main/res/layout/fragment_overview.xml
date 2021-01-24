@@ -1,215 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment.OverviewFragment">
 
-
-    <TextView
-        android:id="@+id/tv_name_detail_product"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/name_view_product"
-        android:textColor="@color/colorBlack"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/layout_detail_price_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name_detail_product"
-        tools:ignore="MissingConstraints"
-        android:baselineAligned="false">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
 
         <LinearLayout
-            android:id="@+id/layout_detail_price_product"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingTop="14dp"
-            android:paddingBottom="14dp"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_tag_price" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/title_price_product"
-                    android:textColor="@color/colorSoftGrey"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tv_price_detail_product"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Rp. 5.000.000"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_detail_date_booking_product"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingTop="14dp"
-            android:paddingBottom="14dp"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:contentDescription="@string/todo"
-                android:src="@drawable/ic_date_gold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/title_date_booking"
-                    android:textColor="@color/colorSoftGrey"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tv_date_booking_detail_product"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/dd_mm_yyyy"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/layout_detail_price_date"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/tv_title_special_treatment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/special_treatment"
-            android:textColor="@color/colorBlack"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/one_day_service"
-            android:textColor="@color/colorDarkGrey"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_special_treatment"
-            tools:ignore="MissingConstraints" />
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/toogle_switch_special_treatment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:theme="@style/SCBSwitch"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:switchMinWidth="25dp"
-            tools:ignore="MissingConstraints" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:paddingTop="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        tools:ignore="MissingConstraints,UselessLeaf">
-
-        <TextView
-            android:id="@+id/tv_keterangan_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/harga_sudah_termasuk_veil_dan_balero_dan_gratis_peminjaman_aksesoris"
-            android:textColor="@color/colorDarkGrey"
-            android:textSize="12sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp" />
-
-        <TextView
-            android:id="@+id/tv_title_similar_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Similar Category"
-            android:textColor="@color/colorBlack"
-            android:textSize="14sp"
-            android:layout_marginTop="27dp"
-            android:layout_marginStart="16dp"
-            android:layout_below="@+id/tv_keterangan_product"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_similar_category"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/tv_title_similar_category"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_detail_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/name_view_product"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_detail_price_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/layout_detail_price_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_tag_price" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/title_price_product"
+                            android:textColor="@color/colorSoftGrey"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_price_detail_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Rp. 5.000.000"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
 
 
-    </RelativeLayout>
+                    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_detail_date_booking_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_date_gold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/title_date_booking"
+                            android:textColor="@color/colorSoftGrey"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_date_booking_detail_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/dd_mm_yyyy"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/layout_detail_price_date"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_title_special_treatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/special_treatment"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/one_day_service"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_special_treatment"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/toogle_switch_special_treatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:theme="@style/SCBSwitch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:switchMinWidth="25dp"
+                    tools:ignore="MissingConstraints" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="28dp">
+
+                <TextView
+                    android:id="@+id/tv_keterangan_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/harga_sudah_termasuk_veil_dan_balero_dan_gratis_peminjaman_aksesoris"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_title_similar_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Similar Category"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_below="@+id/tv_keterangan_product"/>
+
+<!--            ini di buat scroll vertikalnya false-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_similar_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_below="@+id/tv_title_similar_category"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
 

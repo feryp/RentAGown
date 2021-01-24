@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerActivityViewProduct"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewProductActivity">
@@ -57,7 +58,7 @@
         android:layout_height="400dp"
         android:background="@color/colorGray"
         app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMarginBottom="80dp"
+        app:sliderIndicatorMarginBottom="100dp"
         app:sliderIndicatorOrientation="horizontal"
         app:sliderIndicatorPadding="3dp"
         app:sliderIndicatorRadius="2dp"
@@ -71,45 +72,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        app:behavior_hideable="false"
-        app:behavior_peekHeight="400dp">
+        app:behavior_hideable="false">
 
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:background="@drawable/bg_content_detail_product"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/slider_view_product"
+            tools:ignore="MissingConstraints">
 
-            <LinearLayout
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_detail_product"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_content_detail_product"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/slider_view_product"
-                tools:ignore="MissingConstraints">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tab_detail_product"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="26dp"
-                    app:tabMaxWidth="0dp"
-                    app:tabMode="fixed"
-                    app:tabIndicator="@null"
-                    app:tabTextColor="@color/colorDarkGrey"
-                    app:tabSelectedTextColor="@color/colorPrimary"
-                    app:tabTextAppearance="@style/CustomTextApprearance"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabIndicator="@null"
+                app:tabTextColor="@color/colorDarkGrey"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextAppearance="@style/CustomTextApprearance"/>
 
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/vp_detail_product"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_detail_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
-            </LinearLayout>
-
-
-        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
 
     </LinearLayout>
 
