@@ -138,7 +138,6 @@
                     </LinearLayout>
 
 
-
                     <LinearLayout
                         android:id="@+id/layout_text_terms_conditions_promo"
                         android:layout_width="match_parent"
