@@ -3,6 +3,7 @@ package com.example.rentagown.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,11 +47,15 @@ public class ReviewFragment extends Fragment {
         reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
         reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
         reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
+        reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
+        reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
+        reviewList.add(new Review("Randy Palmet","3.5","5 days ago","the material is pretty good"));
 
         //Setup Recycler View
         reviewAdapter = new ReviewAdapter(context,reviewList);
         rvReview.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvReview.setAdapter(reviewAdapter);
+
 
 
         return view;

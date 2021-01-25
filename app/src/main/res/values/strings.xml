@@ -182,6 +182,7 @@
     <string name="appbar_payment">Payment</string>
     <string name="title_shipping_address">Shipping Address</string>
     <string name="btn_change_address">Change Address</string>
+    <string name="btn_add_address">Add Address</string>
     <string name="label_rumah">Rumah</string>
     <string name="label_name">John Doe</string>
     <string name="label_no_hp">(6287871180436)</string>
@@ -330,6 +331,7 @@
 
     <!-- activity new gown -->
     <string name="appbar_new_gown">New Gown</string>
+
 
 
 </resources>

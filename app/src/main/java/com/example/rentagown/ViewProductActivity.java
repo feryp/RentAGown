@@ -65,11 +65,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         bottomSheet = findViewById(R.id.bottom_sheet);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
 
-        //ini di hapus saja
-//        ViewGroup.LayoutParams params = viewPager.getLayoutParams();
-//        params.height = 5000;
-//        viewPager.setLayoutParams(params);
-
 
         sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
