@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import biz.laenger.android.vpbs.BottomSheetUtils;
+import biz.laenger.android.vpbs.ViewPagerBottomSheetBehavior;
 
 public class ViewProductActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,7 +47,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
 
     //tambahan variable
     CoordinatorLayout containerViewProduct;
-    BottomSheetBehavior behavior;
+    ViewPagerBottomSheetBehavior behavior;
 
 
     @Override
@@ -64,6 +65,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         btnBookNow = findViewById(R.id.btn_book_now);
         bottomSheet = findViewById(R.id.bottom_sheet);
         final ViewPager viewPager = findViewById(R.id.vp_detail_product);
+        BottomSheetUtils.setupViewPager(viewPager);
 
 
         sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
@@ -83,6 +85,9 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         tabDetailProduct.addTab(tabDetailProduct.newTab().setText("Overview"));
         tabDetailProduct.addTab(tabDetailProduct.newTab().setText("Review"));
 
+        //untuk membuat bottom sheet dinamis
+        setupBottomSheet();
+
         final PageAdapterDetailProduct pageAdapterDetailProduct = new PageAdapterDetailProduct(this,getSupportFragmentManager(),tabDetailProduct.getTabCount());
         viewPager.setAdapter(pageAdapterDetailProduct);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabDetailProduct));
@@ -90,6 +95,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+
             }
 
             @Override
@@ -103,25 +109,16 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-
-
-        //untuk membuat bottom sheet dinamis
-        setupBottomSheet();
-
         //Set Listener
         back.setOnClickListener(this);
         like.setOnClickListener(this);
         btnWhatsapp.setOnClickListener(this);
         btnBookNow.setOnClickListener(this);
 
-        //ditambahkan ini
-        bottomSheet.requestLayout();
-
-
     }
 
     private void setupBottomSheet() {
-        behavior = BottomSheetBehavior.from(bottomSheet);
+        behavior = ViewPagerBottomSheetBehavior.from(bottomSheet);
 
         //kita cari dulu panjang dari sliderviewnya
         sliderView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -137,7 +134,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
                         containerViewProduct.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                         int containerHeight = containerViewProduct.getHeight();
 
-                        behavior.setPeekHeight((containerHeight - sliderViewHeight)+150);
+                        behavior.setPeekHeight((containerHeight - sliderViewHeight)+100);
                     }
                 });
 

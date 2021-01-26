@@ -51,5 +51,8 @@ dependencies {
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
     implementation "androidx.cardview:cardview:1.0.0"
 
+    //bottom sheet viewpager
+    implementation "biz.laenger.android:vpbs:0.0.6"
+
 
 }

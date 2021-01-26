@@ -170,6 +170,7 @@
     <string name="harga_sudah_termasuk_veil_dan_balero_dan_gratis_peminjaman_aksesoris">Harga sudah termasuk veil dan balero, dan gratis peminjaman aksesoris</string>
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
     <string name="btn_booking_now">Book Now</string>
+    <string name="btn_see_all_review">See All</string>
 
     <!-- activity your booking -->
     <string name="appbar_your_booking">Your Booking</string>

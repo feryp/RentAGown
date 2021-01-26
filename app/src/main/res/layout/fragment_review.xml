@@ -26,19 +26,16 @@
                 android:scrollbars="none"
                 android:nestedScrollingEnabled="false" />
 
-
             <Button
-                android:id="@+id/btn_submit_review"
+                android:id="@+id/btn_see_all_review"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="74dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="See All"
+                android:text="@string/btn_see_all_review"
                 android:textAllCaps="false"
                 android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                tools:ignore="MissingConstraints" />
-
+                android:textSize="16sp" />
 
         </LinearLayout>
 

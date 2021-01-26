@@ -1,109 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/containerActivityViewProduct"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ViewProductActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@android:color/transparent">
+        android:layout_weight="1"
+        android:id="@+id/containerActivityViewProduct"
+        android:layout_height="0dp">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?actionBarSize"
+            android:background="@android:color/transparent">
 
-            <RelativeLayout
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/im_back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_back_white"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/im_like"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000"
-                    android:layout_marginEnd="16dp"
-                    android:layout_alignParentEnd="true"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/btn_like_selected"
-                    tools:ignore="MissingConstraints" />
+                    <ImageButton
+                        android:id="@+id/im_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_back_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
 
-            </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/im_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/btn_like_selected"
+                        tools:ignore="MissingConstraints" />
 
-        </androidx.appcompat.widget.Toolbar>
+                </RelativeLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
+            </androidx.appcompat.widget.Toolbar>
 
-
-    <com.smarteist.autoimageslider.SliderView
-        android:id="@+id/slider_view_product"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:background="@color/colorGray"
-        app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMarginBottom="100dp"
-        app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorPadding="3dp"
-        app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="@color/colorWhite"
-        app:sliderIndicatorUnselectedColor="@color/colorSoftGrey"
-        tools:ignore="MissingConstraints" />
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-    <LinearLayout
-        android:id="@+id/bottom_sheet"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        app:behavior_hideable="false">
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/slider_view_product"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/colorGray"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMarginBottom="100dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@color/colorWhite"
+            app:sliderIndicatorUnselectedColor="@color/colorSoftGrey"
+            tools:ignore="MissingConstraints" />
+
 
         <LinearLayout
+            android:elevation="100dp"
+            android:id="@+id/bottom_sheet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_content_detail_product"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/slider_view_product"
-            tools:ignore="MissingConstraints">
+            app:layout_behavior="@string/view_pager_bottom_sheet_behavior"
+            app:behavior_hideable="false">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_detail_product"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                app:tabMaxWidth="0dp"
-                app:tabMode="fixed"
-                app:tabIndicator="@null"
-                app:tabTextColor="@color/colorDarkGrey"
-                app:tabSelectedTextColor="@color/colorPrimary"
-                app:tabTextAppearance="@style/CustomTextApprearance"/>
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_content_detail_product"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/slider_view_product"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_detail_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="fixed"
+                    app:tabIndicator="@null"
+                    app:tabTextColor="@color/colorDarkGrey"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextAppearance="@style/CustomTextApprearance"/>
 
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_detail_product"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_detail_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -150,4 +159,4 @@
 
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
