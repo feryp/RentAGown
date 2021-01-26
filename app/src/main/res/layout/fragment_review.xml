@@ -24,8 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scrollbars="none"
-                android:nestedScrollingEnabled="false"
-                tools:listitem="@layout/item_list_review"/>
+                android:nestedScrollingEnabled="false" />
 
         </LinearLayout>
 

@@ -419,17 +419,11 @@
                         android:background="@color/colorWhite"
                         android:padding="16dp">
 
-                        <CheckBox
-                            android:id="@+id/checkbox_payment_detail_booking"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/checkbox_payment_detail_booking"
                             android:fontFamily="@font/poppins_medium"
                             android:text="@string/pay_after_service"
                             android:textColor="@color/colorBlack"
