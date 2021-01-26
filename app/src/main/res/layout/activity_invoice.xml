@@ -440,6 +440,35 @@
 
         </androidx.core.widget.NestedScrollView>
 
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btn_confirm_pay"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_rounded_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btn_confirm_pay"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                app:backgroundTint="@null"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

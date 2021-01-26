@@ -248,6 +248,7 @@
     <string name="title_remaining_bill">Remaining Bill</string>
     <string name="transfer_manual">Transfer Manual</string>
     <string name="title_account_number_invoice">Account Number</string>
+    <string name="btn_confirm_pay">Confirm Pay</string>
 
     <!-- activity fitting size -->
     <string name="appbar_size_gown">Size Gown</string>

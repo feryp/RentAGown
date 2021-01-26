@@ -100,10 +100,13 @@
             android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
             android:contentDescription="@string/todo"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:src="@drawable/ic_calendar_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <View
             android:id="@+id/line"
@@ -204,7 +207,7 @@
             android:text="9 September 2020 - 12 September 2020" />
 
         <ImageButton
-            android:id="@+id/btn_delete"
+            android:id="@+id/btn_delete_your_booking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -212,9 +215,12 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/todo"
             android:src="@drawable/ic_delete"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,UnusedAttribute" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

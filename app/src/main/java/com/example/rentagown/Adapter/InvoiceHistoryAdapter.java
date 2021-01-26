@@ -1,13 +1,17 @@
 package com.example.rentagown.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rentagown.DetailBookingActivity;
+import com.example.rentagown.InvoiceActivity;
 import com.example.rentagown.Model.InvoiceHistory;
 import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.InvoiceHistoryViewHolder;
@@ -38,6 +42,15 @@ public class InvoiceHistoryAdapter extends RecyclerView.Adapter<InvoiceHistoryVi
         holder.tvStatusIncvoice.setText(invoiceHistoryList.get(position).getStatusInvoice());
         holder.tvTimeInvoice.setText(invoiceHistoryList.get(position).getTimeInvoice());
         holder.tvDateInvoice.setText(invoiceHistoryList.get(position).getDateInvoice());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Invoice",Toast.LENGTH_SHORT).show();
+                Intent invoice = new Intent(v.getContext(), InvoiceActivity.class);
+                v.getContext().startActivity(invoice);
+            }
+        });
     }
 
     @Override
