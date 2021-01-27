@@ -23,7 +23,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
     LinearLayout btnChoosePaymentMethod;
     ImageButton back, btnWhatsaap;
-    Button btnPayment;
+    Button btnPayment, btnAddAddress, btnChangeAddress;
     Context context;
 
     @Override
@@ -36,12 +36,16 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         btnChoosePaymentMethod = findViewById(R.id.btn_choose_payment_method);
         btnPayment = findViewById(R.id.btn_payment);
         btnWhatsaap = findViewById(R.id.btn_whatsapp);
+        btnAddAddress = findViewById(R.id.btn_add_address);
+        btnChangeAddress = findViewById(R.id.btn_change_address);
 
         //SET LISTENER
         back.setOnClickListener(this);
         btnChoosePaymentMethod.setOnClickListener(this);
         btnPayment.setOnClickListener(this);
         btnWhatsaap.setOnClickListener(this);
+        btnAddAddress.setOnClickListener(this);
+        btnChangeAddress.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -50,6 +54,16 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()){
             case R.id.im_back:
                 finish();
+                break;
+
+            case R.id.btn_add_address:
+                Intent addAddress = new Intent(PaymentActivity.this, AddAddressActivity.class);
+                startActivity(addAddress);
+                break;
+
+            case R.id.btn_change_address:
+                Intent changeAddress = new Intent(PaymentActivity.this, ChangeAddressActivity.class);
+                startActivity(changeAddress);
                 break;
 
             case R.id.btn_choose_payment_method:
