@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.rentagown.Adapter.MyBookingAdapter;
@@ -33,7 +35,8 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
     List<Product> productList;
     SimilarCategoryAdapter similarCategoryAdapter;
     Context context;
-    LinearLayout btnDateBooking;
+    LinearLayout btnStartDate, btnEndDate;
+    ImageButton btnLike;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,7 +46,10 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
 
         //INIT VIEW
         rvSimilarCategory = view.findViewById(R.id.rv_similar_category);
-        btnDateBooking = view.findViewById(R.id.layout_detail_date_booking_product);
+        btnLike = view.findViewById(R.id.btn_like);
+        btnStartDate = view.findViewById(R.id.layout_detail_start_date);
+        btnEndDate = view.findViewById(R.id.layout_detail_end_date);
+
 
 
         //List Similar Category
@@ -67,7 +73,9 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
         rvSimilarCategory.setAdapter(similarCategoryAdapter);
 
         //SET LISTENER
-        btnDateBooking.setOnClickListener(OverviewFragment.this);
+        btnStartDate.setOnClickListener(OverviewFragment.this);
+        btnEndDate.setOnClickListener(OverviewFragment.this);
+        btnLike.setOnClickListener(OverviewFragment.this);
 
         return view;
     }
@@ -76,9 +84,17 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.layout_detail_date_booking_product:
-                Intent dateBooking = new Intent(getActivity(), DateBookingActivity.class);
-                startActivity(dateBooking);
+            case R.id.layout_detail_start_date:
+
+            case R.id.layout_detail_end_date:
+                Intent startDate = new Intent(getActivity(), DateBookingActivity.class);
+                startActivity(startDate);
+                break;
+
+            case R.id.btn_like:
+                if (v == btnLike){
+                    btnLike.setBackgroundResource(R.drawable.btn_like_selected);
+                }
                 break;
         }
     }

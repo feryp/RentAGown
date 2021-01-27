@@ -20,26 +20,108 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_name_detail_product"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/poppins_medium"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_price_detail_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Rp. 5.000.000"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_discount_detail_product"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:text="25%"
+                            android:gravity="center"
+                            android:textSize="8sp"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/bg_button_rounded_gold"
+                            android:fontFamily="@font/poppins_regular"
+                            app:layout_constraintStart_toEndOf="@+id/tv_price_dress_product"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_product"
+                            tools:ignore="MissingConstraints,SmallSp"/>
+
+                        <TextView
+                            android:id="@+id/tv_price_old_dress_detail_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/colorDarkGrey"
+                            android:text="Rp. 8.000.000"
+                            android:foreground="@drawable/strikethrough_foreground"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_price_dress_product"
+                            tools:ignore="MissingConstraints,UnusedAttribute"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/btn_like_selected"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_name_dress_detail_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:lines="3"
+                android:minLines="1"
+                android:singleLine="false"
                 android:text="@string/name_view_product"
+                android:textSize="14sp"
                 android:textColor="@color/colorBlack"
-                android:textSize="24sp" />
+                android:fontFamily="@font/poppins_medium"/>
+
 
             <LinearLayout
-                android:id="@+id/layout_detail_price_date"
+                android:id="@+id/layout_detail_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:baselineAligned="false">
 
                 <LinearLayout
-                    android:id="@+id/layout_detail_price_product"
+                    android:id="@+id/layout_detail_start_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -47,13 +129,16 @@
                     android:orientation="horizontal"
                     android:paddingTop="14dp"
                     android:paddingBottom="14dp"
-                    tools:ignore="MissingConstraints">
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    tools:ignore="MissingConstraints,UnusedAttribute">
 
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:contentDescription="@string/todo"
-                        android:src="@drawable/ic_tag_price" />
+                        android:src="@drawable/ic_date_gold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -65,16 +150,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="@string/title_price_product"
+                            android:text="@string/title_start_date"
                             android:textColor="@color/colorSoftGrey"
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/tv_price_detail_product"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Rp. 5.000.000"
+                            android:text="@string/dd_mm_yyyy"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
 
@@ -84,7 +168,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/layout_detail_date_booking_product"
+                    android:id="@+id/layout_detail_end_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -92,7 +176,10 @@
                     android:orientation="horizontal"
                     android:paddingTop="14dp"
                     android:paddingBottom="14dp"
-                    tools:ignore="MissingConstraints">
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    tools:ignore="MissingConstraints,UnusedAttribute">
 
                     <ImageView
                         android:layout_width="42dp"
@@ -110,7 +197,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="@string/title_date_booking"
+                            android:text="@string/title_end_date"
                             android:textColor="@color/colorSoftGrey"
                             android:textSize="14sp" />
 
@@ -129,6 +216,19 @@
 
             </LinearLayout>
 
+
+            <Button
+                android:id="@+id/btn_see_no_available_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                style="@style/ButtonRoundedOutlinedGold2"
+                android:text="@string/btn_see_no_available_dates"
+                android:textColor="@color/colorSecondary"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"/>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
@@ -136,7 +236,6 @@
                 android:layout_marginTop="16dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/layout_detail_price_date"
                 tools:ignore="MissingConstraints">
 
                 <TextView

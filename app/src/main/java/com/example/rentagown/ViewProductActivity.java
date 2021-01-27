@@ -41,7 +41,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
     SliderView sliderView;
     List<SliderItemProduct> sliderItemProductList;
     TabLayout tabDetailProduct;
-    ImageButton back, like, btnWhatsapp;
+    ImageButton back, btnWhatsapp;
     Button btnBookNow;
     LinearLayout bottomSheet;
 
@@ -60,7 +60,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
         sliderView = findViewById(R.id.slider_view_product);
         tabDetailProduct = findViewById(R.id.tab_detail_product);
         back = findViewById(R.id.im_back);
-        like = findViewById(R.id.im_like);
         btnWhatsapp = findViewById(R.id.btn_whatsapp);
         btnBookNow = findViewById(R.id.btn_book_now);
         bottomSheet = findViewById(R.id.bottom_sheet);
@@ -111,7 +110,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
 
         //Set Listener
         back.setOnClickListener(this);
-        like.setOnClickListener(this);
         btnWhatsapp.setOnClickListener(this);
         btnBookNow.setOnClickListener(this);
 
@@ -134,7 +132,7 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
                         containerViewProduct.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                         int containerHeight = containerViewProduct.getHeight();
 
-                        behavior.setPeekHeight((containerHeight - sliderViewHeight)+100);
+                        behavior.setPeekHeight((containerHeight - sliderViewHeight) + 100);
                     }
                 });
 
@@ -151,11 +149,6 @@ public class ViewProductActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
 
-            case R.id.im_like:
-                if (v == like){
-                    like.setBackgroundResource(R.drawable.btn_like_selected);
-                }
-                break;
             case R.id.btn_book_now:
                 Intent bookNow = new Intent(ViewProductActivity.this, YourBookingActivity.class);
                 startActivity(bookNow);

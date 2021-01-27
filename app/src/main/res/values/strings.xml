@@ -162,8 +162,6 @@
     <string name="tv_title_email_has_been_sent">Email has been sent!</string>
 
     <!-- activity view product -->
-    <string name="title_price_product">PRICE</string>
-    <string name="title_date_booking">DATE BOOKING</string>
     <string name="dd_mm_yyyy">dd/mm/yyyy</string>
     <string name="special_treatment">Special Treatment</string>
     <string name="one_day_service">One-day service</string>
@@ -171,6 +169,9 @@
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
     <string name="btn_booking_now">Book Now</string>
     <string name="btn_see_all_review">See All</string>
+    <string name="btn_see_no_available_dates">See No Available Dates</string>
+    <string name="title_start_date">START DATE</string>
+    <string name="title_end_date">END DATE</string>
 
     <!-- activity your booking -->
     <string name="appbar_your_booking">Your Booking</string>

@@ -87,7 +87,7 @@
             android:fontFamily="@font/poppins_regular"
             app:layout_constraintStart_toEndOf="@+id/tv_price_dress_product"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_dress_product"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints,SmallSp"/>
 
         <TextView
             android:id="@+id/tv_price_old_dress_product"

@@ -40,14 +40,14 @@ public class DateBookingActivity extends AppCompatActivity implements View.OnCli
         calendarView.setFirstDayOfWeek(Calendar.SUNDAY);
 
         //Set Orientation 0 = Horizontal | 1 = Vertical
-        calendarView.setCalendarOrientation(0);
+        calendarView.setCalendarOrientation(1);
 
         calendarView.setWeekendDays(new HashSet(){{
             add(Calendar.SUNDAY);
         }});
 
-        //Range SelectionType
-        calendarView.setSelectionType(SelectionType.RANGE);
+        //Single SelectionType
+        calendarView.setSelectionType(SelectionType.SINGLE);
 
         //Set days you want to connect
         Calendar calendar = Calendar.getInstance();
@@ -76,15 +76,7 @@ public class DateBookingActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
             case R.id.im_set_date:
-//                if (calendarView.getSelectionManager() instanceof RangeSelectionManager){
-//                    RangeSelectionManager rangeSelectionManager = (RangeSelectionManager) calendarView.getSelectionManager();
-//                    if (rangeSelectionManager.getDays() != null){
-//                        startDate = rangeSelectionManager.getDays().first.toString();
-//                        endDate = rangeSelectionManager.getDays().second.toString();
-//                    } else {
-//                        Toast.makeText(DateBookingActivity.this, "Invalid Selection", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
+                //Belum ada fungsi
                 break;
         }
     }
