@@ -335,6 +335,9 @@
     <!-- activity new gown -->
     <string name="appbar_new_gown">New Gown</string>
 
+    <!-- activity no available date -->
+    <string name="appbar_no_available_date">No Available Date</string>
+    <string name="no_available_dates">No available dates</string>
 
 
 </resources>

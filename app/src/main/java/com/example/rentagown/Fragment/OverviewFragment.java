@@ -24,6 +24,7 @@ import com.example.rentagown.DateBookingActivity;
 import com.example.rentagown.InvoiceHistoryActivity;
 import com.example.rentagown.Model.Product;
 import com.example.rentagown.R;
+import com.example.rentagown.SeeNoAvailableDateActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,7 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
     Context context;
     LinearLayout btnStartDate, btnEndDate;
     ImageButton btnLike;
+    Button btnSeeNoAvailableDate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +51,7 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
         btnLike = view.findViewById(R.id.btn_like);
         btnStartDate = view.findViewById(R.id.layout_detail_start_date);
         btnEndDate = view.findViewById(R.id.layout_detail_end_date);
+        btnSeeNoAvailableDate = view.findViewById(R.id.btn_see_no_available_date);
 
 
 
@@ -76,6 +79,7 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
         btnStartDate.setOnClickListener(OverviewFragment.this);
         btnEndDate.setOnClickListener(OverviewFragment.this);
         btnLike.setOnClickListener(OverviewFragment.this);
+        btnSeeNoAvailableDate.setOnClickListener(OverviewFragment.this);
 
         return view;
     }
@@ -95,6 +99,11 @@ public class OverviewFragment extends Fragment implements View.OnClickListener {
                 if (v == btnLike){
                     btnLike.setBackgroundResource(R.drawable.btn_like_selected);
                 }
+                break;
+
+            case R.id.btn_see_no_available_date:
+                Intent noAvailbleDate = new Intent(getActivity(), SeeNoAvailableDateActivity.class);
+                startActivity(noAvailbleDate);
                 break;
         }
     }

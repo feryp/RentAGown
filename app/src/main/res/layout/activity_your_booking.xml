@@ -92,21 +92,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="Selina Colourblock Camisole Dress" />
 
-        <ImageButton
-            android:id="@+id/btn_calendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/todo"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_calendar_grey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <View
             android:id="@+id/line"
@@ -179,32 +164,56 @@
 
         </LinearLayout>
 
-
-        <ImageView
-            android:id="@+id/imageView3"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="20dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_date_grey"
+            android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/tv_date_booking_your_booking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/poppins_regular"
-            android:textColor="@color/colorSoftGray"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            tools:ignore="MissingConstraints,SmallSp"
-            android:text="9 September 2020 - 12 September 2020" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_date_grey" />
+
+            <TextView
+                android:id="@+id/tv_start_date_your_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorSoftGray"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:text="9 September 2020" />
+
+            <View
+                android:id="@+id/line_date"
+                android:layout_width="8dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/colorSoftGray" />
+
+            <TextView
+                android:id="@+id/tv_end_date_your_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorSoftGray"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                android:text="12 September 2020" />
+
+
+        </LinearLayout>
+
+
 
         <ImageButton
             android:id="@+id/btn_delete_your_booking"
