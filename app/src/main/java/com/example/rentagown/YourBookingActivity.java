@@ -1,8 +1,10 @@
 package com.example.rentagown;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -42,7 +44,7 @@ public class YourBookingActivity extends AppCompatActivity implements View.OnCli
                 break;
 
             case R.id.btn_delete_your_booking:
-                //Belum ada fungsinya
+                showDeleteDialog();
                 break;
 
             case R.id.btn_checkout:
@@ -58,5 +60,31 @@ public class YourBookingActivity extends AppCompatActivity implements View.OnCli
                 startActivity(i);
                 break;
         }
+    }
+
+    private void showDeleteDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Delete Item");
+        alertDialog.setMessage("Would you like to delete this booking ? ");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "YES",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        //fungsi jika delete your booking
+
+                        dialog.dismiss();
+
+                    }
+                });
+
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "NO",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
     }
 }

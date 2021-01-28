@@ -1,8 +1,10 @@
 package com.example.rentagown;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -45,10 +47,40 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
                 startActivity(confirmation);
                 break;
 
+            case R.id.btn_cancel:
+                showCancelDialog();
+                break;
+
             case R.id.btn_invoice:
                 Intent invoice = new Intent(ConfirmPaymentActivity.this, InvoiceActivity.class);
                 startActivity(invoice);
                 break;
         }
+    }
+
+    private void showCancelDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Cancel Transaction");
+        alertDialog.setMessage("Do you want to cancel a transaction ? ");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "YES",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        //fungsi jika transaksi cancel
+
+                        dialog.dismiss();
+
+                    }
+                });
+
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "NO",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
     }
 }
