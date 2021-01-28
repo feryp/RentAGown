@@ -339,5 +339,10 @@
     <string name="appbar_no_available_date">No Available Date</string>
     <string name="no_available_dates">No available dates</string>
 
+    <!-- activity detail history booking -->
+    <string name="appbar_detail_history">Detail History</string>
+    <string name="title_history_time_amp_date"><![CDATA[History Time & Date]]></string>
+    <string name="btn_review_detail_history">Review</string>
+
 
 </resources>

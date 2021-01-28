@@ -148,55 +148,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:gravity="center_vertical|end"
         android:layout_marginTop="10dp">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/title_total_price_history"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/colorDarkGrey"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/title_total_price_history"
-                android:textSize="12sp"
-                android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/colorDarkGrey"/>
-
-            <TextView
-                android:id="@+id/tv_total_price_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                tools:text="Rp. 5.000.000"
-                android:textSize="13sp"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="@color/colorBlack"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical|end">
-
-            <Button
-                android:id="@+id/btn_give_review"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                style="@style/ButtonRoundedOutlinedGold2"
-                android:text="@string/btn_review_history"
-                android:textSize="12sp"
-                android:textColor="@color/colorSecondary"
-                android:textAllCaps="false"/>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_total_price_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            tools:text="Rp. 5.000.000"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorBlack"/>
 
     </LinearLayout>
 

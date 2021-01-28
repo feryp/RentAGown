@@ -13,14 +13,11 @@ import com.example.rentagown.R;
 import com.example.rentagown.WriteReviewActivity;
 import com.makeramen.roundedimageview.RoundedImageView;
 
-public class HistoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class HistoryViewHolder extends RecyclerView.ViewHolder{
 
     public TextView tvDateHistory, tvStatusHistory, tvNameProduct, tvCategoryProduct, tvTotalPrice;
     public RoundedImageView imProduct;
-    public Button btnReview;
 
-    private ItemClickListener itemClickListener;
-    private View.OnClickListener onClickListener;
 
     public HistoryViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -31,25 +28,7 @@ public class HistoryViewHolder extends RecyclerView.ViewHolder implements View.O
         tvNameProduct = itemView.findViewById(R.id.tv_name_dress_history);
         tvCategoryProduct = itemView.findViewById(R.id.tv_category_dress_history);
         tvTotalPrice = itemView.findViewById(R.id.tv_total_price_history);
-        btnReview = itemView.findViewById(R.id.btn_give_review);
-
-        itemView.setOnClickListener(this);
-        btnReview.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_give_review:
-                Intent giveReview = new Intent(itemView.getContext(), WriteReviewActivity.class);
-                itemView.getContext().startActivity(giveReview);
-                break;
-//            default:
-//                itemClickListener.onClick(v,getAdapterPosition(),false);
-//                break;
-        }
 
     }
-
 
 }

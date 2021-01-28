@@ -1,13 +1,17 @@
 package com.example.rentagown.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.rentagown.DetailHistoryBookingActivity;
+import com.example.rentagown.InvoiceActivity;
 import com.example.rentagown.Model.History;
 import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.HistoryViewHolder;
@@ -39,6 +43,15 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryViewHolder> {
         holder.tvNameProduct.setText(historyList.get(position).getNameProduct());
         holder.tvCategoryProduct.setText(historyList.get(position).getCategoryProduct());
         holder.tvTotalPrice.setText(historyList.get(position).getTotalPrice());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Detail",Toast.LENGTH_SHORT).show();
+                Intent detail = new Intent(v.getContext(), DetailHistoryBookingActivity.class);
+                v.getContext().startActivity(detail);
+            }
+        });
     }
 
     @Override

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeeNoAvailableDateActivity"></activity>
+        <activity android:name=".DetailHistoryBookingActivity"></activity>
+        <activity android:name=".SeeNoAvailableDateActivity" />
         <activity
             android:name=".SearchViewActivity"
             android:screenOrientation="portrait"

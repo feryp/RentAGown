@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailHistoryBookingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageButton
+                        android:id="@+id/im_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_back_black"
+                        android:background="#00000000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/appbar_detail_history"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/im_back"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="80dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_detail_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/im_product_detail_booking"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                app:riv_corner_radius="8dp"
+                                app:riv_mutate_background="true"
+                                app:riv_oval="false"
+                                android:src="@drawable/prewedding_1"
+                                android:contentDescription="@string/todo"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_name_dress_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Selina Colourblock Camisole Dress"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/tv_category_dress_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/colorDarkGrey"
+                                android:textSize="12sp"
+                                android:text="PREWEDDING" />
+
+                            <TextView
+                                android:id="@+id/tv_status_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@drawable/bg_status_history"
+                                android:text="Done"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorDarkGreen"
+                                android:fontFamily="@font/poppins_semi_bold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_schedule_time_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/title_history_time_amp_date"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            tools:ignore="RelativeOverlap"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_date_detail_history_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="8 Jan 2020"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_regular"/>
+
+                            <TextView
+                                android:id="@+id/tv_time_detail_history_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="10:15 am"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_regular"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_item_price_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/title_item_detail_booking"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="16dp"
+                                android:text="@string/title_price_detail_booking"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/border_bottom">
+
+                            <TextView
+                                android:id="@+id/tv_item_name_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selina Colourblock Camisole Dress"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/poppins_regular"
+                                android:maxWidth="190dp"
+                                android:layout_centerVertical="true"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:id="@+id/tv_item_price_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Rp. 5.000.000"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/title_sub_total_detal_booking"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:id="@+id/tv_sub_total_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="Rp. 5.000.000"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/title_total_discount_detail_booking"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:id="@+id/tv_total_discount_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="- Rp. 0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/title_dp_paid_detail_booking"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:id="@+id/tv_dp_paid_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="Rp. 500.000"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/title_remaining_bills_detail_booking"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                            <TextView
+                                android:id="@+id/tv_remaining_bils_detail_history"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:text="Rp. 4.500.000"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12sp"
+                                tools:ignore="RelativeOverlap"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btn_review_detail_history"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_rounded_gold"
+                android:textAllCaps="false"
+                android:text="@string/btn_review_detail_history"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

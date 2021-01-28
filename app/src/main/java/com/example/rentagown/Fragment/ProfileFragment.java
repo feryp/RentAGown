@@ -22,7 +22,7 @@ import java.util.Objects;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener{
 
-    ConstraintLayout invoiceHistory, transactionStatus, settings, helpCenter, privacyPolicy, termsConditions, signOut;
+    ConstraintLayout invoiceHistory, settings, helpCenter, privacyPolicy, termsConditions, signOut;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +32,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         //INIT VIEW
         invoiceHistory = v.findViewById(R.id.menu_invoice_history);
-        transactionStatus = v.findViewById(R.id.menu_transaction_status);
         settings = v.findViewById(R.id.menu_setting);
         helpCenter = v.findViewById(R.id.menu_help_center);
         privacyPolicy = v.findViewById(R.id.menu_privacy_policy);
@@ -41,7 +40,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         //SET LISTENER
         invoiceHistory.setOnClickListener(ProfileFragment.this);
-        transactionStatus.setOnClickListener(ProfileFragment.this);
         settings.setOnClickListener(ProfileFragment.this);
         helpCenter.setOnClickListener(ProfileFragment.this);
         termsConditions.setOnClickListener(ProfileFragment.this);
@@ -60,12 +58,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Invoice History", Toast.LENGTH_SHORT).show();
                 Intent invoiceHistory = new Intent(getActivity(), InvoiceHistoryActivity.class);
                 startActivity(invoiceHistory);
-                break;
-
-            case R.id.menu_transaction_status:
-                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Transaction Status", Toast.LENGTH_SHORT).show();
-                Intent transactionStatus = new Intent(getActivity(), TransactionStatusActivity.class);
-                startActivity(transactionStatus);
                 break;
 
             case R.id.menu_setting:
