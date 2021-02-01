@@ -255,13 +255,14 @@
     <!-- activity fitting size -->
     <string name="appbar_size_gown">Size Gown</string>
     <string name="btn_template">Template</string>
+    <string name="unit_cm">cm</string>
     <string name="et_bust">Bust</string>
     <string name="et_arm_hole">Arm Hole</string>
     <string name="et_waist">Waist</string>
     <string name="et_hip">Hip</string>
     <string name="title_note">Note :</string>
-    <string name="semua_ukuran_dalam_sentimeter_cm">- Semua ukuran dalam sentimeter (cm)</string>
-    <string name="ukur_secara_melingkar">- Ukur secara melingkar</string>
+    <string name="semua_ukuran_dalam_sentimeter_cm">- All sizes are in centimeter (cm)</string>
+    <string name="ukur_secara_melingkar">- Measure in a circle</string>
     <string name="btn_custom_size">Custom Size</string>
 
     <!-- activity history booking -->
@@ -343,6 +344,7 @@
     <string name="appbar_detail_history">Detail History</string>
     <string name="title_history_time_amp_date"><![CDATA[History Time & Date]]></string>
     <string name="btn_review_detail_history">Review</string>
+
 
 
 </resources>

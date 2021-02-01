@@ -11,13 +11,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.makeramen.roundedimageview.RoundedImageView;
+
 import java.util.Objects;
 
 public class FittingSizeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Dialog dialog;
-    Button btnTemplate;
     ImageButton back;
+    RoundedImageView btnTemplate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class FittingSizeActivity extends AppCompatActivity implements View.OnCli
 
         dialog = new Dialog(this);
         back = findViewById(R.id.im_back);
-        btnTemplate = findViewById(R.id.btn_template);
+        btnTemplate = findViewById(R.id.see_template);
 
         //SET LISTENER
         back.setOnClickListener(this);
@@ -48,7 +50,7 @@ public class FittingSizeActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
 
-            case R.id.btn_template:
+            case R.id.see_template:
                 ShowPopup(v);
                 break;
 

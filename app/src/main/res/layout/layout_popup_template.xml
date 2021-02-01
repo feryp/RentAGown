@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="475dp"
-    android:background="@drawable/template_fitting"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:background="@drawable/body_size_template"
     android:layout_gravity="center">
 
 
