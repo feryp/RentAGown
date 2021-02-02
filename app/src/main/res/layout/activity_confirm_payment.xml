@@ -20,21 +20,20 @@
             android:background="@color/colorWhite"
             tools:ignore="MissingConstraints">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="match_parent"
                 tools:ignore="MissingConstraints">
 
                 <ImageButton
                     android:id="@+id/im_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/ic_back_black"
                     android:background="#00000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -43,12 +42,20 @@
                     android:text="@string/appbar_confirm_payment"
                     android:textColor="@color/colorBlack"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/im_back"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_centerInParent="true" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/im_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="#00000000"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_more_vertical" />
+
+            </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -334,7 +341,7 @@
             tools:ignore="MissingConstraints,UnusedAttribute" />
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/btn_back_to_home_payment"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -342,7 +349,7 @@
             app:backgroundTint="@null"
             android:background="@drawable/bg_button_rounded_gold"
             android:fontFamily="@font/poppins_semi_bold"
-            android:text="@string/btn_cancel"
+            android:text="@string/btn_back_to_home"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"

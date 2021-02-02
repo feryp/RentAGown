@@ -7,14 +7,19 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+
+import com.example.rentagown.Fragment.HomeFragment;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class ConfirmPaymentActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageButton back;
-    Button btnConfirmation, btnCancel, btnInvoice;
+    ImageButton back, more;
+    Button btnConfirmation, btnInvoice, btnBacktoHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +28,17 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
 
         //INIT VIEW
         back = findViewById(R.id.im_back);
+        more = findViewById(R.id.im_more);
         btnConfirmation = findViewById(R.id.btn_confirmation);
-        btnCancel = findViewById(R.id.btn_cancel);
         btnInvoice = findViewById(R.id.btn_invoice);
+        btnBacktoHome = findViewById(R.id.btn_back_to_home_payment);
 
         //SET LISTENER
         back.setOnClickListener(this);
+        more.setOnClickListener(this);
         btnConfirmation.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
         btnInvoice.setOnClickListener(this);
+        btnBacktoHome.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -42,18 +49,45 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
                 finish();
                 break;
 
+            case R.id.im_more:
+                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ConfirmPaymentActivity.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_cancel_payment,
+                        (LinearLayout)findViewById(R.id.bottom_sheet_container_cancel));
+
+                bottomSheetView.findViewById(R.id.btn_cancel_transaction).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showCancelDialog();
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+                bottomSheetView.findViewById(R.id.btn_close).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+                break;
+
             case R.id.btn_confirmation:
                 Intent confirmation = new Intent(ConfirmPaymentActivity.this, FormConfirmationActivity.class);
                 startActivity(confirmation);
                 break;
 
-            case R.id.btn_cancel:
-                showCancelDialog();
-                break;
 
             case R.id.btn_invoice:
                 Intent invoice = new Intent(ConfirmPaymentActivity.this, InvoiceActivity.class);
                 startActivity(invoice);
+                break;
+
+            case R.id.btn_back_to_home_payment:
+//                Intent backHome = new Intent(ConfirmPaymentActivity.this, HomeFragment.class);
+//                startActivity(backHome);
                 break;
         }
     }

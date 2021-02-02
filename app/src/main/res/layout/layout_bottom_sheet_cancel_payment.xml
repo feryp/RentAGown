@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:id="@+id/bottom_sheet_container_cancel">
+
+    <Button
+        android:id="@+id/btn_cancel_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Cancel Transaction"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/poppins_semi_bold"
+        app:backgroundTint="@null"
+        android:background="@drawable/border_bottom"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute" />
+
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textSize="16sp"
+        android:text="Close"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>
