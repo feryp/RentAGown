@@ -217,7 +217,8 @@
     <string name="last_2_digit_is_unique_code_for_bank_transfer">Last 2 digit is unique code for bank transfer</string>
     <string name="payment_method_confirm">Payment Method</string>
     <string name="btn_confirmation">Confirmation</string>
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_cancel_transaction">Cancel Transaction</string>
+    <string name="btn_close_dialog">Close</string>
 
     <!-- activity form confirmation -->
     <string name="appbar_confirmation">Confirmation</string>

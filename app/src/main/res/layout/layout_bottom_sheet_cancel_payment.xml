@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:text="Cancel Transaction"
+        android:text="@string/btn_cancel_transaction"
         android:textSize="12sp"
         android:textAllCaps="false"
         android:gravity="start|center_vertical"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:textSize="16sp"
-        android:text="Close"
+        android:text="@string/btn_close_dialog"
         android:textAllCaps="false"
         android:textColor="@color/colorSecondary"
         style="@style/Widget.MaterialComponents.Button.TextButton"/>
