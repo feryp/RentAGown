@@ -18,8 +18,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class ConfirmPaymentActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageButton back, more;
-    Button btnConfirmation, btnInvoice, btnBacktoHome;
+    ImageButton back;
+    Button btnConfirmation, btnInvoice, btnBacktoHome, btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +28,17 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
 
         //INIT VIEW
         back = findViewById(R.id.im_back);
-        more = findViewById(R.id.im_more);
+        btnCancel = findViewById(R.id.btn_cancel_transaction);
         btnConfirmation = findViewById(R.id.btn_confirmation);
         btnInvoice = findViewById(R.id.btn_invoice);
         btnBacktoHome = findViewById(R.id.btn_back_to_home_payment);
 
         //SET LISTENER
         back.setOnClickListener(this);
-        more.setOnClickListener(this);
         btnConfirmation.setOnClickListener(this);
         btnInvoice.setOnClickListener(this);
         btnBacktoHome.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -49,29 +49,8 @@ public class ConfirmPaymentActivity extends AppCompatActivity implements View.On
                 finish();
                 break;
 
-            case R.id.im_more:
-                final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ConfirmPaymentActivity.this, R.style.BottomSheetDialogTheme);
-                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
-                        R.layout.layout_bottom_sheet_cancel_payment,
-                        (LinearLayout)findViewById(R.id.bottom_sheet_container_cancel));
-
-                bottomSheetView.findViewById(R.id.btn_cancel_transaction).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        showCancelDialog();
-                        bottomSheetDialog.dismiss();
-                    }
-                });
-
-                bottomSheetView.findViewById(R.id.btn_close).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        bottomSheetDialog.dismiss();
-                    }
-                });
-
-                bottomSheetDialog.setContentView(bottomSheetView);
-                bottomSheetDialog.show();
+            case R.id.btn_cancel_transaction:
+                showCancelDialog();
                 break;
 
             case R.id.btn_confirmation:

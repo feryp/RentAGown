@@ -44,16 +44,6 @@
                     android:textSize="20sp"
                     android:layout_centerInParent="true" />
 
-                <ImageButton
-                    android:id="@+id/im_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00000000"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_more_vertical" />
 
             </RelativeLayout>
 
@@ -64,7 +54,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_payment"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_shadow"
         app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
@@ -235,6 +225,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -244,36 +235,36 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_price_confirm"
-                    android:textSize="14sp"
-                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:layout_marginStart="16dp"/>
+                    android:text="@string/total_price_confirm"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/tv_total_price_confirm_payment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rp. 500.050"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="16dp"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:layout_marginStart="16dp"/>
+                    android:text="Rp. 500.050"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/last_2_digit_is_unique_code_for_bank_transfer"
-                    android:textSize="8sp"
-                    android:textColor="@color/colorDarkGrey"
-                    android:fontFamily="@font/poppins_regular"
                     android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/last_2_digit_is_unique_code_for_bank_transfer"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="8sp"
                     tools:ignore="SmallSp" />
 
             </LinearLayout>
@@ -282,32 +273,47 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical|end">
+                android:gravity="center_vertical|end"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/payment_method_confirm"
-                    android:textSize="14sp"
-                    android:textColor="@color/colorBlack"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:layout_marginEnd="16dp"/>
+                    android:text="@string/payment_method_confirm"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/tv_payment_method_confirm_payment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deposit  Booking"
-                    android:textSize="16sp"
-                    android:textColor="@color/colorBlack"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:layout_marginEnd="16dp"/>
+                    android:text="Deposit  Booking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
 
 
             </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cancel_transaction"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Cancel Transaction"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
