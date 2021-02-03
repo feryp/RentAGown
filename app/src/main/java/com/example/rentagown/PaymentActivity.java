@@ -21,7 +21,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class PaymentActivity extends AppCompatActivity implements View.OnClickListener {
 
-    LinearLayout btnChoosePaymentMethod;
+    LinearLayout btnChoosePaymentMethod, btnChooseBank;
     ImageButton back, btnWhatsaap;
     Button btnPayment, btnAddAddress, btnChangeAddress;
     Context context;
@@ -34,6 +34,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         //INIT VIEW
         back = findViewById(R.id.im_back);
         btnChoosePaymentMethod = findViewById(R.id.btn_choose_payment_method);
+        btnChooseBank = findViewById(R.id.choose_list_bank);
         btnPayment = findViewById(R.id.btn_payment);
         btnWhatsaap = findViewById(R.id.btn_whatsapp);
         btnAddAddress = findViewById(R.id.btn_add_address);
@@ -42,6 +43,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         //SET LISTENER
         back.setOnClickListener(this);
         btnChoosePaymentMethod.setOnClickListener(this);
+        btnChooseBank.setOnClickListener(this);
         btnPayment.setOnClickListener(this);
         btnWhatsaap.setOnClickListener(this);
         btnAddAddress.setOnClickListener(this);
@@ -99,6 +101,11 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
                 });
                 bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
+                break;
+
+            case R.id.choose_list_bank:
+                Intent chooseBank = new Intent(PaymentActivity.this, ChoiceBankActivity.class);
+                startActivity(chooseBank);
                 break;
 
             case R.id.btn_payment:
