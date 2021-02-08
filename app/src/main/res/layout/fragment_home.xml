@@ -57,20 +57,38 @@
                             android:background=" #00000000"
                             android:src="@drawable/ic_like_black_outlined"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/im_notification"
+                            app:layout_constraintEnd_toStartOf="@+id/frame_im_notification"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <ImageButton
-                            android:id="@+id/im_notification"
+                        <FrameLayout
+                            android:id="@+id/frame_im_notification"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:focusable="true"
                             android:layout_marginEnd="16dp"
-                            android:contentDescription="@string/todo"
-                            android:background=" #00000000"
-                            android:src="@drawable/ic_notification"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent" >
+
+                            <ImageView
+                                android:id="@+id/im_notification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/ic_notification"
+                                />
+
+                            <View
+                                android:id="@+id/badge_notif"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="end|right|top"
+                                android:layout_marginEnd="0dp"
+                                android:background="@drawable/badge_notification"
+                                android:padding="3dp"/>
+
+                        </FrameLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -199,6 +217,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/im_promo_empty"
                     android:layout_marginTop="16dp"
+                    android:contentDescription="@string/todo"
                     app:layout_constraintTop_toBottomOf="@+id/rv_slider_main_menu"
                     tools:ignore="MissingConstraints"/>
 

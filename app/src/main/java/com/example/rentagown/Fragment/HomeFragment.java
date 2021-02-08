@@ -47,7 +47,8 @@ import java.util.List;
 public class HomeFragment extends Fragment implements View.OnClickListener, ItemClickListener {
 
     Context context;
-    ImageButton imWishlist, imNotification;
+    ImageButton imWishlist;
+    ImageView imNotification;
     ImageView layoutPromoEmpty;
     SearchView searchView;
     ConstraintLayout layoutPromo;

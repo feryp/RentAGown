@@ -102,19 +102,6 @@
             app:singleSelection="true"
             tools:ignore="RtlSymmetry">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_paling_sesuai"
-                style="@style/CustomChipChoice"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:text="@string/chip_paling_sesuai"
-                android:textSize="12sp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                app:chipStartPadding="16dp"
-                app:chipEndPadding="16dp"
-                app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip_terbaru"
@@ -179,47 +166,60 @@
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/colorBlack"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/et_price_terendah"
-                android:layout_width="160dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/bg_edit_text_outlined"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="@string/et_harga_terendah"
-                android:inputType="number"
-                android:paddingStart="12dp"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RtlSymmetry" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="16dp">
 
-            <EditText
-                android:id="@+id/et_price_tertinggi"
-                android:layout_width="160dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/bg_edit_text_outlined"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="@string/et_harga_tertinggi"
-                android:inputType="number"
-                android:paddingStart="12dp"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RtlSymmetry" />
+                <EditText
+                    android:id="@+id/et_price_terendah"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_edit_text_outlined"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="@string/et_harga_terendah"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/et_price_tertinggi"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_edit_text_outlined"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="@string/et_harga_tertinggi"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_group_price"

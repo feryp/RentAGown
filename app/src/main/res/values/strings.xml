@@ -120,12 +120,12 @@
     <string name="btn_reset_filter">Reset</string>
     <string name="btn_apply">Apply</string>
     <string name="chip_paling_sesuai">Paling Sesuai</string>
-    <string name="chip_terbaru">Terbaru</string>
-    <string name="chip_harga_tertinggi">Harga Tertinggi</string>
-    <string name="chip_harga_terendah">Harga Terendah</string>
+    <string name="chip_terbaru">Latest</string>
+    <string name="chip_harga_tertinggi">Highest Price</string>
+    <string name="chip_harga_terendah">Lowest Price</string>
     <string name="title_price">Price</string>
-    <string name="et_harga_terendah">Terendah</string>
-    <string name="et_harga_tertinggi">Tertinggi</string>
+    <string name="et_harga_terendah">Lowest</string>
+    <string name="et_harga_tertinggi">Highest</string>
     <string name="chip_50_rb_100_rb">50 rb - 100 rb</string>
     <string name="chip_100_rb_150_rb">100 rb - 150 rb</string>
     <string name="chip_150_rb_200_rb">150 rb - 200 rb</string>
