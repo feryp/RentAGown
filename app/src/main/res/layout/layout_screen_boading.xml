@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/img_intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleX="1.3"
-        android:scaleY="1.3"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/bg_prewedding"
         android:contentDescription="@string/todo"/>
 
     <TextView
@@ -20,8 +20,9 @@
         android:layout_centerInParent="true"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:fontFamily="@font/poppins_semi_bold"
-        android:textSize="26sp" />
+        android:fontFamily="@font/baskerville_semi_bold"
+        android:textSize="26sp"
+        tools:text="Prewedding"/>
 
     <TextView
         android:id="@+id/tv_intro_desc"
@@ -37,8 +38,9 @@
         android:layout_below="@+id/tv_intro_title"
         android:textAlignment="center"
         android:textSize="14sp"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/baskerville_regular"
         android:textColor="@color/colorWhite"
+        tools:text="The special day that is coming soon will not be memorable without stunning clothes we are here to bring that to you."
         />
 
 
