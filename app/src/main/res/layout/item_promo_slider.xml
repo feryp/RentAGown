@@ -58,7 +58,7 @@
                     tools:text="Promo"
                     android:textSize="12sp"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/poppins_semi_bold"
                     android:layout_toEndOf="@+id/im_discount"
                     android:layout_marginStart="5dp" />
 

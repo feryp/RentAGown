@@ -20,7 +20,7 @@
         android:layout_centerInParent="true"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:fontFamily="@font/baskerville_semi_bold"
+        android:fontFamily="@font/poppins_semi_bold"
         android:textSize="26sp"
         tools:text="Prewedding"/>
 
@@ -38,7 +38,7 @@
         android:layout_below="@+id/tv_intro_title"
         android:textAlignment="center"
         android:textSize="14sp"
-        android:fontFamily="@font/baskerville_regular"
+        android:fontFamily="@font/poppins_regular"
         android:textColor="@color/colorWhite"
         tools:text="The special day that is coming soon will not be memorable without stunning clothes we are here to bring that to you."
         />
