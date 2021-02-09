@@ -68,7 +68,7 @@ public class OnBoardingActivity extends AppCompatActivity{
                 "A more flexible way to rent",
                 "We are here to make it easy for you to choose clothes that are suitable for " +
                         "all your important activities so that you appear different from the others.",
-                R.drawable.bg_get_started));
+                R.drawable.bg_getstarted));
 
 
         //Setup View Pager

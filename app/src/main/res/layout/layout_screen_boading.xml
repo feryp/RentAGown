@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <ImageView
         android:id="@+id/img_intro"
         android:layout_width="match_parent"
@@ -12,6 +13,13 @@
         android:scaleType="centerCrop"
         tools:src="@drawable/bg_prewedding"
         android:contentDescription="@string/todo"/>
+
+<!--    <View-->
+<!--        android:id="@+id/scrim"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#42000000"-->
+<!--        tools:ignore="MissingConstraints"/>-->
 
     <TextView
         android:id="@+id/tv_intro_title"
@@ -42,6 +50,8 @@
         android:textColor="@color/colorWhite"
         tools:text="The special day that is coming soon will not be memorable without stunning clothes we are here to bring that to you."
         />
+
+
 
 
 </RelativeLayout>
