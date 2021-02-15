@@ -11,6 +11,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +21,10 @@ import com.example.rentagown.MainAfterActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SignInActivity;
 import com.example.rentagown.SignUpActivity;
+
+import static android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN;
+import static android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE;
+import static android.view.WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN;
 
 
 public class LoginFragment extends Fragment implements View.OnClickListener{
@@ -33,6 +38,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
+        getActivity().getWindow().setSoftInputMode(SOFT_INPUT_ADJUST_RESIZE);
 
         //INIT VIEW
         etEmail = view.findViewById(R.id.et_email_login);
