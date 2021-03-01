@@ -22,7 +22,7 @@ import com.example.rentagown.SignUpActivity;
 
 public class ProfileBeforeFragment extends Fragment implements View.OnClickListener {
 
-    ConstraintLayout invoiceHistory, transactionStatus, settings, helpCenter, privacyPolicy, termsConditions, signOut;
+    ConstraintLayout invoiceHistory, settings, helpCenter, privacyPolicy, termsConditions, signOut;
     Button btnCreateAccount, btnSignIn;
 
     @Override
@@ -35,7 +35,6 @@ public class ProfileBeforeFragment extends Fragment implements View.OnClickListe
         btnCreateAccount = v.findViewById(R.id.btn_create_account);
         btnSignIn = v.findViewById(R.id.btn_to_layout_login);
         invoiceHistory = v.findViewById(R.id.menu_invoice_history);
-        transactionStatus = v.findViewById(R.id.menu_transaction_status);
         settings = v.findViewById(R.id.menu_setting);
         helpCenter = v.findViewById(R.id.menu_help_center);
         privacyPolicy = v.findViewById(R.id.menu_privacy_policy);

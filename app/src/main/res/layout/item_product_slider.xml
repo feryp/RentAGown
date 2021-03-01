@@ -10,12 +10,12 @@
     android:layout_marginBottom="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/im_image_product"
-            android:layout_width="0dp"
+            android:layout_width="150dp"
             android:layout_height="180dp"
             android:contentDescription="@string/todo"
             android:scaleType="centerCrop"

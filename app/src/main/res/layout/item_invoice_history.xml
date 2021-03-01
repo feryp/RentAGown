@@ -22,7 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_bill_gold"
-            android:layout_marginBottom="5dp"
             android:contentDescription="@string/todo"
             />
 

@@ -8,7 +8,6 @@
                 android:endColor="@color/colorGold"
                 android:startColor="@color/colorDarkGold"/>
 
-
         </shape>
     </item>
 </selector>
