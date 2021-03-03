@@ -368,70 +368,131 @@
 
                     </RelativeLayout>
 
-                    <LinearLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:orientation="horizontal"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
-                        android:baselineAligned="false">
+                        android:layout_marginTop="16dp">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <TextView
+                                android:id="@+id/tv_title_destination_bank_invoice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins_medium"
-                                android:text="@string/title_account_number_invoice"
+                                android:text="@string/tv_title_destination_bank"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/im_logo_bank_transfer"
+                                android:id="@id/im_logo_bank_destination"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
+                                android:contentDescription="@string/todo"
                                 android:src="@drawable/logo_bca"
-                                android:contentDescription="@string/todo"/>
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_title_destination_bank_invoice" />
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="end|center_vertical"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/tv_account_number_invoice"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:gravity="center"
-                                android:text="Rp. 4.500.000"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="12sp" />
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                app:layout_constraintStart_toEndOf="@+id/im_logo_bank_destination"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_title_destination_bank_invoice">
+
+                                <TextView
+                                    android:id="@+id/tv_account_number_destination_bank_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Rp. 4.500.000"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_account_name_destination_bank_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="a.n John Doe"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <TextView
-                                android:id="@+id/tv_account_name_invoice"
+                                android:id="@+id/tv_title_sending_bank_invoice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:text="a.n John Doe"
+                                android:text="Sending Bank"
                                 android:textColor="@color/colorBlack"
-                                android:textSize="12sp" />
+                                android:textSize="14sp"
+                                app:layout_constraintEnd_toEndOf="parent" />
 
-                        </LinearLayout>
+                            <ImageView
+                                android:id="@+id/im_logo_bank_sending"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/logo_bca"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_title_sending_bank_invoice" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                app:layout_constraintStart_toEndOf="@id/im_logo_bank_sending"
+                                app:layout_constraintTop_toBottomOf="@id/tv_title_sending_bank_invoice">
+
+                                <TextView
+                                    android:id="@+id/tv_account_number_sending_bank_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Rp. 4.500.000"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_account_name_sending_bank_invoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="a.n John Doe"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                    </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
 
