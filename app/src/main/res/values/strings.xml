@@ -346,5 +346,12 @@
     <string name="title_history_time_amp_date"><![CDATA[History Time & Date]]></string>
     <string name="btn_review_detail_history">Review</string>
 
+    <string-array name="list_bank">
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>MANDIRI</item>
+        <item>BRI</item>
+        <item>CIMB NIAGA</item>
+    </string-array>
 
 </resources>
