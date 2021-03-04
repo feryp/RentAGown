@@ -524,10 +524,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="MissingConstraints">
 
+            <ImageButton
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_wa_outlined"
+                android:src="@drawable/ic_whatsapp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/todo"
+                tools:ignore="UnusedAttribute" />
+
             <Button
                 android:id="@+id/btn_fitting_size_detail_booking"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginStart="16dp"
                 style="@style/Widget.MaterialComponents.Button"
                 app:backgroundTint="@null"
                 android:background="@drawable/bg_button_rounded_gold"

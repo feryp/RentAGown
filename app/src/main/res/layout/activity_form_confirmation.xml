@@ -73,20 +73,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/please_fill_out_this_page_after_performing_bank_transfer"
-                        android:textColor="@color/colorGray"
-                        android:textSize="12sp"
-                        tools:ignore="MissingConstraints" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -97,7 +86,7 @@
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center"
-                        android:text="@string/please_make_a_payment_transfer_to_the_following_account_and_fill_in_the_payment_confirmation_document_so_that_we_can_process_your_purchase"
+                        android:text="@string/please_fill_in_payment_confirmation_below_so_that_we_can_process_your_booking"
                         android:textColor="@color/colorGray"
                         android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"

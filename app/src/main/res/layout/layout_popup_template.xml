@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="400dp"
     android:layout_height="400dp"
-    android:background="@drawable/body_size_template"
+    android:background="@drawable/image_template"
     android:layout_gravity="center">
 
 

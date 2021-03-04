@@ -152,7 +152,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:text="@string/title_start_date"
-                            android:textColor="@color/colorSoftGrey"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14sp" />
 
                         <TextView
@@ -199,7 +199,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:text="@string/title_end_date"
-                            android:textColor="@color/colorSoftGrey"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14sp" />
 
                         <TextView
@@ -297,7 +297,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Similar Category"
+                    android:text="Similar Product"
                     android:textColor="@color/colorBlack"
                     android:textSize="14sp"
                     android:layout_marginTop="27dp"

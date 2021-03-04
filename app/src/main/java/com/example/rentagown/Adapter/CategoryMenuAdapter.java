@@ -49,7 +49,7 @@ public class CategoryMenuAdapter extends RecyclerView.Adapter<CategoryMenuViewHo
 
         if (selectedCategory != null){
             if (selectedCategory.getIdCategory() == categoryMenuList.get(position).getIdCategory()){
-                holder.tvTitle.setTextColor(Color.parseColor("#E6B31E")); //warna kuning
+                holder.tvTitle.setTextColor(Color.parseColor("#C7A87E")); //warna gold
             } else {
                 holder.tvTitle.setTextColor(Color.parseColor("#747474")); //warna hitam
             }

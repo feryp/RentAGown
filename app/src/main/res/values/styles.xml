@@ -30,7 +30,7 @@
     </style>
 
     <style name="ButtonRoundedOutlinedGold2" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeColor">@color/colorSecondary</item>
+        <item name="strokeColor">@color/colorPrimary</item>
         <item name="cornerRadius">4dp</item>
     </style>
 
@@ -71,7 +71,7 @@
     <!-- Switch Compact -->
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">@color/colorSecondary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
 
         <!-- inactive thumb color -->
         <item name="colorSwitchThumbNormal">@color/colorSoftGrey</item>

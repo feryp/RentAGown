@@ -62,7 +62,7 @@ public class ChoiceBankAdapter extends RecyclerView.Adapter<ChoiceBankViewHolder
 
         holder.bind(bankList);
         if (mSelectedPosition == position){
-            holder.itemView.setBackgroundColor(Color.parseColor("#FAE6AB"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#E6D1B5"));
         } else {
             holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
             holder.itemView.setBackgroundResource(R.drawable.border_bottom);

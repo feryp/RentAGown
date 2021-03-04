@@ -243,10 +243,11 @@
                             android:gravity="center">
 
                             <ImageView
+                                android:id="@+id/im_icon_payment"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/todo"
-                                android:src="@drawable/ic_payment" />
+                                android:src="@drawable/ic_deposit_booking" />
 
                         </LinearLayout>
 
@@ -529,7 +530,8 @@
                 android:id="@+id/btn_whatsapp"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:background="@drawable/bg_chatting"
+                android:background="@drawable/bg_button_wa_outlined"
+                android:src="@drawable/ic_whatsapp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"

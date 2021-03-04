@@ -52,9 +52,11 @@
             android:fontFamily="@font/poppins_medium"
             android:checked="false"
             android:button="@null"
+            android:drawableStart="@drawable/ic_deposit_booking"
             android:drawableEnd="@drawable/custom_radio_button"
+            android:drawablePadding="16dp"
             android:paddingStart="16dp"
-            android:paddingEnd="18dp"/>
+            android:paddingEnd="16dp"/>
 
         <RadioButton
             android:id="@+id/radio_full_payment"
@@ -67,8 +69,10 @@
             android:checked="false"
             android:button="@null"
             android:drawableEnd="@drawable/custom_radio_button"
+            android:drawableStart="@drawable/ic_full_booking"
+            android:drawablePadding="16dp"
             android:paddingStart="16dp"
-            android:paddingEnd="18dp"/>
+            android:paddingEnd="16dp"/>
         
     </RadioGroup>
 

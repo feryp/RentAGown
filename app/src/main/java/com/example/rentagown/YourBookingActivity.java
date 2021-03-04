@@ -65,7 +65,7 @@ public class YourBookingActivity extends AppCompatActivity implements View.OnCli
     private void showDeleteDialog() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle("Delete Item");
-        alertDialog.setMessage("Would you like to delete this booking ? ");
+        alertDialog.setMessage("Are you sure to remove this item ? ");
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "YES",
                 new DialogInterface.OnClickListener() {
                     @Override

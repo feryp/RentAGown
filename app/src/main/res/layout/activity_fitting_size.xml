@@ -278,7 +278,7 @@
                     android:contentDescription="@string/todo"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/body_size_template"
+                    android:src="@drawable/image_template"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView

@@ -242,27 +242,42 @@
         android:orientation="horizontal"
         android:paddingStart="16dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toTopOf="@id/relativeLayout"
         tools:ignore="MissingConstraints,RtlSymmetry">
 
-        <TextView
-            android:id="@+id/tv_information_your_booking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
-            android:maxWidth="300dp"
-            android:text="@string/info_your_booking"
-            android:textColor="@color/colorMistyBlack"
-            android:textSize="10sp"
-            tools:ignore="SmallSp,UnusedAttribute" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="5dp"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_info" />
+            <TextView
+                android:id="@+id/tv_information_your_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:maxWidth="300dp"
+                android:text="@string/info_your_booking"
+                android:textColor="@color/colorMistyBlack"
+                android:textSize="10sp"
+                tools:ignore="SmallSp,UnusedAttribute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_info" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -303,10 +318,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="16dp"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -314,7 +326,8 @@
             android:id="@+id/btn_whatsapp"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="@drawable/bg_chatting"
+            android:background="@drawable/bg_button_wa_outlined"
+            android:src="@drawable/ic_whatsapp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"

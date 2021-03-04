@@ -169,13 +169,15 @@
     <string name="name_view_product">Selina Colourblock Camisole Dress</string>
     <string name="btn_booking_now">Book Now</string>
     <string name="btn_see_all_review">See All</string>
-    <string name="btn_see_no_available_dates">See No Available Dates</string>
+    <string name="btn_see_no_available_dates">See No Available Date</string>
     <string name="title_start_date">START DATE</string>
     <string name="title_end_date">END DATE</string>
 
     <!-- activity your booking -->
     <string name="appbar_your_booking">Your Booking</string>
-    <string name="info_your_booking">Maximum return of goods is 7 days after the date of booking, which is 16 September 2020 (Office Hours).</string>
+    <string name="info_your_booking">Maximum return of goods is 7 days from start date of booking.
+        25% charge will be applied for 14 days booking from start date of booking.
+        50% charge will be applied for 21 days booking from start date.</string>
     <string name="tv_title_total_price_your_booking">Total Price</string>
     <string name="tv_total_price_your_booking">Rp. 0</string>
     <string name="btn_checkout">Checkout</string>
@@ -222,8 +224,7 @@
 
     <!-- activity form confirmation -->
     <string name="appbar_confirmation">Confirmation</string>
-    <string name="please_fill_out_this_page_after_performing_bank_transfer">Please fill out this page after performing bank transfer</string>
-    <string name="please_make_a_payment_transfer_to_the_following_account_and_fill_in_the_payment_confirmation_document_so_that_we_can_process_your_purchase">Please make a payment transfer to the following account and fill in the payment confirmation document so that we can process your purchase</string>
+    <string name="please_fill_in_payment_confirmation_below_so_that_we_can_process_your_booking">Please fill-in payment confirmation below so that we can process your booking.</string>
     <string name="total_price">Total Price</string>
     <string name="last_2_digit_is_unique_code_for_bank_transfer_confirm">Last 2 digit is unique code for bank transfer</string>
     <string name="hint_your_bank_name">Your Bank Name</string>
@@ -254,7 +255,7 @@
     <string name="btn_confirm_pay">Confirm Pay</string>
 
     <!-- activity fitting size -->
-    <string name="appbar_size_gown">Size Gown</string>
+    <string name="appbar_size_gown">Fitting Size Gown</string>
     <string name="btn_template">Template</string>
     <string name="unit_cm">cm</string>
     <string name="et_bust">Bust</string>
@@ -262,9 +263,9 @@
     <string name="et_waist">Waist</string>
     <string name="et_hip">Hip</string>
     <string name="title_note">Note :</string>
-    <string name="semua_ukuran_dalam_sentimeter_cm">- All sizes are in centimeter (cm)</string>
-    <string name="ukur_secara_melingkar">- Measure in a circle</string>
-    <string name="btn_custom_size">Custom Size</string>
+    <string name="semua_ukuran_dalam_sentimeter_cm">All sizes are in centimeter (cm)</string>
+    <string name="ukur_secara_melingkar">Measure in a circle</string>
+    <string name="btn_custom_size">Submit</string>
 
     <!-- activity history booking -->
     <string name="appbar_history">History</string>
