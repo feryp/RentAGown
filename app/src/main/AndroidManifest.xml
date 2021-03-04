@@ -12,15 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChoiceBankActivity"
+        <activity android:name=".FullscreenActivity"></activity>
+        <activity
+            android:name=".ChoiceBankActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".DetailHistoryBookingActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".DetailHistoryBookingActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".SeeNoAvailableDateActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".SeeNoAvailableDateActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SearchViewActivity"
             android:screenOrientation="portrait"

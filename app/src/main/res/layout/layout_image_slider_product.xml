@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/img_product"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
         tools:src="@drawable/prewedding_1"
         android:contentDescription="@string/todo"/>

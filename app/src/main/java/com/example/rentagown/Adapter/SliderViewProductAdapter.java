@@ -2,11 +2,13 @@ package com.example.rentagown.Adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.example.rentagown.FullscreenActivity;
 import com.example.rentagown.Model.SliderItemProduct;
 import com.example.rentagown.R;
 import com.example.rentagown.ViewHolder.SliderViewProductViewHolder;
@@ -54,7 +56,14 @@ public class SliderViewProductAdapter extends SliderViewAdapter<SliderViewProduc
 //        SliderItemProduct sliderItemProduct = mSliderItems.get(position);
 
         viewHolder.imageSlider.setImageResource(mSliderItems.get(position).getImageProduct());
-
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent fullscreen = new Intent(context, FullscreenActivity.class);
+                fullscreen.putExtra("posisi", position);
+                context.startActivity(fullscreen);
+            }
+        });
 //        Glide.with(viewHolder.itemView)
 //                .load(sliderItemProduct.getImageProduct())
 //                .fitCenter()

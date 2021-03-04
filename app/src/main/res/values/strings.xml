@@ -348,6 +348,9 @@
     <string name="appbar_detail_history">Detail History</string>
     <string name="title_history_time_amp_date"><![CDATA[History Time & Date]]></string>
     <string name="btn_review_detail_history">Review</string>
+    <string name="btn_add_to_wishlist">Add to Wishlist</string>
+
+    <!-- activity fullscreen -->
 
 
 
