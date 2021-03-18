@@ -350,16 +350,11 @@
     <string name="btn_review_detail_history">Review</string>
     <string name="btn_add_to_wishlist">Add to Wishlist</string>
 
-    <!-- activity fullscreen -->
+    <!-- activity privacy policy -->
+    <string name="appbar_privacy_policy">Privacy Policy</string>
 
+    <!-- activity terms and conditions -->
+    <string name="appbar_terms_and_conditions">Terms and Conditions</string>
 
-
-    <string-array name="list_bank">
-        <item>BCA</item>
-        <item>BNI</item>
-        <item>MANDIRI</item>
-        <item>BRI</item>
-        <item>CIMB NIAGA</item>
-    </string-array>
 
 </resources>

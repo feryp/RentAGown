@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.rentagown.InvoiceHistoryActivity;
+import com.example.rentagown.PrivacyPolicyActivity;
 import com.example.rentagown.R;
 import com.example.rentagown.SettingActivity;
+import com.example.rentagown.TermsConditionActivity;
 import com.example.rentagown.TransactionStatusActivity;
 
 import java.util.Objects;
@@ -42,6 +44,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         invoiceHistory.setOnClickListener(ProfileFragment.this);
         settings.setOnClickListener(ProfileFragment.this);
         helpCenter.setOnClickListener(ProfileFragment.this);
+        privacyPolicy.setOnClickListener(ProfileFragment.this);
         termsConditions.setOnClickListener(ProfileFragment.this);
         signOut.setOnClickListener(ProfileFragment.this);
 
@@ -64,6 +67,18 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Settings", Toast.LENGTH_SHORT).show();
                 Intent settings = new Intent(getActivity(), SettingActivity.class);
                 startActivity(settings);
+                break;
+
+            case R.id.menu_privacy_policy:
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Privacy Policy", Toast.LENGTH_SHORT).show();
+                Intent privacy = new Intent(getActivity(), PrivacyPolicyActivity.class);
+                startActivity(privacy);
+                break;
+
+            case R.id.menu_terms_condition:
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(),"Terms and Conditions", Toast.LENGTH_SHORT).show();
+                Intent terms = new Intent(getActivity(), TermsConditionActivity.class);
+                startActivity(terms);
                 break;
 
         }

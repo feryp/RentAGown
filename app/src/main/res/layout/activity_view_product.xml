@@ -47,7 +47,6 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/slider_view_product"
             android:layout_width="match_parent"
@@ -96,7 +95,6 @@
                     android:id="@+id/vp_detail_product"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
-
 
             </LinearLayout>
 
@@ -147,7 +145,6 @@
             tools:ignore="MissingConstraints,UnusedAttribute" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

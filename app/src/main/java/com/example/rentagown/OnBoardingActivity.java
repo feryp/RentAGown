@@ -124,9 +124,9 @@ public class OnBoardingActivity extends AppCompatActivity{
                 //we could know that he is already checked the intro screen activity
                 //use shared preferences to that process
                 finishOnboarding();
-//                Intent main = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(main);
-//                savePrefsData();
+                Intent main = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(main);
+                savePrefsData();
                 finish();
             }
         });
@@ -178,10 +178,10 @@ public class OnBoardingActivity extends AppCompatActivity{
     }
 
 
-//    private boolean restorePredData() {
-//        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
-//        return pref.getBoolean("isIntroOpened",false);
-//    }
+    private boolean restorePredData() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
+        return pref.getBoolean("isIntroOpened",false);
+    }
 //
     private void savePrefsData() {
         SharedPreferences preferences = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
